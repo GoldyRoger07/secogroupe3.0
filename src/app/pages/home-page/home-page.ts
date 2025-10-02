@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Navbar } from "../../components/navbar/navbar";
 import { Footer } from "../../components/footer/footer";
 import { MyButton } from "../../components/my-button/my-button";
+import { HeroSection } from "../../components/hero-section/hero-section";
 
 @Component({
   selector: 'app-home-page',
-  imports: [Navbar, Footer, MyButton],
+  imports: [Navbar, Footer, MyButton, HeroSection],
   templateUrl: './home-page.html',
   styles: `
   .hero-section{
