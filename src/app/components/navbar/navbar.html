@@ -1,98 +1,91 @@
-<!-- Navbar Responsive -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      
-      <!-- Logo -->
-      <div class="flex-shrink-0">
-        <img class="h-10 w-auto sm:h-12" src="img/new_seco_logo.png" alt="SECO GROUPE INC">
-      </div>
-      
-      <!-- Menu Desktop -->
-      <div class="hidden lg:flex lg:items-center lg:space-x-8">
-        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold transition-colors duration-200">
-          Industries
-        </a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold transition-colors duration-200">
-          Solutions
-        </a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold transition-colors duration-200">
-          Perspective
-        </a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold transition-colors duration-200">
-          Who We Are
-        </a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold transition-colors duration-200">
-          Company
-        </a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold transition-colors duration-200">
-          Careers
-        </a>
-      </div>
-      
-      <!-- Actions Desktop -->
-      <div class="hidden lg:flex lg:items-center lg:space-x-4">
-        <language-selector/>
-        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-200">
-          Contact Us
-        </button>
-      </div>
-      
-      <!-- Menu Mobile Button -->
-      <div class="lg:hidden flex items-center space-x-2">
-        <language-selector/>
-        <button 
-          type="button" 
-          class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors duration-200"
-          (click)="toggleMobileMenu()"
-          [attr.aria-expanded]="isMobileMenuOpen"
-          aria-controls="mobile-menu">
-          <span class="sr-only">Open main menu</span>
-          <!-- Hamburger Icon -->
-          <svg *ngIf="!isMobileMenuOpen" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <!-- Close Icon -->
-          <svg *ngIf="isMobileMenuOpen" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Menu Mobile -->
-  <div 
-    *ngIf="isMobileMenuOpen" 
-    class="lg:hidden bg-white border-t border-gray-200 shadow-lg"
-    id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1">
-      <a href="#" (click)="closeMobileMenu()" class="block px-3 py-2 text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-        Industries
-      </a>
-      <a href="#" (click)="closeMobileMenu()" class="block px-3 py-2 text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-        Solutions
-      </a>
-      <a href="#" (click)="closeMobileMenu()" class="block px-3 py-2 text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-        Perspective
-      </a>
-      <a href="#" (click)="closeMobileMenu()" class="block px-3 py-2 text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-        Who We Are
-      </a>
-      <a href="#" (click)="closeMobileMenu()" class="block px-3 py-2 text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-        Company
-      </a>
-      <a href="#" (click)="closeMobileMenu()" class="block px-3 py-2 text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-        Careers
-      </a>
-      <div class="pt-4 pb-3 border-t border-gray-200">
-        <button (click)="closeMobileMenu()" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-base font-semibold transition-colors duration-200">
-          Contact Us
-        </button>
-      </div>
-    </div>
-  </div>
-</nav>
+<nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
 
-<!-- Spacer pour éviter que le contenu soit caché sous la navbar fixe -->
-<div class="h-16"></div>
+        <!-- Logo -->
+        <div class="flex-shrink-0 text-2xl font-bold text-blue-600">
+          <img src="img/logos/new_seco_logo.png" class="w-[100px]" alt="logo">
+        </div>
+
+        <!-- Bouton Burger (mobile) -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 hover:text-blue-500 focus:outline-none">
+            <!-- Icône burger -->
+            <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <!-- Icône croix -->
+            <svg id="menu-close" class="hidden w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menu Desktop -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="nav-link text-gray-700 text-blue-500 transition-colors">Home</a>
+          <a href="#" class="nav-link text-gray-700 hover:text-blue-500 transition-colors">About</a>
+          <a href="#" class="nav-link text-gray-700 hover:text-blue-500 transition-colors">Contact</a>
+          <div class="relative group">
+            <button class="nav-link text-gray-700 hover:text-blue-500 transition-colors">Services</button>
+            <div class="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-lg w-40">
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-500 transition">USA</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-500 transition">Haiti</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-500 transition">Canada</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-500 transition">Bahamas</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-500 transition">Bresil</a>
+
+            </div>
+          </div>
+          <select class="border border-gray-300 rounded-md px-2 py-1 text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-500 transition">Home</a>
+      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-500 transition">About</a>
+      
+      <!-- Dropdown Services Mobile -->
+      <div class="border-t">
+        <button id="services-btn" class="w-full text-left px-4 py-2 text-gray-700 hover:text-blue-500 focus:outline-none flex justify-between items-center">
+          Services
+          <svg id="services-icon" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="services-menu" class="hidden bg-gray-50">
+          <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-500 transition">Web Development</a>
+          <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-500 transition">Mobile Apps</a>
+          <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-500 transition">Consulting</a>
+        </div>
+      </div>
+
+      <!-- Langue -->
+      <div class="border-t px-4 py-2">
+        <select class="w-full border border-gray-300 rounded-md px-2 py-1 text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+
+
+    <!-- Mobile Menu -->
+    <div class="fixed inset-0 bg-white z-40 hidden flex-col items-center justify-center" id="mobile-menu">
+        <button class="absolute top-6 right-6 focus:outline-none" id="close-menu">
+            <i data-feather="x"></i>
+        </button>
+        <nav class="flex flex-col space-y-8 text-center">
+            <a href="#" class="text-2xl font-medium text-gray-800 hover:text-blue-500">Home</a>
+            <a href="#about" class="text-2xl font-medium text-gray-800 hover:text-blue-500">About</a>
+            <a href="#services" class="text-2xl font-medium text-gray-800 hover:text-blue-500">Services</a>
+            <a href="#portfolio" class="text-2xl font-medium text-gray-800 hover:text-blue-500">Portfolio</a>
+            <a href="#contact" class="text-2xl font-medium text-gray-800 hover:text-blue-500">Contact</a>
+        </nav>
+    </div>
