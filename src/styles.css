@@ -21,6 +21,10 @@
         .nav-link {
       position: relative;
     }
+
+    .nav-link.active{
+      color: var(--my-sec-bg);
+    }
     .nav-link::after {
       content: "";
       position: absolute;
