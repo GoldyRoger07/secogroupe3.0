@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { Navbar } from "../../components/navbar/navbar";
 import { Footer } from "../../components/footer/footer";
 import { HeroSection } from "../../components/hero-section/hero-section";
+import { MySlider } from "../../components/my-slider/my-slider";
 
 interface ServiceSection{
   title: string;
   icon?: string;
+  color?: string;
   description: string;
-  imageUrl: string;
+  imageUrl: string[];
   subServices: SubService[];
 
 }
@@ -20,7 +22,7 @@ interface SubService{
 
 @Component({
   selector: 'app-services',
-  imports: [Navbar, Footer, HeroSection],
+  imports: [Navbar, Footer, HeroSection, MySlider],
   templateUrl: './services.html',
   styleUrl: './services.css'
 })
@@ -29,8 +31,9 @@ export class Services {
   {
     title: 'Housekeeping & Janitorial',
     icon: 'ri-brush-line',
+    color: 'bg-gradient-to-r from-blue-50 to-blue-100',
     description: 'Beyond simply cleaning, our services ensure a healthy, productive, and welcoming environment for your employees and clients',
-    imageUrl: 'img/services/housekeeping.jpeg',
+    imageUrl: ['img/services/housekeeping.jpeg','img/services/housekeeping.jpg','img/services/housekeeping1.jpg'],
     subServices: [
       {
         title: 'Pristine Environments',
@@ -52,8 +55,9 @@ export class Services {
   {
     title: 'Building Maintenance',
     icon: 'ri-building-2-line',
+    color: 'bg-gradient-to-r from-gray-50 to-gray-100',
     description: 'Protecting your investment requires proactive and expert maintenance. We keep your infrastructure running smoothly and efficiently.',
-    imageUrl: 'img/services/building_maintenance.jpeg',
+    imageUrl: ['img/services/building_maintenance.jpeg','img/services/building_maintenance_2.jpg','img/services/new/building_maintenance.jpg'],
     subServices: [
       {
         title: 'Preventative Maintenance',
@@ -80,8 +84,13 @@ export class Services {
   {
     title: 'Staffing Solutions',
     icon: 'ri-group-line',
+    color: 'bg-gradient-to-r from-blue-50 to-blue-100',
     description: 'When you need specialized help fast, our staffing division provides vetted, trained, and reliable personnel to fill essential roles within your facility or organization.',
-    imageUrl: 'img/services/staffing.jpeg',
+    imageUrl: [
+      'img/services/new/staffing.jpg',
+      'img/services/new/staffing_foods_worker.jpg',
+      'img/services/staffing_pic_for_production.jpg'
+    ],
     subServices: [
       {
         title: 'Flexible Staffing',
@@ -104,8 +113,9 @@ export class Services {
   {
     title: 'Concierge Services',
     icon: 'ri-service-line',
+    color: 'bg-gradient-to-r from-gray-50 to-gray-100',
     description: 'Elevate the experience for residents, tenants, and visitors with professional, hospitable, and highly effective concierge support.',
-    imageUrl: 'https://bancm.com/wp-content/uploads/2024/04/shutterstock_2367142379.jpg',
+    imageUrl: ['img/services/concierge.jpg','img/services/concierge.jpg','img/services/concierge.jpg'],
     subServices: [
       {
         title: 'First Impressions',
@@ -127,8 +137,9 @@ export class Services {
   {
     title: 'Security Experts',
     icon: 'ri-shield-keyhole-line',
+    color: 'bg-gradient-to-r from-blue-50 to-blue-100',
     description: 'Protecting your assets, people, and property is our paramount commitment. Our security experts provide a powerful blend of technology and human presence.',
-    imageUrl: 'img/services/bg_seco_securite.jpg',
+    imageUrl: ['img/services/bg_seco_securite.jpg','img/services/security_guard.jpg','img/services/security_guard_female.jpg'],
     subServices: [
       {
         title: '24/7 Protection',
