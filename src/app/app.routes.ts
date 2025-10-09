@@ -6,6 +6,7 @@ import { Services } from './pages/services/services';
 export const routes: Routes = [
     {path: '',redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomePage },
+    { path: 'home2', component: Homepage2Component },
     { path: 'services', component: Services },
     // { path: '**', redirectTo: '/notfound' }
 ];
