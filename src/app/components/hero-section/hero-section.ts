@@ -26,14 +26,18 @@ import { Component } from '@angular/core';
                         </clipPath>
                 </defs>
                 <g style="clip-path:url(#clip-path-right)" id="right" class="start">
-                        <image class="double-hero-image-right-03" opacity="0" href="https://f.hubspotusercontent20.net/hubfs/2731727/Website%20Images/What%20We%20Do/what%20we%20do_website_0003_government-IFM-Medical%20Air-20.jpg" width="650" height="671" transform="translate(250 0)"></image>
-                        <image class="double-hero-image-right-02" opacity="0" href="img/services/seco_agent_securite_en_bleu.jpg" width="650" height="671" transform="translate(200 0)"></image>
-                        <image class="double-hero-image-right-01" href="img/services/seco_agent_securite_en_jaune.jpg" width="650" height="671" transform="translate(200 0)"></image>
+                        <image class="double-hero-image-right-05" opacity="0" href="img/services/crop/building_maintenance_2.jpg" width="650" height="671" transform="translate(190 0)"></image>
+                        <image class="double-hero-image-right-04" opacity="0" href="img/services/seco_agent_securite_en_bleu.jpg" width="650" height="671" transform="translate(200 0)"></image>
+                        <image class="double-hero-image-right-03" opacity="0" href="img/services/crop/housekeeping_services.jpg" width="650" height="671" transform="translate(200 0)"></image>
+                        <image class="double-hero-image-right-02" opacity="0" href="img/services/crop/janitorial.jpg" width="650" height="671" transform="translate(200 0)"></image>
+                        <image class="double-hero-image-right-01" href="img/services/crop/staffing.jpg" width="650" height="671" transform="translate(200 0)"></image>
                 </g>
                 <g style="clip-path:url(#clip-path-left)" id="left" class="start">
-                        <image class="double-hero-image-left-03" opacity="0" href="https://f.hubspotusercontent20.net/hubfs/2731727/Website%20Images/What%20We%20Do/what%20we%20do_website_0006_education-0E1A3527-202.jpg" width="650" height="671" transform="translate(-150 0)"></image>
-                        <image class="double-hero-image-left-02" opacity="0" href="https://f.hubspotusercontent20.net/hubfs/2731727/Website%20Images/What%20We%20Do/what%20we%20do_website_0000_senior%20living-elderly%20patient%20care-v07423588148.jpg" width="650" height="671" transform="translate(-150 0)"></image>
-                        <image class="double-hero-image-left-01" href="https://f.hubspotusercontent20.net/hubfs/2731727/Website%20Images/What%20We%20Do/what%20we%20do_website_0005_healthcare-8O2A0426.jpg" width="650" height="671" transform="translate(-150 0)"></image>
+                        <image class="double-hero-image-left-05" opacity="0" href="img/services/crop/security_guard_female.jpg" width="650" height="671" transform="translate(-150 0)"></image>
+                        <image class="double-hero-image-left-04" opacity="0" href="img/services/crop/manager_facility.jpg" width="650" height="671" transform="translate(-150 0)"></image>
+                        <image class="double-hero-image-left-03" opacity="0" href="img/services/crop/concierge.jpg" width="650" height="671" transform="translate(-150 0)"></image>
+                        <image class="double-hero-image-left-02" opacity="0" href="img/services/crop/housekeeping.jpg" width="650" height="671" transform="translate(-150 0)"></image>
+                        <image class="double-hero-image-left-01" href="img/services/crop/staffing_solution.jpg" width="650" height="671" transform="translate(-150 0)"></image>
                 </g>
         </svg>
         

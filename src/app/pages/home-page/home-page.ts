@@ -3,10 +3,11 @@ import { Navbar } from "../../components/navbar/navbar";
 import { Footer } from "../../components/footer/footer";
 import { MyButton } from "../../components/my-button/my-button";
 import { HeroSection } from "../../components/hero-section/hero-section";
+import { MySlider } from "../../components/my-slider/my-slider";
 
 @Component({
   selector: 'app-home-page',
-  imports: [Navbar, Footer, MyButton, HeroSection],
+  imports: [Navbar, Footer, MyButton, HeroSection, MySlider],
   templateUrl: './home-page.html',
   styles: `
   .hero-section{

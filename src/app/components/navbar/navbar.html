@@ -24,7 +24,7 @@
         <!-- Menu Desktop -->
         <div class="hidden md:flex items-center space-x-8">
           <a routerLink="/home" routerLinkActive="active" class="nav-link text-gray-700 hover:text-(--my-sec-bg) text-(--my-sec-bg) transition-colors">Home</a>
-          <a routerLink="/about" routerLinkActive="active" class="nav-link text-gray-700 hover:text-(--my-sec-bg) transition-colors">About</a>
+          <a routerLink="/about-us" routerLinkActive="active" class="nav-link text-gray-700 hover:text-(--my-sec-bg) transition-colors">About</a>
           <a routerLink="/services" routerLinkActive="active" class="nav-link text-gray-700 hover:text-(--my-sec-bg) transition-colors">Services</a>
           <a routerLink="/contact" routerLinkActive="active" class="nav-link text-gray-700 hover:text-(--my-sec-bg) transition-colors">Contact</a>
 
@@ -39,10 +39,12 @@
 
             </div>
           </div> -->
-          <select class="border border-gray-300 rounded-md px-2 py-1 text-gray-700 focus:ring-2 focus:ring-(--my-sec-bg) focus:outline-none">
+          
+          <!-- <select class="border border-gray-300 rounded-md px-2 py-1 text-gray-700 focus:ring-2 focus:ring-(--my-sec-bg) focus:outline-none">
             <option value="en">English</option>
             <option value="fr">Français</option>
-          </select>
+          </select> -->
+          <p-select [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" placeholder="Select a Language" class="w-full md:w-30" />
         </div>
       </div>
     </div>
