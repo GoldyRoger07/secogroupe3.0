@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageSelector } from "../language-selector/language-selector";
 import { SelectModule } from 'primeng/select';
@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 // import { SelectModule } from 'primeng/select';
 
 
+import { SelectType } from '../../models/SelectType';
 
 @Component({
   selector: 'navbar',
@@ -14,10 +15,12 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './navbar.html',
   styles: ``
 })
+
 export class Navbar {
   isMobileMenuOpen = false;
 
-  countries:SelectType[] = [
+  // list of languages for the select
+  countries: SelectType[] = [
     {
       name: 'English',
       code: 'English'
@@ -36,5 +39,13 @@ export class Navbar {
 
   closeMobileMenu() {
     this.isMobileMenuOpen = false;
+  }
+
+  // Close mobile menu on Escape key for better UX
+  @HostListener('window:keydown.escape')
+  onEscape() {
+    if (this.isMobileMenuOpen) {
+      this.closeMobileMenu();
+    }
   }
 }
