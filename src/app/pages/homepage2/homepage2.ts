@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { Navbar } from '../../components/navbar/navbar';
-import { MyButton } from '../../components/my-button/my-button';
-import { Footer } from '../../components/footer/footer';
+import { MySlider } from "../../components/my-slider/my-slider";
 
 @Component({
   selector: 'app-homepage2',
   standalone: true,
-  imports: [Navbar, MyButton, Footer],
+  imports: [MySlider],
   templateUrl: './homepage2.html'
 })
 export class Homepage2Component {

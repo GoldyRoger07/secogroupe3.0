@@ -4,6 +4,7 @@ import { Footer } from "../../components/footer/footer";
 import { MyButton } from "../../components/my-button/my-button";
 import { HeroSection } from "../../components/hero-section/hero-section";
 import { MySlider } from "../../components/my-slider/my-slider";
+<<<<<<< HEAD
 import { MyHero } from "../../components/my-hero/my-hero";
 import { Select } from "primeng/select";
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -36,6 +37,12 @@ interface CardService {
 @Component({
   selector: 'app-home-page',
   imports: [Carousel, CommonModule, ButtonModule, CardModule, Navbar, Footer, ReactiveFormsModule, MySlider, MyHero, Select, Tag],
+=======
+
+@Component({
+  selector: 'app-home-page',
+  imports: [Navbar, Footer, MyButton, HeroSection, MySlider],
+>>>>>>> 74ab40aa1b0049ca16dfd1d80ddffa3a3c148384
   templateUrl: './home-page.html',
   styles: `
   .hero-section{
