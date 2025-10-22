@@ -8,6 +8,6 @@ import { Navbar } from "../../components/navbar/navbar";
   templateUrl: './about-us.html',
   styles: ``
 })
-export class AboutUs {
+export default class AboutUs {
 
 }

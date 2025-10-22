@@ -8,6 +8,6 @@ import { Footer } from "../../components/footer/footer";
   templateUrl: './contact.html',
   styles: ``
 })
-export class Contact {
+export default class Contact {
 
 }

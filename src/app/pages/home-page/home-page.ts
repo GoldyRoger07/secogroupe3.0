@@ -96,7 +96,7 @@ interface CardService {
 }
   `
 })
-export class HomePage implements OnInit{
+export default class HomePage implements OnInit{
 
   products: Product[] = [
     {
@@ -113,36 +113,59 @@ export class HomePage implements OnInit{
     }
   ]
 
+  maps = [
+    {
+      imgUrl: 'img/maps/compressed/usa_map.webp',
+      title: 'United States'
+    },
+    {
+      imgUrl: 'img/maps/compressed/canada_map.webp',
+      title: 'Canada'
+    },
+    {
+      imgUrl: 'img/maps/compressed/haiti_map.webp',
+      title: 'Haiti'
+    },
+    {
+      imgUrl: 'img/maps/compressed/bahamas_map.webp',
+      title: 'Bahamas'
+    },
+    {
+      imgUrl: 'img/maps/compressed/bresil_map.webp',
+      title: 'Bresil'
+    },
+  ]
+
   cardServices: CardService[] = [
     {
       name: 'Building Maintenance',
       description: 'Protecting your investment requires proactive and expert maintenance. We keep your infrastructure running smoothly and efficiently...',
-      cover: 'img/services/new/building_maintenance.jpg'
+      cover: 'img/services/new/compressed/building_maintenance.webp'
     },
     {
       name: 'Security',
       description: 'Protecting your assets, people, and property is our paramount commitment. Our security experts provide a powerful blend of technology and human presence...',
-      cover: 'img/services/security_guard.jpg'
+      cover: 'img/services/compressed/security_guard.webp'
     },
     {
       name: 'Housekeeping',
       description: 'Beyond simply cleaning, our services ensure a healthy, productive, and welcoming environment for your employees and clients...',
-      cover: 'img/services/housekeeping1.jpg'
+      cover: 'img/services/compressed/housekeeping1.webp'
     },
     {
       name: 'Janitorial',
       description: 'Deep cleaning, floor care (stripping, waxing, buffing), window cleaning, and waste management...',
-      cover: 'img/services/new/janitorial_hospital.jpg'
+      cover: 'img/services/new/compressed/janitorial_hospital.webp'
     },
     {
       name: 'Staffing',
       description: 'When you need specialized help fast, our staffing division provides vetted, trained, and reliable personnel to fill essential roles within your facility or organization...',
-      cover: 'img/services/staffing_solution.jpg'
+      cover: 'img/services/compressed/staffing_solution.webp'
     },
     {
       name: 'Concierges',
       description: 'Elevate the experience for residents, tenants, and visitors with professional, hospitable, and highly effective concierge support...',
-      cover: 'img/services/concierge.jpg'
+      cover: 'img/services/compressed/concierge.webp'
     }
   ]
 

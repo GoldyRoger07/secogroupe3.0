@@ -7,6 +7,6 @@ import { MySlider } from "../../components/my-slider/my-slider";
   imports: [MySlider],
   templateUrl: './homepage2.html'
 })
-export class Homepage2Component {
+export default class Homepage2Component {
 
 }
