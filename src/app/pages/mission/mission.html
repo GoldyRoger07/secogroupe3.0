@@ -1,0 +1,67 @@
+<my-navbar/>
+
+<section>
+    <my-container>
+        <div class="w-full my-10 h-[50vh] rounded-2xl shadow-lg border border-gray-200  flex flex-col items-center justify-center gap-5">
+            <h1 class="text-3xl text-gray-500 font-bold">
+                Our Mission, Vision, and Values
+            </h1>
+            <p class="text-xl text-gray-500 w-[50%] text-center">
+                These principles guide every action we take and every service we deliver to our clients.
+            </p>
+        </div>
+
+        
+    </my-container>
+</section>
+
+<section>
+    <my-container>
+        <div class="py-10 text-gray-500">
+            <h2 class="text-3xl text-gray-500 font-bold mb-3" >Our Mission</h2>
+            <p>
+                To be the trusted, single-source provider of integrated facility management,
+                staffing, and security solutions. We are dedicated to delivering
+                uncompromising quality, ensuring operational efficiency, and maintaining
+                safe, pristine environments that allow our clients to focus entirely on their core
+                business.
+            </p>
+        </div>
+
+        <div class="py-10 text-gray-500">
+            <h2 class="text-3xl text-gray-500 font-bold mb-3" >Our Vision</h2>
+            <p>
+                To be recognized as the premier and most dependable integrated services
+                partner in the industry, continuously setting the benchmark for professional
+                excellence, technological integration, and unparalleled client satisfaction across
+                all facility and staffing verticals.
+            </p>
+        </div>
+    </my-container>
+</section>
+
+<section >
+    <my-container>
+        <div class="my-10">
+            <div class="text-gray-500 text-center">
+                <h2 class="text-3xl text-gray-500 font-bold mb-3">Our Core Values</h2>
+                <p>These are the fundamental beliefs that dictate our conduct and culture:</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4  py-10 text-gray-500">
+                @for(item of ourCoreValueCards; track $index){
+                    <div class="flex  flex-col items-center p-8 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
+                        <!-- <i class="ri-shield-star-line text-(--my-sec-bg) text-5xl mb-4"></i> -->
+                        <h3 class="text-xl w-fit font-semibold mb-2">{{item.title}}</h3>
+                        <p class="text-gray-600">
+                            {{item.description}}
+                        </p>
+                    </div>
+                }
+                
+            </div>
+        </div>
+    </my-container>
+</section>
+
+<app-footer></app-footer>

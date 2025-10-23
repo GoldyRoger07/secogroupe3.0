@@ -1,10 +1,10 @@
-<div class="relative">
+<div class="relative border-t border-amber-300">
     <swiper-container class="mySwiper" pagination="true" pagination-clickable="true"  space-between="30"
     centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="true">
         @for(img of imgs; track $index){
             <swiper-slide>
                 <!-- <progressive-image [imageUrl]="img" [imageSmallUrl]="imgsSmall[$index]"/> -->
-                <img [src]="img" />
+                <img [src]="img" loading="lazy"/>
             </swiper-slide>
 
             
@@ -16,7 +16,7 @@
 
                     <div class="absolute z-10 top-0 w-full h-full bg-gray-800/20">
                         <div class="absolute text-white left-[50%] bottom-[50%] translate-x-[-50%] translate-y-[50%] md:translate-x-[0%] md:translate-y-[0%] md:bottom-10 md:left-20 px-3 py-5 md:p-10   h-fit  w-[80%] lg:w-[600px] rounded-2xl space-y-6 flex flex-col justify-center text-center md:text-start md:justify-start">
-                            <h2 class="text-2xl md:text-5xl lg:text-6xl font-bold leading-tight">A new vision for your facility with <span class="text-(--my-sec-bg)">SECO GROUPE</span></h2>
+                            <h2 class="text-2xl md:text-5xl lg:text-5xl font-bold leading-tight">A new vision for your facility with <span class="text-(--my-sec-bg)">SECO GROUPE</span></h2>
                             <p class="text-md lg:text-2xl text-white leading-relaxed ">At SECO GROUPE INC, we don't just see a building; we see an opportunity to create a smarter, more resilient, and connected space that delivers real value.</p>
                             <!-- <button class="w-full bg-(--my-sec-bg) hover:bg-orange-400 text-white px-4 py-2 min-[395px]:p-4  md:px-8 md:py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 min-[395px]:whitespace-nowrap cursor-pointer">Let's build something better, together</button> -->
                             <button class=" w-full text-[12px] lg:text-2xl pulse-button bg-(--my-sec-bg) whitespace-nowrap">Let's build something better, together</button>

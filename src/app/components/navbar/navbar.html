@@ -1,86 +1,49 @@
-<nav class="bg-white shadow-md relative z-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center h-16">
 
-        <!-- Logo -->
-        <div class="flex-shrink-0 text-2xl font-bold text-(--my-sec-bg)">
-          <img src="img/logos/new_seco_logo.png" class="w-[100px]" alt="logo">
+
+<nav class="navbar" [ngStyle]="myStyle">
+  <my-container>
+    <div class="flex justify-between items-center p-3 lg:px-0">
+        <div class="navbar-left">
+          <img [src]="config.logo" alt="logo" class="logo" />
         </div>
 
-        <!-- Bouton Burger (mobile) -->
-        <div class="md:hidden">
-          <button (click)="toggleMobileMenu()" aria-label="Open menu" class="text-gray-700 hover:text-orange-400 focus:outline-none">
-            <!-- Icône burger -->
-            <svg *ngIf="!isMobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-            <!-- Icône croix -->
-            <svg *ngIf="isMobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Menu Desktop -->
-        <div class="hidden md:flex items-center space-x-8">
-          <a routerLink="/home" routerLinkActive="active" class="nav-link text-gray-700 hover:text-(--my-sec-bg) text-(--my-sec-bg) transition-colors">Home</a>
-          <a routerLink="/about-us" routerLinkActive="active" class="nav-link text-gray-700 hover:text-(--my-sec-bg) transition-colors">About</a>
-          <a routerLink="/services" routerLinkActive="active" class="nav-link text-gray-700 hover:text-(--my-sec-bg) transition-colors">Services</a>
-          <a routerLink="/contact" routerLinkActive="active" class="nav-link text-gray-700 hover:text-(--my-sec-bg) transition-colors">Contact</a>
+        <ul class="navbar-links desktop-menu">
+          @for(link of links; track $index){
+              <li>
+                  <link-item [link]="link" color="var(--my-sec-bg)"/>
+              </li>
+          }
           
-          <!-- <div class="relative group z-[99]">
-            <button class="nav-link text-gray-700 hover:text-(--my-sec-bg) transition-colors">Services</button>
-            <div class="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-lg w-40">
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-(--my-sec-bg) transition">USA</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-(--my-sec-bg) transition">Haiti</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-(--my-sec-bg) transition">Canada</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-(--my-sec-bg) transition">Bahamas</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-(--my-sec-bg) transition">Bresil</a>
-              2892 2892V
-            </div>
-          </div> -->
-          
-          <!-- <select class="border border-gray-300 rounded-md px-2 py-1 text-gray-700 focus:ring-2 focus:ring-(--my-sec-bg) focus:outline-none">
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-          </select> -->
-          <p-select [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" placeholder="Select a Language" class="w-full md:w-30" />
-        </div>
-      </div>
+        </ul>
     </div>
+  </my-container>
 
+  @if(config.showSearch){
+    <div class="navbar-right">
+        <input type="text" [(ngModel)]="searchValue" placeholder="Search..." />
+        <button (click)="handleSearch()">🔍</button>
+    </div>
+  }
+
+  <div class="mobile-toolbar" #toolbar>
+    <img [src]="config.logo" alt="logo" class="logo" />
+
+    <!-- <button (click)="onClickMenuBtn">
+        Menu
+    </button> -->
+    <hamburger-btn [callback]="onClickMenuBtn" [option]="mobileMenu"/>
+
+    <ng-template #btnContent>
+              Menu
+    </ng-template>
+  </div>
+
+  <ul class="mobile-menu" #mobileMenu>
+    @for(link of links; track $index){
+        <li>
+            <link-item [link]="link" color="yellow"/>
+        </li>
+    }
+  </ul>
     
-  </nav>
-
-
-    <!-- Mobile Menu -->
-    <!-- Mobile menu: backdrop + right-side sliding panel -->
-    <div class="fixed inset-0 z-40 md:hidden pointer-events-none" [class.pointer-events-auto]="isMobileMenuOpen">
-      <!-- Backdrop -->
-      <div (click)="closeMobileMenu()" class="absolute inset-0 bg-black/40 transition-opacity duration-300" [class.opacity-100]="isMobileMenuOpen" [class.opacity-0]="!isMobileMenuOpen"></div>
-
-      <!-- Sliding panel (right side) -->
-      <aside class="absolute top-0 right-0 h-full w-72 bg-white shadow-xl transform transition-transform duration-300 ease-in-out"
-             [class.translate-x-0]="isMobileMenuOpen"
-             [class.translate-x-full]="!isMobileMenuOpen">
-        <div class="p-4 flex items-center justify-between border-b">
-          <div class="text-lg font-semibold">Menu</div>
-          <button (click)="closeMobileMenu()" aria-label="Close menu" class="p-2 focus:outline-none">
-            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-        </div>
-
-        <nav class="p-6 flex flex-col space-y-4">
-          <a routerLink="/home" (click)="closeMobileMenu()" class="text-gray-700 hover:text-(--my-sec-bg) text-lg">Home</a>
-          <a routerLink="/about-us" (click)="closeMobileMenu()" class="text-gray-700 hover:text-(--my-sec-bg) text-lg">About</a>
-          <a routerLink="/services" (click)="closeMobileMenu()" class="text-gray-700 hover:text-(--my-sec-bg) text-lg">Services</a>
-          <a routerLink="/contact" (click)="closeMobileMenu()" class="text-gray-700 hover:text-(--my-sec-bg) text-lg">Contact</a>
-
-          <div class="pt-4 border-t">
-            <p-select [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" placeholder="Select a Language" class="w-full" />
-          </div>
-        </nav>
-      </aside>
-    </div>
+</nav>
