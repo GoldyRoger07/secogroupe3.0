@@ -132,7 +132,7 @@ export class Navbar implements AfterViewInit{
 
   @Input()
   links = [
-    {label: "Home", path: '/'},
+    {label: "Home", path: '/home'},
     {label: "About", path: '/about-us'},
     {label: "Service", path: '/services'},
     {label: "Contact", path: '/contact'},

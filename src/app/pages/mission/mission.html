@@ -1,15 +1,30 @@
 <my-navbar/>
 
-<section>
+<section class="my-10">
     <my-container>
-        <div class="w-full my-10 h-[50vh] rounded-2xl shadow-lg border border-gray-200  flex flex-col items-center justify-center gap-5">
-            <h1 class="text-3xl text-gray-500 font-bold">
-                Our Mission, Vision, and Values
-            </h1>
-            <p class="text-xl text-gray-500 w-[50%] text-center">
-                These principles guide every action we take and every service we deliver to our clients.
-            </p>
-        </div>
+        
+            <div class="relative  w-full h-[70vh] z-2 text-gray-600 flex flex-col items-center justify-center gap-5">
+                <div class="absolute auto-show rounded-xl z-1 top-0 left-0 w-[180px] h-[160px] blur-md bg-amber-500"></div>
+                <!-- <div class="absolute rounded-xl z-1 bottom-0 left-0 w-[160px] h-[160px]  bg-amber-500"></div> -->
+                <div class="absolute rounded-xl z-1 bottom-0 right-0 w-[180px] h-[160px] blur-md bg-blue-500"></div>
+                <!-- <div class="absolute rounded-xl z-1 top-0 right-0 w-[160px] h-[160px]  bg-blue-500"></div> -->
+                
+                <h1 class="text-4xl z-2 uppercase font-bold ">
+                    Our Mission, Vision and Values
+                </h1>
+                <p class="text-xl w-[50%] text-center">
+                    These principles guide every action we take and every service we deliver to our clients.
+                </p>
+            </div>
+
+            <!-- <div class=" blobs absolute  w-[30%] h-[30%] top-[50%] left-[50%] z-1">
+                
+                <div class="blob "></div>
+                <div class="blob "></div>
+                <div class="blob "></div>
+                <div class="blob "></div>
+            </div> -->
+        
 
         
     </my-container>
@@ -17,42 +32,50 @@
 
 <section>
     <my-container>
-        <div class="py-10 text-gray-500">
-            <h2 class="text-3xl text-gray-500 font-bold mb-3" >Our Mission</h2>
-            <p>
-                To be the trusted, single-source provider of integrated facility management,
-                staffing, and security solutions. We are dedicated to delivering
-                uncompromising quality, ensuring operational efficiency, and maintaining
-                safe, pristine environments that allow our clients to focus entirely on their core
-                business.
-            </p>
+        <div class="py-10 grid grid-cols-2 gap-2 items-center text-gray-500 h-[70vh]">
+            <!-- <div> -->
+            <img loading="lazy" class="fade-up" src="img/team_building_idea_concept.png" alt="teamworker">
+            <!-- </div> -->
+            <div>
+                <h2 class="text-4xl font-bold text-gray-600 font-bold mb-3 auto-show" >Our Mission</h2>
+                <p class="auto-show">
+                    To be the trusted, single-source provider of integrated facility management,
+                    staffing, and security solutions. We are dedicated to delivering
+                    uncompromising quality, ensuring operational efficiency, and maintaining
+                    safe, pristine environments that allow our clients to focus entirely on their core
+                    business.
+                </p>
+            </div>
         </div>
+        <div class="py-10 grid grid-cols-2 gap-2 items-center text-gray-600 h-[70vh]">
+            <div class="py-10 ">
+                <h2 class="text-4xl font-bold  font-bold mb-3" >Our Vision</h2>
+                <p>
+                    To be recognized as the premier and most dependable integrated services
+                    partner in the industry, continuously setting the benchmark for professional
+                    excellence, technological integration, and unparalleled client satisfaction across
+                    all facility and staffing verticals.
+                </p>
+            </div>
+            <img class="fade-up" src="img/illustration_concept_vision_entreprise.png" alt="">
 
-        <div class="py-10 text-gray-500">
-            <h2 class="text-3xl text-gray-500 font-bold mb-3" >Our Vision</h2>
-            <p>
-                To be recognized as the premier and most dependable integrated services
-                partner in the industry, continuously setting the benchmark for professional
-                excellence, technological integration, and unparalleled client satisfaction across
-                all facility and staffing verticals.
-            </p>
         </div>
     </my-container>
 </section>
 
 <section >
     <my-container>
-        <div class="my-10">
-            <div class="text-gray-500 text-center">
-                <h2 class="text-3xl text-gray-500 font-bold mb-3">Our Core Values</h2>
-                <p>These are the fundamental beliefs that dictate our conduct and culture:</p>
+        <div class=" mt-20">
+            <div class="text-gray-600 text-center">
+                <h2 class="text-3xl  font-bold mb-3 fade-up">Our Core Values</h2>
+                <p class="fade-up">These are the fundamental beliefs that dictate our conduct and culture:</p>
             </div>
 
-            <div class="grid grid-cols-2 gap-4  py-10 text-gray-500">
+            <div class="grid grid-cols-2 gap-4  py-10 text-gray-600">
                 @for(item of ourCoreValueCards; track $index){
-                    <div class="flex  flex-col items-center p-8 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
+                    <div class="flex  flex-col items-center p-8 rounded-2xl  auto-show">
                         <!-- <i class="ri-shield-star-line text-(--my-sec-bg) text-5xl mb-4"></i> -->
-                        <h3 class="text-xl w-fit font-semibold mb-2">{{item.title}}</h3>
+                        <h3 class="text-xl w-fit font-semibold mb-2 mr-auto text-left">{{item.title}}</h3>
                         <p class="text-gray-600">
                             {{item.description}}
                         </p>
