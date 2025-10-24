@@ -5,7 +5,8 @@ import { RouterLink } from '@angular/router';
 import { Container } from "../container/container";
 import { LinkItem } from "../link-item/link-item";
 import { HamburgerBtn } from "../hamburger-btn/hamburger-btn";
-
+import { SelectType } from '../../models/SelectType';
+import { Select } from "primeng/select";
 export class NavbarConfig{
   // logo?: string;
   // logoWidth?: string;
@@ -20,7 +21,7 @@ export class NavbarConfig{
     public links: Link[] = [],
     public showSearch = false,
     public bgColor = "#fff",
-    public textColor = "#010101",
+    public textColor = "red",
   ){}
 }
 
@@ -31,7 +32,7 @@ export interface Link{
 
 @Component({
   selector: 'my-navbar',
-  imports: [RouterLink, CommonModule, FormsModule, Container, LinkItem, HamburgerBtn],
+  imports: [Select ,RouterLink, CommonModule, FormsModule, Container, LinkItem, HamburgerBtn],
   templateUrl: './navbar.html',
   styles: `
     .navbar {
@@ -51,6 +52,7 @@ export interface Link{
 .navbar-links {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -94,8 +96,9 @@ export interface Link{
     left: 0;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding:  20px;
+    padding: 10px 20px;
     z-index: 99;
     display: none;
 }
@@ -112,6 +115,10 @@ export interface Link{
     .mobile-menu{
         display: block;
 
+    }
+
+    .desktop-menu{
+      display: none;
     }
 }
   `
@@ -134,10 +141,23 @@ export class Navbar implements AfterViewInit{
   links = [
     {label: "Home", path: '/home'},
     {label: "About", path: '/about-us'},
-    {label: "Service", path: '/services'},
+    {label: "Services", path: '/services'},
     {label: "Contact", path: '/contact'},
     {label: "Mission", path: '/mission'}
   ]
+
+   languages: SelectType[] = [
+        { name: 'English', code: 'US' },
+        { name: 'French', code: 'FR' },
+    ]
+    
+      // // filter: brightness(0.7);
+    
+      selectedLanguage: SelectType = {
+        name: 'English',
+        code: 'US'
+      };
+  
 
   @Output() onSearch = new EventEmitter<string>();
 

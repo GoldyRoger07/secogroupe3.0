@@ -3,6 +3,7 @@ import { Navbar } from "../../components/navbar/navbar";
 import { Footer } from "../../components/footer/footer";
 import { HeroSection } from "../../components/hero-section/hero-section";
 import { MySlider } from "../../components/my-slider/my-slider";
+import { Container } from "../../components/container/container";
 
 interface ServiceSection{
   title: string;
@@ -22,7 +23,7 @@ interface SubService{
 
 @Component({
   selector: 'app-services',
-  imports: [Navbar, Footer, HeroSection, MySlider],
+  imports: [Navbar, Footer, HeroSection, MySlider, Container],
   templateUrl: './services.html',
   styleUrl: './services.css'
 })
@@ -61,7 +62,7 @@ export default class Services {
     icon: 'ri-building-2-line',
     color: 'bg-gradient-to-r from-gray-50 to-gray-100',
     description: 'Protecting your investment requires proactive and expert maintenance. We keep your infrastructure running smoothly and efficiently.',
-    imageUrl: ['img/services/compressed/building_maintenance.jpeg','img/services/compressed/building_maintenance_2.webp','img/services/new/compressed/building_maintenance.webp'],
+    imageUrl: ['img/services/compressed/building_maintenance.webp','img/services/compressed/building_maintenance_2.webp','img/services/new/compressed/building_maintenance.webp'],
     subServices: [
       {
         title: 'Preventative Maintenance',

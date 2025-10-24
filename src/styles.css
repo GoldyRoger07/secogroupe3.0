@@ -2,7 +2,12 @@
    @import "tailwindcss";
    @plugin "tailwindcss-primeui";
    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        :root{
+        
+ html{
+  overflow-x: hidden;
+ }
+   
+   :root{
             --my-prim-bg: #0d6efd;
             --my-sec-bg: #fbad19;
             --my-hover-prim-bg: #0b5dd9;
@@ -11,6 +16,7 @@
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
+            width: 100%;
         }
         .hero-gradient {
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);

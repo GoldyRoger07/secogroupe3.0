@@ -13,6 +13,7 @@ import { ButtonModule } from 'primeng/button';
 import { Carousel } from 'primeng/carousel';
 import { Tag } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
+import { Container } from "../../components/container/container";
 
 interface Product {
     id: string,
@@ -35,7 +36,7 @@ interface CardService {
 
 @Component({
   selector: 'app-home-page',
-  imports: [Carousel, CommonModule, ButtonModule, CardModule, Navbar, Footer, ReactiveFormsModule, MySlider, MyHero, Select, Tag],
+  imports: [Carousel, CommonModule, ButtonModule, CardModule, Navbar, Footer, ReactiveFormsModule, MySlider, MyHero, Select, Tag, Container],
   templateUrl: './home-page.html',
   styles: `
   .hero-section{
@@ -98,19 +99,22 @@ interface CardService {
 })
 export default class HomePage implements OnInit{
 
-  products: Product[] = [
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5
-    }
+  clients = [
+    { size: "w-34", url: "img/clients/brana_logo.png" },
+    { size: "w-54", url: "img/clients/Grand-Sierra-Resort-Logo.png" },
+    { size: "w-54", url: "img/clients/grand_geneva_logo.jpeg" },
+    { size: "w-44", url: "img/clients/Kalahari_Resorts_Horiz_Blue-768x257.avif" },
+    { size: "w-34", url: "img/clients/logo_barbancourt.jpg" },
+    { size: "w-34", url: "img/clients/logo_best_western.png" },
+    { size: "w-34", url: "img/clients/logo_boomtown_resort.webp" },
+    { size: "w-34", url: "img/clients/logo_camelback_resort.png" },
+    { size: "w-34", url: "img/clients/logo_chulavista.png" },
+    { size: "w-34", url: "img/clients/logo_dells_resort.png" },
+    { size: "w-54", url: "img/clients/logo_fne.webp" },
+    { size: "w-34", url: "img/clients/logo_ihsi.png" },
+    { size: "w-34", url: "img/clients/logo_marriott.png" },
+    { size: "w-44", url: "img/clients/logo_monarch_resort.png"}
+    
   ]
 
   maps = [
@@ -191,7 +195,7 @@ export default class HomePage implements OnInit{
      this.responsiveOptions = [
             {
                 breakpoint: '1400px',
-                numVisible: 2,
+                numVisible: 4,
                 numScroll: 1
             },
             {

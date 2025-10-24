@@ -1,6 +1,6 @@
 
 
-<nav class="navbar" [ngStyle]="myStyle">
+<nav class="navbar " [ngStyle]="myStyle">
   <my-container>
     <div class="flex justify-between items-center p-3 lg:px-0">
         <div class="navbar-left">
@@ -10,10 +10,12 @@
         <ul class="navbar-links desktop-menu">
           @for(link of links; track $index){
               <li>
-                  <link-item [link]="link" color="var(--my-sec-bg)"/>
+                  <link-item [link]="link" hoverTextColor="var(--my-sec-bg)" [textColor]="config.textColor"/>
               </li>
           }
-          
+            <li>
+              <p-select [options]="languages" [(ngModel)]="selectedLanguage"  optionLabel="name" placeholder="Select a Language" class="w-full md:w-30" />
+            </li>
         </ul>
     </div>
   </my-container>
@@ -25,7 +27,7 @@
     </div>
   }
 
-  <div class="mobile-toolbar" #toolbar>
+  <div class="mobile-toolbar " #toolbar>
     <img [src]="config.logo" alt="logo" class="logo" />
 
     <!-- <button (click)="onClickMenuBtn">
@@ -41,9 +43,13 @@
   <ul class="mobile-menu" #mobileMenu>
     @for(link of links; track $index){
         <li>
-            <link-item [link]="link" color="yellow"/>
+            <link-item [link]="link" hoverTextColor="var(--my-sec-bg)" textColor="red"/>
         </li>
+
     }
+    <li>
+      <p-select [options]="languages"   [(ngModel)]="selectedLanguage" optionLabel="name" placeholder="Select a Language" class="w-full md:w-30" />
+    </li>
   </ul>
     
 </nav>

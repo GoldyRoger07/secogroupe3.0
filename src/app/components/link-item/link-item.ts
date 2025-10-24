@@ -10,8 +10,10 @@ import { CommonModule } from '@angular/common';
   styles: `
     a{
       --link-color: red;
+      --text-color: #020202;
       text-decoration: none;
       transition: all 250ms ease-out;
+      color: --text-color;
     }
 
     
@@ -20,7 +22,10 @@ import { CommonModule } from '@angular/common';
 export class LinkItem {
   
   @Input()
-  color = "red"
+  hoverTextColor = "red"
+
+  @Input()
+  textColor = "#020202"
 
   @Input({required: true})
   link!:Link

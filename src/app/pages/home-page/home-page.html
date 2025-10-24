@@ -82,19 +82,22 @@
 
     <!-- new Section -->
     <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            
+        </div> -->
+        <my-container>
+                <div class="grid lg:grid-cols-2 gap-16 items-center px-5">
                 <div class="transform transition-all duration-1000 translate-x-0 opacity-100">
                     <img alt="Partnership approach"  class="image-reveal rounded-lg shadow-2xl object-cover w-full h-96" loading="lazy" src="img/services/new/compressed/meeting_with_partener_or_client.webp">
                 </div>
                 <div class="space-y-8 transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
-                    <div class="space-y-6" data-aos="fade-up" data-aos-duration="1500">
-                        <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Partnership is at the core of our business.</h2>
-                        <p class="text-lg text-gray-600 leading-relaxed">Your facility is a vital asset, and your vision is our blueprint. At SECO GROUPE INC, we work alongside you to transform your most critical infrastructure into modern, efficient, and healthy environments.</p>
-                        <p class="text-lg text-gray-600 leading-relaxed">We provide a single point of contact and accountability, making it simple for you to achieve your goals while focusing on what matters most.</p>
+                    <div class="space-y-6 auto-show" >
+                        <h2 class="text-4xl font-bold text-gray-900 leading-tight">Partnership is at the core of our business.</h2>
+                        <p class="text-md text-gray-600 leading-relaxed">Your facility is a vital asset, and your vision is our blueprint. At SECO GROUPE INC, we work alongside you to transform your most critical infrastructure into modern, efficient, and healthy environments.</p>
+                        <p class="text-md text-gray-600 leading-relaxed">We provide a single point of contact and accountability, making it simple for you to achieve your goals while focusing on what matters most.</p>
                     </div>
                     <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-(--my-sec-bg) rounded-full flex items-center justify-center">
+                        <div class="w-12 h-12 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center">
                             <i class="ri-handshake-line text-white text-xl">
 
                             </i>
@@ -106,23 +109,27 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </my-container>
     </section>
 
     <!-- Map Section -->
      <section class="py-20 bg-white auto-show" id="portfolio">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
+        <!-- <div class="container mx-auto px-6">
+            
+            
+        </div> -->
+        <my-container>
+            <div class="text-center mb-16 px-5">
                 <h2 class="text-3xl font-bold mb-4" data-aos="fade-up" data-aos-duration="1500">Where <span class="text-(--my-sec-bg)">We</span> Operate</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1500">
                     We deliver our premium services across multiple countries worldwide
                 </p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-5">
                 <!-- Project 1 -->
                  @for (map of maps; track $index) {
                     <div  class="group relative overflow-hidden rounded-xl shadow-lg border-y-4 border-[var(--my-sec-bg)]">
-                        <img [src]="map.imgUrl" loading="lazy" alt="E-commerce Platform" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110 mb-4">
+                        <img [src]="map.imgUrl" loading="lazy" alt="E-commerce Platform" class="w-full h-54 object-cover transition duration-500 group-hover:scale-110 mb-4">
                         <!-- <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div> -->
                         <div class="absolute bottom-0 left-0 px-6 py-3 ">
                             <h3 class="text-xl text-gray-500 font-bold mb-1">{{map.title}}</h3>
@@ -142,8 +149,7 @@
                 <!-- Project 3 -->
                 
             </div>
-            
-        </div>
+        </my-container>
     </section>
 
     <!-- About Section -->
@@ -192,10 +198,14 @@
 <!-- new Section -->
 
 <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-0 min-[391px]:px-3 md:px-6 lg:px-8">
+    <!-- <div class="max-w-7xl mx-auto px-0 min-[391px]:px-3 md:px-6 lg:px-8">
+        
+    </div> -->
+
+    <my-container>
         <div class="text-center mb-16 px-3 min-[391px]:px-0 transform transition-all duration-1000 translate-y-0 opacity-100">
-            <h2 data-aos="fade-up" data-aos-duration="1500" class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Expertise designed to meet your needs.</h2>
-            <p  data-aos="fade-up" data-aos-duration="1500" class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">Your facility's unique challenges require a tailored approach. Our diverse team at SECO GROUPE INC provides comprehensive, integrated services that ensure your building performs at its best throughout its entire lifecycle.</p>
+            <h2 data-aos="fade-up" data-aos-duration="1500" class="text-4xl font-bold text-gray-900 mb-6">Expertise designed to meet your needs.</h2>
+            <p  data-aos="fade-up" data-aos-duration="1500" class="text-md text-gray-600 max-w-xl mx-auto leading-relaxed">Your facility's unique challenges require a tailored approach. Our diverse team at SECO GROUPE INC provides comprehensive, integrated services that ensure your building performs at its best throughout its entire lifecycle.</p>
         </div>
         <div class="mb-20 transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
             <div class="bg-gradient-to-r from-blue-50 to-blue-100 min-[391px]:rounded-2xl p-4 md:p-8 lg:p-12">
@@ -295,8 +305,8 @@
             </div>
         </div>
     </div>
-</div>
-</div>
+        </div>
+    </my-container>
 </section>
 
     <!-- Services Section -->
@@ -407,9 +417,9 @@
             </div>
             <div class="">
                 
-             <p-carousel [value]="cardServices" [numVisible]="3" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions" autoplayInterval="3000">
+             <p-carousel [value]="cardServices" [numVisible]="4" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions" autoplayInterval="3000">
         <ng-template let-cardService #item>
-           <p-card [style]="{ overflow: 'hidden', margin: '10px', height: 'calc(100% - 20px)' }">
+           <p-card [style]="{ overflow: 'hidden', margin: '10px', height: '95%' }">
                 <ng-template #header>
                     <div class="img-container">
                         <img alt="Card" loading="lazy" class="w-full card-img" [src]="cardService.cover" />
@@ -420,7 +430,7 @@
                     <span class="font-bold text-gray-600"> {{cardService.name}}</span>    
                 </ng-template>
                 <!-- <ng-template #subtitle> Card subtitle </ng-template> -->
-                <p class="text-gray-600 min-h-[100px] ">
+                <p class="text-gray-600 max-h-[80px] overflow-hidden ">
                    {{cardService.description}}
                 </p>
                 <ng-template #footer>
@@ -434,13 +444,6 @@
     </p-carousel>   
                 
 
-               
-
-                
-
-               
-
-                
 
                 <!-- https://www.bbcleaningservice.com/wp-content/uploads/2024/07/janitorial-cleaning-services-cart.jpg -->
             </div>
@@ -449,7 +452,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-20 bg-gray-50">
+    <!-- <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 data-aos="fade-up" data-aos-duration="1500" class="text-3xl font-bold mb-4">What Our <span class="text-(--my-sec-bg)">Clients</span> Say</h2>
@@ -458,7 +461,7 @@
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
+               
                 <div data-aos="zoom-in" data-aos-duration="1500" class="bg-white p-8 rounded-xl shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -481,7 +484,7 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial 2 -->
+               
                 <div data-aos="zoom-in" data-aos-duration="1500" class="bg-white p-8 rounded-xl shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -504,7 +507,7 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial 3 -->
+                
                 <div data-aos="zoom-in" data-aos-duration="1500" class="bg-white p-8 rounded-xl shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -528,55 +531,28 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="py-20">
-        <div class="text-center mb-16">
-                <h2 data-aos="fade-up" data-aos-duration="1500" class="text-3xl font-bold mb-4">Our <span class="text-(--my-sec-bg)">Clients</span></h2>
-                <p data-aos="fade-up" data-aos-duration="1500" class="text-gray-600 max-w-2xl mx-auto">
+    <section class="pt-10 pb-40">
+        <div class="text-center mb-16 px-5">
+                <h2  class="text-3xl font-bold mb-4">Our <span class="text-(--my-sec-bg)">Clients</span></h2>
+                <p  class="text-gray-600 max-w-2xl mx-auto">
                     We are proud to collaborate with trusted partners and clients who believe in our vision.
                 </p>
             </div>
-    <div class="overflow-hidden relative" data-aos="fade-in" data-aos-duration="1500">
+    <div class="overflow-hidden relative" >
         <div class=" marquee space-x-12">
         <!-- Logos -->
-        <img loading="lazy" src="img/clients/brana_logo.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/Grand-Sierra-Resort-Logo.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/grand_geneva_logo.jpeg" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/Kalahari_Resorts_Horiz_Blue-768x257.avif" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_barbancourt.jpg" alt="Sponsor 1" class="h-16">
-        
-        <img loading="lazy" src="img/clients/logo_best_western.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_boomtown_resort.webp" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_camelback_resort.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_chulavista.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_dells_resort.png" alt="Sponsor 1" class="h-16">
-        
-        <img loading="lazy" src="img/clients/logo_fne.webp" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_ihsi.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_marriott.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_monarch_resort.png" alt="Sponsor 1" class="h-16">
+         @for (client of clients; track $index) {
 
+             <img loading="lazy" [src]="client.url" alt="Sponsor 1" class="object-contain {{client.size}}">
+         }
 
+         @for (client of clients; track $index) {
 
-        <!-- Clone des logos pour effet infini -->
-        <img loading="lazy" src="img/clients/brana_logo.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/Grand-Sierra-Resort-Logo.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/grand_geneva_logo.jpeg" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/Kalahari_Resorts_Horiz_Blue-768x257.avif" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_barbancourt.jpg" alt="Sponsor 1" class="h-16">
+             <img loading="lazy" [src]="client.url" alt="Sponsor 1" class="object-contain {{client.size}}">
+         }
         
-        <img loading="lazy" src="img/clients/logo_best_western.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_boomtown_resort.webp" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_camelback_resort.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_chulavista.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_dells_resort.png" alt="Sponsor 1" class="h-16">
-        
-        <img loading="lazy" src="img/clients/logo_fne.webp" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_ihsi.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_marriott.png" alt="Sponsor 1" class="h-16">
-        <img loading="lazy" src="img/clients/logo_monarch_resort.png" alt="Sponsor 1" class="h-16">
-
         </div>
     </div>
     </section>

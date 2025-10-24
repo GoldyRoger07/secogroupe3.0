@@ -3,19 +3,19 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
 import { ProgressiveImage } from '../progressive-image/progressive-image';
+import { Container } from '../container/container';
 // register Swiper custom elements
 register();
 
 @Component({
   selector: 'my-hero',
-  imports: [ProgressiveImage],
+  imports: [ProgressiveImage,Container],
   templateUrl: './my-hero.html',
   styleUrl: './my-hero.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class MyHero {
   imgs = [
-    "img/services/compressed/housekeeping.webp",
     "img/services/compressed/concierge.webp",
     "img/services/new/compressed/construction_worker_and_maintenance.webp",
     "img/services/new/compressed/facility_management_1.webp",
@@ -23,10 +23,8 @@ export class MyHero {
     "img/services/new/compressed/facility_manager.webp",
 
     "img/services/new/compressed/housekeeping_team.webp",
-    "img/services/new/compressed/janitorial_cleaning.webp",
     "img/services/new/compressed/janitorial_hospital.webp",
     "img/services/new/compressed/janitorial.webp",
-    "img/services/new/compressed/seco_tech_maintenance_elevator.webp",
     "img/services/compressed/security_guard.webp",
     "img/services/compressed/staffing_solution.webp"
     
