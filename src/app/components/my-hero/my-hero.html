@@ -4,7 +4,7 @@
         @for(img of imgs; track $index){
             <swiper-slide>
                 <!-- <progressive-image [imageUrl]="img" [imageSmallUrl]="imgsSmall[$index]"/> -->
-                <img [src]="img" />
+                <img [src]="img" fetchpriority="high"/>
             </swiper-slide>
 
             
