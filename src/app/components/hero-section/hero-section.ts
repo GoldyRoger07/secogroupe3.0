@@ -26,18 +26,18 @@ import { Component } from '@angular/core';
                         </clipPath>
                 </defs>
                 <g style="clip-path:url(#clip-path-right)" id="right" class="start">
-                        <image class="double-hero-image-right-05" opacity="0" href="img/services/crop/compressed/building_maintenance_2.webp" width="650" height="671" transform="translate(190 0)"></image>
+                        <image class="double-hero-image-right-05" opacity="0" href="img/services/crop/compressed/building_maintenance_2_500.webp" width="650" height="671" transform="translate(190 0)"></image>
                         <image class="double-hero-image-right-04" opacity="0" href="img/services/compressed/seco_agent_securite_en_bleu.webp" width="650" height="671" transform="translate(200 0)"></image>
-                        <image class="double-hero-image-right-03" opacity="0" href="img/services/crop/compressed/housekeeping_services.webp" width="650" height="671" transform="translate(200 0)"></image>
-                        <image class="double-hero-image-right-02" opacity="0" href="img/services/crop/compressed/janitorial.webp" width="650" height="671" transform="translate(200 0)"></image>
-                        <image class="double-hero-image-right-01" href="img/services/crop/compressed/staffing.webp" width="650" height="671" transform="translate(200 0)"></image>
+                        <image class="double-hero-image-right-03" opacity="0" href="img/services/crop/compressed/housekeeping_services_500.webp" width="650" height="671" transform="translate(200 0)"></image>
+                        <image class="double-hero-image-right-02" opacity="0" href="img/services/crop/compressed/janitorial_500.webp" width="650" height="671" transform="translate(200 0)"></image>
+                        <image class="double-hero-image-right-01" href="img/services/crop/compressed/staffing_500.webp" width="650" height="671" transform="translate(200 0)"></image>
                 </g>
                 <g style="clip-path:url(#clip-path-left)" id="left" class="start">
-                        <image class="double-hero-image-left-05" opacity="0" href="img/services/crop/compressed/security_guard_female.webp" width="650" height="671" transform="translate(-150 0)"></image>
-                        <image class="double-hero-image-left-04" opacity="0" href="img/services/crop/compressed/manager_facility.webp" width="650" height="671" transform="translate(-150 0)"></image>
-                        <image class="double-hero-image-left-03" opacity="0" href="img/services/crop/compressed/concierge.webp" width="650" height="671" transform="translate(-150 0)"></image>
-                        <image class="double-hero-image-left-02" opacity="0" href="img/services/crop/compressed/housekeeping.webp" width="650" height="671" transform="translate(-150 0)"></image>
-                        <image class="double-hero-image-left-01" href="img/services/crop/compressed/staffing_solution.webp" width="650" height="671" transform="translate(-150 0)"></image>
+                        <image class="double-hero-image-left-05" opacity="0" href="img/services/crop/compressed/security_guard_female_500.webp" width="650" height="671" transform="translate(-150 0)"></image>
+                        <image class="double-hero-image-left-04" opacity="0" href="img/services/crop/compressed/manager_facility_500.webp" width="650" height="671" transform="translate(-150 0)"></image>
+                        <image class="double-hero-image-left-03" opacity="0" href="img/services/crop/compressed/concierge_500.webp" width="650" height="671" transform="translate(-150 0)"></image>
+                        <image class="double-hero-image-left-02" opacity="0" href="img/services/crop/compressed/housekeeping_500.webp" width="650" height="671" transform="translate(-150 0)"></image>
+                        <image class="double-hero-image-left-01" href="img/services/crop/compressed/staffing_solution_500.webp" width="650" height="671" transform="translate(-150 0)"></image>
                 </g>
         </svg>
         

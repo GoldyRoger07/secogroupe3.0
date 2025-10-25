@@ -9,24 +9,24 @@ register();
 
 @Component({
   selector: 'my-hero',
-  imports: [ProgressiveImage,Container],
+  imports: [Container],
   templateUrl: './my-hero.html',
   styleUrl: './my-hero.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class MyHero {
   imgs = [
-    "img/services/compressed/concierge.webp",
-    "img/services/new/compressed/construction_worker_and_maintenance.webp",
-    "img/services/new/compressed/facility_management_1.webp",
-    "img/services/new/compressed/facility_management.webp",
-    "img/services/new/compressed/facility_manager.webp",
+    "img/services/new/compressed/construction_worker_and_maintenance_1440.webp",
+    "img/services/new/compressed/facility_management_1_1440.webp",
+    "img/services/new/compressed/facility_management_1440.webp",
+    "img/services/new/compressed/facility_manager_1440.webp",
+    "img/services/compressed/concierge_1440.webp",
 
-    "img/services/new/compressed/housekeeping_team.webp",
-    "img/services/new/compressed/janitorial_hospital.webp",
-    "img/services/new/compressed/janitorial.webp",
-    "img/services/compressed/security_guard.webp",
-    "img/services/compressed/staffing_solution.webp"
+    "img/services/new/compressed/housekeeping_team_1440.webp",
+    "img/services/new/compressed/janitorial_hospital_1440.webp",
+    "img/services/new/compressed/janitorial_1440.webp",
+    "img/services/compressed/security_guard_1440.webp",
+    "img/services/compressed/staffing_solution_1440.webp"
     
   ];
 

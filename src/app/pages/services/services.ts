@@ -35,9 +35,9 @@ export default class Services {
     color: 'bg-gradient-to-r from-blue-50 to-blue-100',
     description: 'Beyond simply cleaning, our services ensure a healthy, productive, and welcoming environment for your employees and clients',
     imageUrl: [
-      'img/services/compressed/housekeeping.webp',
-      'img/services/compressed/housekeeping.webp',
-      'img/services/compressed/housekeeping1.webp'
+      'img/services/compressed/housekeeping_services_1440.webp',
+      'img/services/compressed/housekeeping_services_1440.webp',
+      'img/services/compressed/housekeeping1_1440.webp'
     ],
     subServices: [
       {
@@ -62,7 +62,7 @@ export default class Services {
     icon: 'ri-building-2-line',
     color: 'bg-gradient-to-r from-gray-50 to-gray-100',
     description: 'Protecting your investment requires proactive and expert maintenance. We keep your infrastructure running smoothly and efficiently.',
-    imageUrl: ['img/services/compressed/building_maintenance.webp','img/services/compressed/building_maintenance_2.webp','img/services/new/compressed/building_maintenance.webp'],
+    imageUrl: ['img/services/compressed/building_maintenance.webp','img/services/compressed/building_maintenance_2_1440.webp','img/services/new/compressed/building_maintenance_1440.webp'],
     subServices: [
       {
         title: 'Preventative Maintenance',
@@ -92,9 +92,9 @@ export default class Services {
     color: 'bg-gradient-to-r from-blue-50 to-blue-100',
     description: 'When you need specialized help fast, our staffing division provides vetted, trained, and reliable personnel to fill essential roles within your facility or organization.',
     imageUrl: [
-      'img/services/new/compressed/staffing.webp',
-      'img/services/new/compressed/staffing_foods_worker.webp',
-      'img/services/compressed/staffing_pic_for_production.webp'
+      'img/services/new/compressed/staffing_1440.webp',
+      'img/services/new/compressed/staffing_foods_worker_1440.webp',
+      'img/services/compressed/staffing_pic_for_production_1440.webp'
     ],
     subServices: [
       {
@@ -121,9 +121,9 @@ export default class Services {
     color: 'bg-gradient-to-r from-gray-50 to-gray-100',
     description: 'Elevate the experience for residents, tenants, and visitors with professional, hospitable, and highly effective concierge support.',
     imageUrl: [
-      'img/services/compressed/concierge.webp',
-      'img/services/compressed/concierge.webp',
-      'img/services/compressed/concierge.webp'],
+      'img/services/compressed/concierge_1440.webp',
+      'img/services/compressed/concierge_1440.webp',
+      'img/services/compressed/concierge_1440.webp'],
     subServices: [
       {
         title: 'First Impressions',
@@ -148,9 +148,9 @@ export default class Services {
     color: 'bg-gradient-to-r from-blue-50 to-blue-100',
     description: 'Protecting your assets, people, and property is our paramount commitment. Our security experts provide a powerful blend of technology and human presence.',
     imageUrl: [
-      'img/services/compressed/bg_seco_securite.webp',
-      'img/services/compressed/security_guard.webp',
-      'img/services/compressed/security_guard_female.webp'],
+      'img/services/compressed/bg_seco_securite_1440.webp',
+      'img/services/compressed/security_guard_1440.webp',
+      'img/services/compressed/security_guard_female_1440.webp'],
     subServices: [
       {
         title: '24/7 Protection',
