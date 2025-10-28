@@ -142,8 +142,8 @@ export class Navbar implements AfterViewInit{
     {label: "Home", path: '/home'},
     {label: "About", path: '/about-us'},
     {label: "Services", path: '/services'},
-    {label: "Contact", path: '/contact'},
-    {label: "Mission", path: '/mission'}
+    {label: "Contact", path: '/contact'}
+    // {label: "Mission", path: '/mission'}
   ]
 
    languages: SelectType[] = [
