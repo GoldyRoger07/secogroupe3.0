@@ -13,10 +13,10 @@ for img in *.webp; do
   extension="${img##*.}"
 
   # Définit le nom du fichier de sortie
-  output="${filename}_900.${extension}"
+  output="${filename}_500.${extension}"
 
   # Exécute la commande ffmpeg pour créer une version réduite
-  ffmpeg -i "$img" -vf scale=900:-1 "$output" -y
+  ffmpeg -i "$img" -vf scale=500:-1 "$output" -y
 
   echo "✅ $img → $output"
 done
