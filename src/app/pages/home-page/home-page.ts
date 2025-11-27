@@ -14,6 +14,7 @@ import { Carousel } from 'primeng/carousel';
 import { Tag } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
 import { Container } from "../../components/container/container";
+import { NativeSlider } from "../../components/native-slider/native-slider";
 
 interface Product {
     id: string,
@@ -36,7 +37,7 @@ interface CardService {
 
 @Component({
   selector: 'app-home-page',
-  imports: [Carousel, CommonModule, ButtonModule, CardModule, Navbar, Footer, ReactiveFormsModule, MySlider, MyHero, Select, Container],
+  imports: [Carousel, CommonModule, ButtonModule, CardModule, Navbar, Footer, ReactiveFormsModule, MySlider, MyHero, Select, Container, NativeSlider],
   templateUrl: './home-page.html',
   styles: `
   .hero-section{
