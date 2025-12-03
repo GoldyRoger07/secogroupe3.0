@@ -66,7 +66,7 @@
                 
                 <div class="space-y-8 transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
                     <div class="space-y-6" data-aos="fade-up" data-aos-duration="1500">
-                        <h2 class="lg:text-4xl font-bold text-gray-900 leading-tight">Your Trusted Partner in Facility and Staff Management</h2>
+                        <h2 class="lg:text-4xl font-bold text-gray-700 leading-tight">Your Trusted Partner in Facility and Staff Management</h2>
                         <p class="text-md text-gray-600 leading-relaxed">SECOGROUPE INC is a full-service provider committed to maintaining the functionality, safety, and pristine condition of your property.</p>
                         <p class="text-md text-gray-600 leading-relaxed">From the foundational cleanliness of
 Janitorial services to the expertise of Security Experts, we deliver integrated solutions that
@@ -102,7 +102,7 @@ save you time, reduce overhead, and ensure seamless operations.</p>
 </div> -->
     <my-container>
         <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4" >Our <span class="text-(--my-sec-bg)">Comprehensive </span>Services</h2>
+                <h2 class="text-3xl font-bold mb-4 text-gray-700" >Our <span class="text-(--my-sec-bg)">Comprehensive </span>Services</h2>
                 
         </div>
         @for (serviceSection of serviceSections; track $index) {
@@ -115,9 +115,9 @@ save you time, reduce overhead, and ensure seamless operations.</p>
                             <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
                                 <i class="{{serviceSection.icon}} text-white text-2xl"></i>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">{{serviceSection.title}}</h3>
+                            <h3 class="text-3xl font-bold text-gray-700">{{serviceSection.title}}</h3>
                         </div>
-                        <p  class="text-lg text-gray-700 mb-8 leading-relaxed">{{serviceSection.description}}</p>
+                        <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{serviceSection.description}}</p>
                     </div>
                     <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
                         <my-slider [images]="serviceSection.imageUrl"/>
@@ -132,9 +132,9 @@ save you time, reduce overhead, and ensure seamless operations.</p>
                                 <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
                                     <i class="{{serviceSection.icon}} text-white text-2xl"></i>
                                 </div>
-                                <h3 class="text-3xl font-bold text-gray-900">{{serviceSection.title}}</h3>
+                                <h3 class="text-3xl font-bold text-gray-700">{{serviceSection.title}}</h3>
                             </div>
-                            <p  class="text-lg text-gray-700 mb-8 leading-relaxed">{{serviceSection.description}}</p>
+                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{serviceSection.description}}</p>
                         </div>
                     
                     }
@@ -146,7 +146,7 @@ save you time, reduce overhead, and ensure seamless operations.</p>
                             <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                                 <i class="{{subService.icon}} text-(--my-sec-bg) text-xl"></i>
                             </div>
-                            <h4 class="font-semibold text-gray-900 mb-2">{{subService.title}}</h4>
+                            <h4 class="font-semibold text-gray-700 mb-2">{{subService.title}}</h4>
                             <p class="text-gray-600 text-sm leading-relaxed">{{subService.description}}</p>
                         </div>
                     }
@@ -183,8 +183,8 @@ save you time, reduce overhead, and ensure seamless operations.</p>
 
     <section class="py-20">
         <div class="text-center mb-16">
-                <h2 data-aos="fade-up" data-aos-duration="1500" class="text-3xl font-bold mb-4">Our <span class="text-(--my-sec-bg)">Clients</span></h2>
-                <p data-aos="fade-up" data-aos-duration="1500" class="text-gray-600 max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold mb-4 text-gray-700">Our <span class="text-(--my-sec-bg)">Clients</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
                     We are proud to collaborate with trusted partners and clients who believe in our vision.
                 </p>
             </div>

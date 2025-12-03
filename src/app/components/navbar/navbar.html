@@ -7,7 +7,7 @@
           <img [src]="config.logo" alt="logo" class="logo" />
         </div>
 
-        <ul class="navbar-links desktop-menu">
+        <ul class="navbar-links desktop-menu text-gray-600">
           @for(link of links; track $index){
               <li>
                   <link-item [link]="link" hoverTextColor="var(--my-sec-bg)" [textColor]="config.textColor"/>
