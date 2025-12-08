@@ -7,6 +7,7 @@ import { LinkItem } from "../link-item/link-item";
 import { HamburgerBtn } from "../hamburger-btn/hamburger-btn";
 import { SelectType } from '../../models/SelectType';
 import { Select } from "primeng/select";
+
 export class NavbarConfig{
   // logo?: string;
   // logoWidth?: string;

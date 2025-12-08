@@ -15,6 +15,7 @@ import { Tag } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
 import { Container } from "../../components/container/container";
 import { NativeSlider } from "../../components/native-slider/native-slider";
+import { Dialog } from 'primeng/dialog';
 
 interface Product {
     id: string,
@@ -37,7 +38,7 @@ interface CardService {
 
 @Component({
   selector: 'app-home-page',
-  imports: [Carousel, CommonModule, ButtonModule, CardModule, Navbar, Footer, ReactiveFormsModule, MySlider, MyHero, Select, Container, NativeSlider],
+  imports: [Dialog,Carousel, CommonModule, ButtonModule, CardModule, Navbar, Footer, ReactiveFormsModule, MySlider, MyHero, Select, Container, NativeSlider],
   templateUrl: './home-page.html',
   styles: `
   .hero-section{
@@ -99,6 +100,8 @@ interface CardService {
   `
 })
 export default class HomePage implements OnInit{
+
+  visible = false
 
   clients = [
     { size: "w-34", url: "img/clients/brana_logo.png" },
@@ -215,5 +218,9 @@ export default class HomePage implements OnInit{
                 numScroll: 1
             }
         ]
+  }
+
+  showDialog() {
+        this.visible = true;
   }
 }
