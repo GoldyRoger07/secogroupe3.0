@@ -1,52 +1,213 @@
  <my-navbar/>
-<section>
-    <my-container>
-        <div class="flex items-center  justify-between">
-            <img src="img/maps/compressed/usa_map_512.webp" alt="">
-            <div class="flex flex-col gap-3">
-                <h2 class="bg-(--my-sec-bg) text-white py-2 px-3 rounded font-bold text-2xl">Liste des services disponible aux USA</h2>
-                <div class="grid grid-cols-3 gap-5">
-                    <div class="bg-gray-100 text-(--my-sec-bg) text-xl py-2 px-3 rounded font-bold flex flex-col items-center gap-2">
-                        <img src="img/logos/bouclier-securise.png" alt="">
-                        Seco Securite
-                    </div>
-                    <div class="bg-gray-100 text-(--my-sec-bg) text-xl py-2 px-3 rounded font-bold flex flex-col items-center gap-2">
-                        <img src="img/logos/bouclier-securise.png" alt="">
-                        Seco Securite
-                    </div>
-                    <div class="bg-gray-100 text-(--my-sec-bg) text-xl py-2 px-3 rounded font-bold flex flex-col items-center gap-2">
-                       <img src="img/logos/bouclier-securise.png" alt="">
-                        Seco Securite
-                    </div>
-                    <div class="bg-gray-100 text-(--my-sec-bg) text-xl py-2 px-3 rounded font-bold flex flex-col items-center gap-2">
-                       <img src="img/logos/bouclier-securise.png" alt="">
-                        Seco Securite
-                    </div>
-                    <div class="bg-gray-100 text-(--my-sec-bg) text-xl py-2 px-3 rounded font-bold flex flex-col items-center gap-2">
-                       <img src="img/logos/bouclier-securise.png" alt="">
-                        Seco Securite
-                    </div>
-                    <div class="bg-gray-100 text-(--my-sec-bg) text-xl py-2 px-3 rounded font-bold flex flex-col items-center gap-2">
-                       <img src="img/logos/bouclier-securise.png" alt="">
-                        Seco Securite
-                    </div>
-                    <div class="bg-gray-100 text-(--my-sec-bg) text-xl py-2 px-3 rounded font-bold flex flex-col items-center gap-2">
-                       <img src="img/logos/bouclier-securise.png" alt="">
-                        Seco Securite
-                    </div>
-                    <div class="bg-gray-100 text-(--my-sec-bg) text-xl py-2 px-3 rounded font-bold flex flex-col items-center gap-2">
-                       <img src="img/logos/bouclier-securise.png" alt="">
-                        Seco Securite
-                    </div>
-                    <div class="bg-gray-100 text-(--my-sec-bg) text-xl py-2 px-3 rounded font-bold flex flex-col items-center gap-2">
-                       <img src="img/logos/bouclier-securise.png" alt="">
-                        Seco Securite
-                    </div>
-                </div>
-                </div>
-            </div>
 
-        </my-container>
+ <!-- services-country.component.html -->
+<!-- <div class="max-w-6xl mx-auto px-4 py-8">
+  
+</div> -->
+
+<section class="py-10">
+    <my-container>
+      <!-- services-country.component.html -->
+<div class="">
+  <!-- Section header -->
+  <header class="mb-6">
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-700">Services par pays</h2>
+    <p class="mt-2 text-sm text-gray-600">Clique sur un pays pour afficher les services disponibles sous forme de cartes. Chaque carte décrit le service, ses points forts et propose un accès rapide pour demander un devis.</p>
+  </header>
+
+  <!-- Country selector -->
+  <nav aria-label="Sélection des pays" class="mb-6">
+    <ul class="flex flex-wrap gap-2">
+      <li *ngFor="let c of countries">
+        <button
+          type="button"
+          (click)="selectCountry(c.code)"
+          [attr.aria-pressed]="selected === c.code"
+          class="group inline-flex items-center gap-2 px-3 py-2 rounded-full border transition-shadow duration-200
+                 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+          [ngClass]="selected === c.code ? 'bg-gradient-to-r from-orange-600 to-yellow-400 text-white shadow-lg' : 'bg-white text-gray-700 border-gray-200 hover:shadow-sm'">
+          <!-- <span class="text-lg" aria-hidden="true">{{ c.flag }}</span> -->
+          <span class="text-sm font-medium">{{ c.name }}</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Services grid -->
+  <main>
+    <div *ngIf="(servicesByCountry[selected] && servicesByCountry[selected].length) else emptyState">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article *ngFor="let svc of servicesByCountry[selected]" class="bg-white rounded-2xl p-5 border shadow-sm hover:shadow-md transition-shadow duration-200">
+          <header class="flex items-start justify-between gap-4 mb-3">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-700">{{ svc.title }}</h3>
+              <p class="text-sm text-gray-500 mt-1">{{ svc.short }}</p>
+            </div>
+            <div class="text-xs font-medium px-2 py-1 rounded-lg bg-gray-100 text-gray-700">{{ svc.category }}</div>
+          </header>
+
+          <p class="text-sm text-gray-600 mb-4">{{ svc.description }}</p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span *ngFor="let t of svc.tags" class="text-xs px-2 py-1 rounded-full border bg-gray-50 text-gray-600">{{ t }}</span>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <a href="#" (click)="openProject(svc, $event)" class="text-sm font-semibold inline-flex items-center gap-2 text-gray-700">
+              Voir les détails
+              <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+
+            <button (click)="contactForService(svc)" class="px-3 py-2 rounded-full bg-orange-500 text-white text-sm font-medium hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+              Demander un devis
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- empty state -->
+    <ng-template #emptyState>
+      <div class="rounded-xl border border-dashed border-gray-200 p-8 text-center">
+        <p class="text-gray-500">Aucun service disponible pour ce pays pour le moment.</p>
+      </div>
+    </ng-template>
+  </main>
+
+  <!-- modal simple (hidden by default) -->
+  <div *ngIf="activeService" class="fixed inset-0 z-40 flex items-center justify-center px-4 py-6">
+    <div class="absolute inset-0 bg-black/40" (click)="closeModal()" aria-hidden="true"></div>
+    <section role="dialog" aria-modal="true" aria-labelledby="modal-title" class="relative bg-white rounded-2xl max-w-2xl w-full p-6 shadow-xl">
+      <header class="flex items-start justify-between">
+        <h3 id="modal-title" class="text-xl font-bold text-gray-700">{{ activeService.title }}</h3>
+        <button (click)="closeModal()" class="text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Fermer la fenêtre">
+          ✕
+        </button>
+      </header>
+
+      <div class="mt-4 text-sm text-gray-600">
+        <p>{{ activeService.description }}</p>
+        <div class="mt-4">
+          <h4 class="text-sm font-medium text-gray-800 mb-2">Points forts</h4>
+          <ul class="list-disc pl-5 text-gray-600">
+            <li *ngFor="let d of activeService.details">{{ d }}</li>
+          </ul>
+        </div>
+
+        <div *ngIf="activeService.localNotes" class="mt-4 text-xs text-gray-500">
+          <strong>Note locale :</strong> {{ activeService.localNotes }}
+        </div>
+      </div>
+
+      <footer class="mt-6 flex justify-end gap-3">
+        <button (click)="closeModal()" class="px-3 py-2 rounded-md border bg-white text-gray-700">Retour</button>
+        <button (click)="contactForService(activeService)" class="px-4 py-2 rounded-md bg-indigo-600 text-white">Demander un devis</button>
+      </footer>
     </section>
+  </div>
+</div>
+
+      <!-- Section header -->
+      <!-- <header class="mb-6">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-700">Services par pays</h2>
+        <p class="mt-2 text-sm text-gray-600">Sélectionne un pays pour voir les services disponibles. Les cartes sont adaptatives et interactives.</p>
+      </header> -->
+    
+      <!-- Country selector -->
+      <!-- <nav aria-label="Sélection des pays" class="mb-6">
+        <ul class="flex flex-wrap gap-2">
+          <li *ngFor="let c of countries">
+            <button
+              type="button"
+              (click)="selectCountry(c.code)"
+              [attr.aria-pressed]="selected === c.code"
+              class="group inline-flex items-center gap-2 px-3 py-2 rounded-full border transition-shadow duration-200
+                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+                    motion-safe:transform motion-safe:transition-transform"
+              [ngClass]="selected === c.code ? 'bg-gradient-to-r from-indigo-600 to-cyan-400 text-white shadow-lg' : 'bg-white text-gray-700 border-gray-200 hover:shadow-sm'">
+              
+              <span class="text-lg" aria-hidden="true">{{ c.flag }}</span>
+              <span class="text-sm font-medium">{{ c.name }}</span>
+            </button>
+          </li>
+        </ul>
+      </nav> -->
+    
+      <!-- Services grid -->
+      <!-- <main>
+        <div *ngIf="(servicesByCountry[selected] && servicesByCountry[selected].length) else emptyState">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article *ngFor="let svc of servicesByCountry[selected]" class="bg-white rounded-2xl p-5 border shadow-sm hover:shadow-md transition-shadow duration-200">
+              <header class="flex items-start justify-between gap-4 mb-3">
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-700">{{ svc.title }}</h3>
+                  <p class="text-sm text-gray-600 mt-1">{{ svc.short }}</p>
+                </div>
+                <div class="text-xs font-medium px-2 py-1 rounded-lg bg-gray-100 text-gray-700">{{ svc.level }}</div>
+              </header>
+    
+              <p class="text-sm text-gray-600 mb-4">{{ svc.description }}</p>
+    
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span *ngFor="let t of svc.tags" class="text-xs px-2 py-1 rounded-full border bg-gray-50 text-gray-600">{{ t }}</span>
+              </div>
+    
+              <div class="flex items-center justify-between">
+                <a href="#" (click)="openProject(svc, $event)" class="text-sm font-semibold inline-flex items-center gap-2 text-gray-700">
+                  Voir les détails
+                  <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+    
+                <button (click)="contactForService(svc)" class="px-3 py-2 rounded-full bg-indigo-600 text-white text-sm font-medium hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Demander un devis
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+    
+        
+        <ng-template #emptyState>
+          <div class="rounded-xl border border-dashed border-gray-200 p-8 text-center">
+            <p class="text-gray-600">Aucun service disponible pour ce pays pour le moment.</p>
+          </div>
+        </ng-template>
+      </main> -->
+    
+      
+      <!-- <div *ngIf="activeService" class="fixed inset-0 z-40 flex items-center justify-center px-4 py-6">
+        <div class="absolute inset-0 bg-black/40" (click)="closeModal()" aria-hidden="true"></div>
+        <section role="dialog" aria-modal="true" aria-labelledby="modal-title" class="relative bg-white rounded-2xl max-w-2xl w-full p-6 shadow-xl">
+          <header class="flex items-start justify-between">
+            <h3 id="modal-title" class="text-xl font-bold text-gray-700">{{ activeService.title }}</h3>
+            <button (click)="closeModal()" class="text-gray-500 hover:text-gray-600 focus:outline-none" aria-label="Fermer la fenêtre">
+              ✕
+            </button>
+          </header>
+    
+          <div class="mt-4 text-sm text-gray-600">
+            <p>{{ activeService.description }}</p>
+            <div class="mt-4">
+              <h4 class="text-sm font-medium text-gray-700 mb-2">Détails</h4>
+              <ul class="list-disc pl-5 text-gray-600">
+                <li *ngFor="let d of activeService.details">{{ d }}</li>
+              </ul>
+            </div>
+          </div>
+    
+          <footer class="mt-6 flex justify-end gap-3">
+            <button (click)="closeModal()" class="px-3 py-2 rounded-md border bg-white text-gray-700">Retour</button>
+            <button (click)="contactForService(activeService)" class="px-4 py-2 rounded-md bg-indigo-600 text-white">Demander un devis</button>
+          </footer>
+        </section>
+      </div> -->
+    </my-container>
+</section>
+
+
 <app-footer/>
                    
