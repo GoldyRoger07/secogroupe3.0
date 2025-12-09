@@ -1,11 +1,69 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { register } from 'swiper/element';
+
+// register Swiper custom elements
+register();
+
+interface Data{
+  title: string;
+  description: string;
+  cover: string;
+}
 
 @Component({
   selector: 'native-slider',
   imports: [],
   templateUrl: './native-slider.html',
-  styleUrl: './native-slider.css'
+  styleUrl: './native-slider.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class NativeSlider {
-
+    datas: Data[] = [
+      {
+        title: 'Resorts & Casinos',
+        description: 'Premium services tailored for hospitality and gaming venues, ensuring exceptional guest experiences and operational excellence.',
+        cover: 'https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?q=80&amp;w=775&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      },
+      {
+        title: 'Healthcare',
+        description: 'Specialized solutions for medical facilities, prioritizing safety, compliance, and patient-centered care environments.',
+        cover: 'https://images.unsplash.com/photo-1758691463203-cce9d415b2b5?q=80&amp;w=1032&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      },
+      {
+        title: 'Senior Living',
+        description: 'Compassionate care and support services designed to enhance quality of life for senior residents and their families.',
+        cover: 'https://plus.unsplash.com/premium_photo-1721296251780-51cbf620c505?q=80&amp;w=872&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      },
+      {
+        title: 'Multi-Family, HOA & Commercial Buildings',
+        description: 'Comprehensive management and maintenance for residential communities and commercial properties of all sizes.',
+        cover: 'https://images.unsplash.com/photo-1614969263964-f381e32b337d?q=80&amp;w=1031&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      },
+      {
+        title: 'Aviation',
+        description: 'Professional services for airports and aviation facilities, maintaining high standards of safety and efficiency.',
+        cover: 'https://plus.unsplash.com/premium_photo-1661962354730-cda54fa4f9f1?q=80&amp;w=870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      },
+      {
+        title: 'Country Clubs',
+        description: 'Elite services for private clubs, delivering excellence in amenities, grounds management, and member satisfaction.',
+        cover: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&amp;w=870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      },
+      {
+        title: 'Specialized Staffing Solutions for Food Manufacturing',
+        description: `SECO Group understands the unique demands of food production facilities, where quality,
+                                    safety, and efficiency are paramount. We provide reliable staffing solutions tailored
+                                    specifically for food manufacturing plants, supplying skilled workers who are trained in food
+                                    safety protocols, HACCP standards, and Good Manufacturing Practices (GMP). Whether
+                                    you need production line workers, packaging specialists, quality control inspectors,
+                                    sanitation crews, or warehouse personnel, our pre-screened candidates are ready to meet
+                                    your operational needs. We handle the complexities of compliance, background checks, and
+                                    safety certifications, allowing you to focus on maintaining production schedules and meeting
+                                    customer demands. With flexible staffing options—from temporary surge support during
+                                    peak seasons to temp-to-hire and direct placement—SECO Group becomes your trusted
+                                    partner in building a workforce that keeps your food plant running smoothly, safely, and
+                                    efficiently`,
+        cover: '/img/services/new/compressed/staffing_foods_worker_1440.webp'
+      }
+    ]
 }

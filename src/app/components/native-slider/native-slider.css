@@ -84,3 +84,17 @@
         flex: 0 0 100%;
     }
 } */
+
+swiper-container {
+    width: 100%;
+    height: calc(100vh - 120px);
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

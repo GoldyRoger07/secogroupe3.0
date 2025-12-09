@@ -1,13 +1,21 @@
-<div class="carousel">
-                    <div class="card h-[500px] overflow-hidden col-span-6 rounded-xl bg-cover bg-center " style="background-image: url('https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?q=80&amp;w=775&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-                        <div class="text-white text-center w-full h-full flex flex-col gap-2 items-start justify-end py-5 bg-gradient-to-t from-black to-transparent">
-                            <div class="p-4 rounded-xl text-start">
-                                <h2 class="text-4xl font-bold text-shadow-xs  mb-2">Resorts &amp; Casinos</h2>
-                                <p class="text-shadow-xs "> Premium services tailored for hospitality and gaming venues, ensuring exceptional guest experiences and operational excellence. </p>
+<swiper-container class="mySwiper" pagination="true" pagination-clickable="true"  space-between="30"
+    centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="true">
+
+                @for (data of datas; track $index) {
+                    <swiper-slide>
+
+                        <div class="card h-[500px] overflow-hidden col-span-6 rounded-xl bg-cover bg-center " style="background-image: url('{{data.cover}}')">
+                            <div class="text-white text-center w-full h-full flex flex-col gap-2 items-start justify-end py-5 bg-gradient-to-t from-black to-transparent">
+                                <div class="p-4 rounded-xl text-start">
+                                    <h2 class="text-4xl font-bold text-shadow-xs  mb-2">{{data.title}}</h2>
+                                    <p class="text-shadow-xs "> {{data.description}} </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </swiper-slide>
+                }
 
+<!--                     
                     <div class="card h-[500px] overflow-hidden col-span-6 lg:col-span-4 md:col-span-3 rounded-xl bg-cover bg-center " style="background-image: url('https://images.unsplash.com/photo-1758691463203-cce9d415b2b5?q=80&amp;w=1032&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
                         <div class="text-white text-center w-full h-full flex flex-col gap-2 items-start justify-end py-5 bg-gradient-to-t from-black to-transparent">
                             <div class="px-4 py-2 rounded-xl text-start">
@@ -76,6 +84,6 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-</div>
+</swiper-container>
