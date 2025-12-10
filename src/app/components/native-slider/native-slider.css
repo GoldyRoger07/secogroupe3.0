@@ -87,13 +87,13 @@
 
 swiper-container {
     width: 100%;
-    height: calc(100vh - 120px);
+    height: 600px;
 }
 
 swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #444;
+    /* background: #444; */
     display: flex;
     justify-content: center;
     align-items: center;
