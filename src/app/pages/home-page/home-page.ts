@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Navbar } from "../../components/navbar/navbar";
 import { Footer } from "../../components/footer/footer";
 import { MyButton } from "../../components/my-button/my-button";
@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { Container } from "../../components/container/container";
 import { NativeSlider } from "../../components/native-slider/native-slider";
 import { Dialog } from 'primeng/dialog';
+import { Meta, Title } from '@angular/platform-browser';
 
 interface Product {
     id: string,
@@ -100,6 +101,12 @@ interface CardService {
   `
 })
 export default class HomePage implements OnInit{
+
+
+  // Pour le SEO
+  title = inject(Title)
+  meta = inject(Meta)
+
 
   visible = false
 
@@ -187,6 +194,8 @@ export default class HomePage implements OnInit{
     { name: 'Consulting Services', code: 'CS' }
   ]
 
+
+
   // // filter: brightness(0.7);
 
   selectedService: SelectType | null = null;
@@ -218,6 +227,10 @@ export default class HomePage implements OnInit{
                 numScroll: 1
             }
         ]
+    this.title.setTitle('Home — Secogroupe');
+    this.meta.updateTag({ name: 'description', content: 'Seco Groupe est Gardiennage, rondes, interventions, sécurité privée, surveillance de locaux... #securite' });
+    this.meta.updateTag({ property: 'og:title', content: 'seco groupe | securite' });
+
   }
 
   showDialog() {

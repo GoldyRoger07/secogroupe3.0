@@ -51,7 +51,7 @@ export class NativeSlider {
       },
       {
         title: 'Specialized Staffing Solutions for Food Manufacturing',
-        description: `SECO Group understands the unique demands of food production facilities, where quality,
+        description: `Seco Groupe understands the unique demands of food production facilities, where quality,
                                     safety, and efficiency are paramount. We provide reliable staffing solutions tailored
                                     specifically for food manufacturing plants, supplying skilled workers who are trained in food
                                     safety protocols, HACCP standards, and Good Manufacturing Practices (GMP). Whether

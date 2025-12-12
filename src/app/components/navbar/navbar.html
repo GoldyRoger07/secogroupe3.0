@@ -3,15 +3,22 @@
 <nav class="navbar" [ngStyle]="myStyle">
   <my-container>
     <div class="flex justify-between items-center p-3 lg:px-0">
-        <div class="navbar-left">
+        <div class="navbar-left" routerLink="/">
           <img [src]="config.logo" alt="logo" class="logo" />
         </div>
 
         <ul class="navbar-links desktop-menu text-gray-600">
           @for(link of links; track $index){
+            @if(link.path === ""){
+              <li>
+                <link-item [link]="link" hoverTextColor="var(--my-sec-bg)" [textColor]="config.textColor"></link-item>
+              </li>
+            }@else {
+
               <li>
                   <link-item [link]="link" hoverTextColor="var(--my-sec-bg)" [textColor]="config.textColor"/>
               </li>
+            }
           }
             <li>
               <p-select [options]="languages" [(ngModel)]="selectedLanguage"  optionLabel="name" placeholder="Select a Language" class="w-full md:w-30" />

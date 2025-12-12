@@ -1,7 +1,7 @@
 import { CommonModule, NgTemplateOutlet } from '@angular/common';
 import { Component, Input, Output, EventEmitter, AfterViewInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Container } from "../container/container";
 import { LinkItem } from "../link-item/link-item";
 import { HamburgerBtn } from "../hamburger-btn/hamburger-btn";
@@ -33,7 +33,7 @@ export interface Link{
 
 @Component({
   selector: 'my-navbar',
-  imports: [Select ,RouterLink, CommonModule, FormsModule, Container, LinkItem, HamburgerBtn],
+  imports: [Select ,RouterLink,RouterLinkActive, CommonModule, FormsModule, Container, LinkItem, HamburgerBtn],
   templateUrl: './navbar.html',
   styles: `
     .navbar {
@@ -140,7 +140,7 @@ export class Navbar implements AfterViewInit{
 
   @Input()
   links = [
-    {label: "Home", path: '/home'},
+    {label: "Home", path: ''},
     {label: "About", path: '/about-us'},
     {label: "Services", path: '/services'},
     {label: "Contact", path: '/contact'}
