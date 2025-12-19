@@ -1,8 +1,59 @@
 
-   @import "tailwindcss";
-   @plugin "tailwindcss-primeui";
-   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
+  @import "tailwindcss";
+  @plugin "tailwindcss-primeui";
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.inter-100,
+.inter-200,
+.inter-300,
+.inter-400,
+.inter-500,
+.inter-600,
+.inter-700,
+.inter-800,
+.inter-900 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+.inter-100{
+    font-weight: 100;
+}
+
+.inter-200{
+    font-weight: 200;
+}
+
+.inter-300{
+    font-weight: 300;
+}
+
+.inter-400{
+    font-weight: 400;
+}
+
+.inter-500{
+    font-weight: 500;
+}
+
+.inter-600{
+    font-weight: 600;
+}
+
+.inter-700{
+    font-weight: 700;
+}
+
+.inter-800{
+    font-weight: 800;
+}
+
+.inter-900{
+    font-weight: 900;
+} 
  html{
   overflow-x: hidden;
  }
@@ -12,6 +63,7 @@
             --my-sec-bg: #fbad19;
             --my-hover-prim-bg: #0b5dd9;
             --my-hover-sec-bg: #d59113;
+            --text-color: #4a4a4a;
         }
         body {
             font-family: 'Inter', sans-serif;

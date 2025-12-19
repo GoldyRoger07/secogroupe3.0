@@ -1,0 +1,5 @@
+.grid-lines{
+    display: grid;
+    grid-template-columns: repeat(12,85px);
+    gap: 20px;
+}
