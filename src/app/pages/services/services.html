@@ -62,7 +62,7 @@
             
         </div> -->
         <my-container>
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="grid lg:grid-cols-2 gap-16 items-center col-span-12">
                 
                 <div class="space-y-8 transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
                     <div class="space-y-6" data-aos="fade-up" data-aos-duration="1500">
@@ -101,13 +101,13 @@ save you time, reduce overhead, and ensure seamless operations.</p>
         
 </div> -->
     <my-container>
-        <div class="text-center mb-16">
+        <div class="text-center mb-16 col-span-12">
                 <h2 class="text-3xl font-bold mb-4 text-gray-700" >Our <span class="text-(--my-sec-bg)">Comprehensive </span>Services</h2>
                 
         </div>
         @for (serviceSection of serviceSections; track $index) {
-            <div class="mb-20 transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
-            <div class="{{serviceSection.color}} min-[391px]:rounded-2xl p-4 md:p-8 lg:p-12">
+            <div class="col-span-12 mb-20 transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
+            <div class=" {{serviceSection.color}} min-[391px]:rounded-2xl p-4 md:p-8 lg:p-12">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     @if($index % 2 === 0) {
                         <div>
@@ -234,7 +234,7 @@ save you time, reduce overhead, and ensure seamless operations.</p>
 
 
     <!-- Footer bg-gray-900-->
-   <app-footer />
+   <my-footer />
 
    
 

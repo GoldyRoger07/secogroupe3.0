@@ -162,7 +162,7 @@
       }
     }
 
-    .fade-up{
+    /* .fade-up{
       animation: fade-up-animation;
       animation-timeline: view()
     }
@@ -176,5 +176,67 @@
         opacity: 1;
         transform: translateY(0) scale(1);
       }
-    }
-  
+    } */
+
+
+
+.typewriter-container{
+  display: inline-block;
+}
+
+.typewriter-text{
+  /* border-right: 5px solid; */
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(13);
+              /* cursor 400ms step-end infinite alternate;  */
+}
+
+@keyframes cursor{
+  50%{
+    border-color: transparent;
+  }
+}
+
+@keyframes typing{
+  from{
+    width: 0;
+  }
+}
+
+.fade-up{
+    transform: translateY(20%);
+    opacity: 0;
+    transition: all 700ms ease-in-out ;
+    transition-delay: 500ms;
+}
+
+section.active .fade-up{
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.fade-right{
+    transform: translateX(-5%);
+    opacity: 0;
+    transition: all 700ms ease-in-out ;
+    transition-delay: 500ms;
+}
+
+section.active .fade-right{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.fade-left{
+    transform: translateX(5%);
+    opacity: 0;
+    transition: all 700ms ease-in-out ;
+    transition-delay: 500ms;
+}
+
+section.active .fade-left{
+    transform: translateX(0%);
+    opacity: 1;
+}

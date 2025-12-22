@@ -231,6 +231,28 @@ export default class HomePage implements OnInit{
     this.meta.updateTag({ name: 'description', content: 'Seco Groupe est Gardiennage, rondes, interventions, sécurité privée, surveillance de locaux... #securite' });
     this.meta.updateTag({ property: 'og:title', content: 'seco groupe | securite' });
 
+
+    const sections = document.querySelectorAll("section")
+
+    
+const observer = new IntersectionObserver((entries)=>{
+    // console.log(entries)
+
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            if(!entry.target.classList.contains("active"))
+                entry.target.classList.add("active")
+        }
+    })
+    
+    },{
+    threshold: 0.25
+    })
+
+    sections.forEach(section => {
+        observer.observe(section)
+    })
+  
   }
 
   showDialog() {

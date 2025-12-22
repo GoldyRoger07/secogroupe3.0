@@ -12,7 +12,6 @@ interface ServiceSection{
   description: string;
   imageUrl: string[];
   subServices: SubService[];
-
 }
 
 interface SubService{
