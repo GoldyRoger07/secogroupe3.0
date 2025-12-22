@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Navbar } from "../../components/navbar/navbar";
 import { Footer } from "../../components/footer/footer";
 import { Container } from "../../components/container/container";
@@ -9,7 +9,7 @@ import { Container } from "../../components/container/container";
   templateUrl: './mission.html',
   styleUrl: './mission.css'
 })
-export default class Mission {
+export default class Mission implements OnInit{
 
   ourCoreValueCards = [
     {
@@ -45,4 +45,27 @@ compliant with all regulations.`
     },
 
   ]
+
+  ngOnInit(): void {
+    const sections = document.querySelectorAll(".section-animate")
+
+    
+const observer = new IntersectionObserver((entries)=>{
+    // console.log(entries)
+
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            if(!entry.target.classList.contains("active"))
+                entry.target.classList.add("active")
+        }
+    })
+    
+    },{
+    threshold: 0.75
+    })
+
+    sections.forEach(section => {
+        observer.observe(section)
+    })
+  }
 }
