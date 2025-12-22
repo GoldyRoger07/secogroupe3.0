@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 })
 export default class ServicesCountry implements OnInit{
   ngOnInit(): void {
-    const sections = document.querySelectorAll("section")
+    const sections = document.querySelectorAll(".section-animate")
 
     
 const observer = new IntersectionObserver((entries)=>{
@@ -29,7 +29,7 @@ const observer = new IntersectionObserver((entries)=>{
     })
     
     },{
-    threshold: 0.25
+    threshold: 0.75
     })
 
     sections.forEach(section => {

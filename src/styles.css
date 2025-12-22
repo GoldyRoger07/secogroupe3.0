@@ -206,14 +206,14 @@
 }
 
 .fade-up{
-    transform: translateY(20%);
+    transform: translateY(25%) scale(0.9);
     opacity: 0;
     transition: all 700ms ease-in-out ;
-    transition-delay: 500ms;
+    /* transition-delay: 500ms; */
 }
 
-section.active .fade-up{
-    transform: translateY(0%);
+.section-animate.active .fade-up{
+    transform: translateY(0%) scale(1);
     opacity: 1;
 }
 
@@ -221,10 +221,10 @@ section.active .fade-up{
     transform: translateX(-5%);
     opacity: 0;
     transition: all 700ms ease-in-out ;
-    transition-delay: 500ms;
+    /* transition-delay: 500ms; */
 }
 
-section.active .fade-right{
+.section-animate.active .fade-right{
     transform: translateX(0%);
     opacity: 1;
 }
@@ -236,7 +236,7 @@ section.active .fade-right{
     transition-delay: 500ms;
 }
 
-section.active .fade-left{
+.section-animate.active .fade-left{
     transform: translateX(0%);
     opacity: 1;
 }
