@@ -17,6 +17,7 @@ import { Container } from "../../components/container/container";
 import { NativeSlider } from "../../components/native-slider/native-slider";
 import { Dialog } from 'primeng/dialog';
 import { Meta, Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 interface Product {
     id: string,
@@ -106,6 +107,7 @@ export default class HomePage implements OnInit{
   // Pour le SEO
   title = inject(Title)
   meta = inject(Meta)
+  router = inject(Router)
 
 
   visible = false
@@ -255,7 +257,10 @@ const observer = new IntersectionObserver((entries)=>{
   
   }
 
-  showDialog() {
-        this.visible = true;
+  showDialog(country: string) {
+        if(country === "Haiti")
+          this.router.navigateByUrl("/services-country")
+        else
+          this.router.navigateByUrl("/services")
   }
 }
