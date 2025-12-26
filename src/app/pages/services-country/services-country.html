@@ -1,6 +1,6 @@
 <my-navbar/>
 <my-container>
-  <section class="col-span-12" style="padding: 32px 0;">
+  <section class="col-span-12" >
         <!-- <div class="container">
         </div>  -->
         <div class="wrapper">
@@ -23,11 +23,11 @@
     </section>
         
     <!-- servicescard section fbad19 -->
-    <section class="col-span-12" style="background: #f1f1f1; padding: 32.5px 0;" id="services-cards">
+    <section class="col-span-12 rounded-[25px]" style=" padding: 32.5px 0;" id="services-cards">
       <div class="title-main text-center mx-auto" style="max-width:700px;">
           
        <!-- <button class="btn btn-primary my-4" >START APPLICATION PROCESS</button> -->
-        <div class="marquee-container text-box">
+        <!-- <div class="marquee-container text-box">
               <div class="marquee ">
                   @if(pays === 'usa' || pays === 'canada' || pays === 'bahamas'){
                       For more than 15 years, we have been supporting businesses
@@ -36,7 +36,7 @@
                   }
                      
               </div>
-        </div>
+        </div> -->
        
       </div>
       @if(pays === 'usa'){
@@ -86,14 +86,14 @@
                   </div>
                   <div class="back">
                       <div class="top">
-                          <img [src]="filiale.logo" alt="logo seco">
+                          <img [src]="filiale.logo" class="bg-amber-300 rounded-xl" alt="logo seco">
                       </div>
                       <div class="overlay">
-                          <div class="title">
+                          <!-- <div class="title">
                               <i [class]="filiale.icon"></i>
                               {{filiale.name}}
-                          </div>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet ratione obcaecati...</p>
+                          </div> -->
+                          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet ratione obcaecati...</p> -->
                       </div>
                   </div>
                   </div>
@@ -106,7 +106,7 @@
         
     </section>
 
-  <section class="section-animate col-span-12 my-[50px]">
+  <!-- <section class="section-animate col-span-12 my-[50px]">
     <div class="flex flex-col gap-[20px]">
       <div class="w-[60%] fade-up">
         <h2 class="inter-700 text-(--text-color) text-[32px]">Seco Securite</h2>
@@ -240,7 +240,7 @@
                 Where your journey takes flight.
             </p>
       </div>
-  </section>
+  </section> -->
 </my-container>
 
 <my-footer/>

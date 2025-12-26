@@ -13,12 +13,12 @@
 }
 
 .wrapper{
-    margin-top: 120px;
+    margin-top: 20px;
     width: 100%;
     height: calc(100vh - 100px);
     
     border-radius: 25px;
-    background-image: url(/images/meeting1.jpeg),url(/secogroupe2.0/images/meeting1.jpeg);
+    background-image: url(/img/meeting1.jpeg);
     overflow: hidden;
    
 }

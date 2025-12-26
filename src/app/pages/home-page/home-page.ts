@@ -258,9 +258,9 @@ const observer = new IntersectionObserver((entries)=>{
   }
 
   showDialog(country: string) {
-        if(country === "Haiti")
-          this.router.navigateByUrl("/services-country/haiti")
-        else
-          this.router.navigateByUrl("/services")
+        // if(country === "Haiti")
+          this.router.navigateByUrl("/services-country/"+country.toLocaleLowerCase())
+        // else
+        //   this.router.navigateByUrl("/services")
   }
 }
