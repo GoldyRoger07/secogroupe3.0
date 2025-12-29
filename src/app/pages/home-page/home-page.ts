@@ -259,6 +259,8 @@ const observer = new IntersectionObserver((entries)=>{
 
   showDialog(country: string) {
         // if(country === "Haiti")
+        if(country.toLocaleLowerCase() === "united states")
+          country = "usa"
           this.router.navigateByUrl("/services-country/"+country.toLocaleLowerCase())
         // else
         //   this.router.navigateByUrl("/services")
