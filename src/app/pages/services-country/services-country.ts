@@ -19,6 +19,7 @@ import { FilialeService } from '../../services/filiale-service';
 export default class ServicesCountry implements OnInit{
   
   pays: string = '';
+  
   filiales: Filiale[] = []
 
   activatedRoute = inject(ActivatedRoute)
@@ -49,6 +50,7 @@ export default class ServicesCountry implements OnInit{
 
     this.activatedRoute.paramMap.subscribe(params => {
       this.pays = params.get('pays') || "";
+      
 
       if(!(this.pays === "usa" || this.pays === "canada" || this.pays === "haiti" || this.pays === "bahamas" || this.pays === "bresil"))
           this.router.navigate(['/']);

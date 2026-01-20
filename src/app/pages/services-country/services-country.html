@@ -62,7 +62,7 @@
       
       <div class="services-cards-container" style="margin-bottom: 70px;">
           @for(filiale of filiales; track $index){
-              <a [routerLink]="['/filiales',pays,filiale.idName]" class="service-card-container">
+              <a routerLink='/services-country/{{pays}}/{{filiale.idName}}' class="service-card-container">
                   <div class="service-card">
                   <div class="front">
                       <div class="icon-box">
