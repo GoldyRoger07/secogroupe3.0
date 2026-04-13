@@ -25,6 +25,8 @@ export default class ServicesCountry implements OnInit{
   activatedRoute = inject(ActivatedRoute)
   router = inject(Router)
   filialeService = inject(FilialeService)
+
+  previewInfo = this.filialeService.previewInfo
   
   ngOnInit(): void {
     const sections = document.querySelectorAll(".section-animate")
@@ -75,6 +77,12 @@ export default class ServicesCountry implements OnInit{
     }
 
     return tab
+  }
+
+
+  getPreviewInfo(service: string){
+    return this.previewInfo.find(p => p.service.toLocaleLowerCase() === service)
+
   }
   
 }

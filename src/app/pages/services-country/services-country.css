@@ -233,11 +233,12 @@
 
 
 .service-card .back .overlay{
-    margin-top: auto;
+    /* margin-top: auto; */
+    height: 100%;
     background: #00000028;
     /* background-image: linear-gradient(to top,#000000,transparent); */
-    color: #fbad19;
-    padding: 0 20px;
+    /* color: #fbad19; */
+    padding: 20px;
     
 }
 
@@ -253,7 +254,7 @@
 
 
 .service-card .back .overlay p{
-    color: #fbad19;
-    font-size: 12px;
+    /* color: #fbad19; */
+    font-size: 15px;
     padding-bottom: 10px;
 }

@@ -184,6 +184,39 @@ Services. `
 
   ]
 
+  previewInfo = [
+    {
+      title: 'Professional Security Solutions',
+      description: 'We provide reliable and highly trained security personnel to ensure the safety of your people and assets. Our services are tailored to meet the unique needs of each client. With a strong focus on vigilance and professionalism, we deliver peace of mind at all times.',
+      service: 'security'
+    },
+    {
+      title: 'Comprehensive Building Maintenance',
+      description: 'Our building maintenance services are designed to keep your facilities operating at peak performance. We handle everything from routine inspections to preventive maintenance. Our team ensures a safe, functional, and well-maintained environment for your business.',
+      service: 'building maintenance'
+    },
+    {
+      title: 'Strategic Staffing Services',
+      description: 'We offer flexible staffing solutions to help your organization meet its workforce demands efficiently. Our recruitment process ensures qualified and reliable candidates for every role. We focus on delivering talent that aligns with your company’s goals and values.',
+      service: 'staffing'
+    },
+    {
+      title: 'Premium Housekeeping Services',
+      description: 'Our housekeeping team delivers exceptional cleanliness and organization for residential and commercial spaces. We use professional techniques and quality products to maintain high standards. Your comfort and satisfaction remain our top priority.',
+      service: 'housekeeping'
+    },
+    {
+      title: 'Expert Janitorial Services',
+      description: 'We provide thorough and consistent janitorial services to maintain clean and hygienic work environments. Our trained staff follows strict cleaning protocols and schedules. We help create a healthier and more productive space for your operations.',
+      service: 'janitorial'
+    },
+    {
+      title: 'Personalized Concierge Services',
+      description: 'Our concierge services are designed to enhance convenience and elevate client experiences. From daily assistance to specialized requests, we handle every detail with professionalism. We ensure a seamless and welcoming environment for your clients and guests.',
+      service: 'concierge'
+    }
+  ]
+
   
   // document.documentElement.style.setProperty('--body-bg', 'url(https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
 
