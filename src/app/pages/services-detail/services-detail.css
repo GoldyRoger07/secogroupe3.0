@@ -1,0 +1,20 @@
+.worker-img{
+    position: relative;
+}
+
+.worker-img::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    /* background: #000; */
+    background-image: linear-gradient(to top, var(--my-sec-bg) 20% ,  transparent 31% );
+    /* background: radial-gradient(circle at center, transparent, var(--my-sec-bg)); */
+    z-index: 90;
+}
+
+.bg-section{
+    background-image: linear-gradient( var(--my-sec-bg),  #fff );
+}
