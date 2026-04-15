@@ -13,6 +13,7 @@ export const routes: Routes = [
     { path: 'cookie-policy', loadComponent: ()=> import('./pages/cookie-policy/cookie-policy') , pathMatch: 'full'},
     { path: 'privacy-policy', loadComponent: ()=> import('./pages/privacy-policy/privacy-policy') , pathMatch: 'full'},
     { path: 'terms-of-service', loadComponent: ()=> import('./pages/terms-of-service/terms-of-service') , pathMatch: 'full'},
+    { path: 'hiring', loadComponent: ()=> import('./pages/hiring/hiring-page'), pathMatch: 'full' },
     { path: 'page-not-found' , loadComponent: ()=> import('./pages/notfound/notfound'), pathMatch: 'full'},
     { path: '**', redirectTo: '/page-not-found' }
 ];
