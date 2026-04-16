@@ -18,6 +18,7 @@ export class FilialeService {
 
   secoTechDetails: FilialeDetails[] = [
     {
+      id: 'building-maintenance',
       title: 'Building Maintenance',
       description: 'With over a decade of experience, QS consistently provides exceptional Janitorial, Security, Concierge, and Maintenance services to clients nationwide.',
       slogan: 'Our company focus is to diligently serve the Corporate Sector by providing specialized facilities management services.'
@@ -41,7 +42,7 @@ export class FilialeService {
   ]
 
   filiales:Filiale[] = [
-      new Filiale('seco_securite','Seco Security','Security','',['images/new/bg_seco_securite.jpg'],'images/logos/seco_secu_logo.png','','images/logos/security_services.png',new CardDetails(2,
+      new Filiale('seco-security','Seco Security','Security','',['images/new/bg_seco_securite.jpg'],'images/logos/seco_secu_logo.png','','images/logos/security_services.png',new CardDetails(2,
         [
          
           {title: 'Security Guard', link: '/seco_securite/security_guard', cover: 'https://cdn.prod.website-files.com/65e795a2f83946f9da1f1bcc/67c7c2c8c603a6e7c899e103_Belfry_Imagery4.png'},
@@ -120,7 +121,7 @@ Services. `
       }]),
       new Filiale('concierge_services','Concierge Services','Concierge','',['https://media.cnn.com/api/v1/images/stellar/prod/111005061730-concierge-ritz.jpg?q=w_4000,h_3000,x_0,y_0,c_fill'],'images/logos/seco_secu_logo.png','','images/logos/concierges_services.png',new CardDetails(2),this.filialeDetails),
       new Filiale('janitorial_services','Janitorial Services','Janitorial','',['https://plus.unsplash.com/premium_photo-1661662877086-4007ebf0378e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'],'images/logos/seco_secu_logo.png','','images/logos/janitorial_services.png',new CardDetails(2),this.filialeDetails),
-      new Filiale('seco_tech','Seco Tech','Building Maintenance','',['images/new/bg_seco_tech.jpg'],'images/logos/seco_tech_logo.png','images/logos/seco_tech_white_logo.png','images/logos/building_maintenance.png',new CardDetails(3),this.secoTechDetails),
+      new Filiale('building-maintenance','Seco Tech','Building Maintenance','',['images/new/bg_seco_tech.jpg'],'images/logos/seco_tech_logo.png','images/logos/seco_tech_white_logo.png','images/logos/building_maintenance.png',new CardDetails(3),this.secoTechDetails),
       new Filiale('seco_agro_industries','Seco Agro Industries','','',[
         'images/vecteezy/cover_seco_agro.jpg',
         'images/vecteezy/cover_seco_agro1.jpeg',
@@ -147,26 +148,26 @@ Services. `
   ]
 
   filialesPays: FilialePays[] = [
-    new FilialePays('usa','seco_securite'),
-    new FilialePays('usa','seco_tech'),
+    new FilialePays('usa','seco-security'),
+    new FilialePays('usa','building-maintenance'),
     new FilialePays('usa','optimal_staffing_services'),
     new FilialePays('usa','housekeeping_services'),
     new FilialePays('usa','janitorial_services'),
     new FilialePays('usa','concierge_services'),
-    new FilialePays('canada','seco_securite'),
-    new FilialePays('canada','seco_tech'),
+    new FilialePays('canada','seco-security'),
+    new FilialePays('canada','building-maintenance'),
     new FilialePays('canada','optimal_staffing_services'),
     new FilialePays('canada','housekeeping_services'),
     new FilialePays('canada','janitorial_services'),
     new FilialePays('canada','concierge_services'),
-    new FilialePays('bahamas','seco_securite'),
-    new FilialePays('bahamas','seco_tech'),
+    new FilialePays('bahamas','seco-security'),
+    new FilialePays('bahamas','building-maintenance'),
     new FilialePays('bahamas','optimal_staffing_services'),
     new FilialePays('bahamas','housekeeping_services'),
     new FilialePays('bahamas','janitorial_services'),
     new FilialePays('bahamas','concierge_services'),
-    new FilialePays('haiti','seco_securite'),
-    new FilialePays('haiti','seco_tech'),
+    new FilialePays('haiti','seco-security'),
+    new FilialePays('haiti','building-maintenance'),
     new FilialePays('haiti','seco_energy_co'),
     new FilialePays('haiti','seco_agro_industries'),
     new FilialePays('haiti','seco_distributors'),
@@ -174,13 +175,46 @@ Services. `
     new FilialePays('haiti','mass_assurance'),
     new FilialePays('haiti','mass_funds'),
     new FilialePays('haiti','seco_univers_construction'),
-    new FilialePays('bresil','seco_securite'),
-    new FilialePays('bresil','seco_tech'),
+    new FilialePays('bresil','seco-security'),
+    new FilialePays('bresil','building-maintenance'),
     new FilialePays('bresil','optimal_staffing_services'),
     new FilialePays('bresil','housekeeping_services'),
     new FilialePays('bresil','janitorial_services'),
     new FilialePays('bresil','concierge_services'),
 
+  ]
+
+  previewInfo = [
+    {
+      title: 'Professional Security Solutions',
+      description: 'We provide reliable and highly trained security personnel to ensure the safety of your people and assets. Our services are tailored to meet the unique needs of each client. With a strong focus on vigilance and professionalism, we deliver peace of mind at all times.',
+      service: 'security'
+    },
+    {
+      title: 'Comprehensive Building Maintenance',
+      description: 'Our building maintenance services are designed to keep your facilities operating at peak performance. We handle everything from routine inspections to preventive maintenance. Our team ensures a safe, functional, and well-maintained environment for your business.',
+      service: 'building maintenance'
+    },
+    {
+      title: 'Strategic Staffing Services',
+      description: 'We offer flexible staffing solutions to help your organization meet its workforce demands efficiently. Our recruitment process ensures qualified and reliable candidates for every role. We focus on delivering talent that aligns with your company’s goals and values.',
+      service: 'staffing'
+    },
+    {
+      title: 'Premium Housekeeping Services',
+      description: 'Our housekeeping team delivers exceptional cleanliness and organization for residential and commercial spaces. We use professional techniques and quality products to maintain high standards. Your comfort and satisfaction remain our top priority.',
+      service: 'housekeeping'
+    },
+    {
+      title: 'Expert Janitorial Services',
+      description: 'We provide thorough and consistent janitorial services to maintain clean and hygienic work environments. Our trained staff follows strict cleaning protocols and schedules. We help create a healthier and more productive space for your operations.',
+      service: 'janitorial'
+    },
+    {
+      title: 'Personalized Concierge Services',
+      description: 'Our concierge services are designed to enhance convenience and elevate client experiences. From daily assistance to specialized requests, we handle every detail with professionalism. We ensure a seamless and welcoming environment for your clients and guests.',
+      service: 'concierge'
+    }
   ]
 
   

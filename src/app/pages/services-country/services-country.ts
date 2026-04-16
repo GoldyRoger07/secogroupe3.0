@@ -19,11 +19,14 @@ import { FilialeService } from '../../services/filiale-service';
 export default class ServicesCountry implements OnInit{
   
   pays: string = '';
+  
   filiales: Filiale[] = []
 
   activatedRoute = inject(ActivatedRoute)
   router = inject(Router)
   filialeService = inject(FilialeService)
+
+  previewInfo = this.filialeService.previewInfo
   
   ngOnInit(): void {
     const sections = document.querySelectorAll(".section-animate")
@@ -49,6 +52,7 @@ export default class ServicesCountry implements OnInit{
 
     this.activatedRoute.paramMap.subscribe(params => {
       this.pays = params.get('pays') || "";
+      
 
       if(!(this.pays === "usa" || this.pays === "canada" || this.pays === "haiti" || this.pays === "bahamas" || this.pays === "bresil"))
           this.router.navigate(['/']);
@@ -73,6 +77,12 @@ export default class ServicesCountry implements OnInit{
     }
 
     return tab
+  }
+
+
+  getPreviewInfo(service: string){
+    return this.previewInfo.find(p => p.service.toLocaleLowerCase() === service)
+
   }
   
 }

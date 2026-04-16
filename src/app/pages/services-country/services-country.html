@@ -62,7 +62,8 @@
       
       <div class="services-cards-container" style="margin-bottom: 70px;">
           @for(filiale of filiales; track $index){
-              <a [routerLink]="['/filiales',pays,filiale.idName]" class="service-card-container">
+            <!-- /services-country/{{pays}}/{{filiale.idName}} -->
+              <a routerLink="/services-country/{{pays}}/{{filiale.idName}}" class="service-card-container">
                   <div class="service-card">
                   <div class="front">
                       <div class="icon-box">
@@ -85,10 +86,25 @@
                       </div>
                   </div>
                   <div class="back">
-                      <div class="top">
+                      <!-- <div class="top">
                           <img [src]="filiale.logo" class="bg-amber-300 rounded-xl" alt="logo seco">
-                      </div>
+                      </div> -->
                       <div class="overlay">
+                        @if(filiale.details.length>0 && (pays === 'usa' || pays === 'canada' || pays === 'bahamas')){
+                              <!-- <span>{{filiale.details}}</span> -->
+                              <div class="title text-gray-700">
+                                  <!-- <i [class]="filiale.icon"></i> -->
+                                  {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.title}}
+                              </div>
+                              <p class="text-gray-600">
+                               {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.description}}
+                              </p>
+                        }@else{
+                              <span>{{getPreviewInfo(filiale.name.toLocaleLowerCase())?.title}}</span>
+                              <p>
+                               {{getPreviewInfo(filiale.name.toLocaleLowerCase())?.description}}
+                              </p>
+                        }
                           <!-- <div class="title">
                               <i [class]="filiale.icon"></i>
                               {{filiale.name}}

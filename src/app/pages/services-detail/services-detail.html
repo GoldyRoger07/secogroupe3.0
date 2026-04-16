@@ -1,0 +1,120 @@
+<my-navbar/>
+
+    @if( service === "seco-security"){
+
+        <div class="flex items-center w-[1238px] mx-auto justify-between" >
+            <div class=" gap-2 flex flex-col items-start">
+                <span class="text-[18px] text-gray-700 font-bold">Seco Security</span>
+                <h1 class="text-[32px] font-bold text-gray-700">Personal Protection, Total Security</h1>
+                <p class="text-gray-700  mb-2">Our highly trained agents ensure your safety at all times with discretion and efficiency.</p>
+                <button class="rounded-[15px] text-white font-bold bg-(--my-sec-bg) w-fit px-5 h-[81px] text-[28px]">
+                    REQUEST PROTECTION NOW
+                </button>
+            </div>
+            <img style="transform: translateX(200px)" src="img/seco-securite-hero.png" alt="hero">
+        </div>
+        <div class="bg-(--my-sec-bg) mt-[200px] mb-[50px]">
+            <my-container>
+                <div class="flex items-center col-span-12 text-white justify-between">
+                    <div class="w-[580px]">
+                        <h2 class="text-[32px] font-bold text-start">A serious, honest and professional concept of SECURITY with capital letters</h2>
+                        <p class="text-[20px]">
+                            The security of a company ranges from the protection of people, goods and facilities, to the proper preservation of digital data. At Seco security we are aware of this, which is why we have developed a wide variety of services to meet the security needs of a company.
+                            <br/>
+                            We establish commitments of collaboration with our clients, understanding the business relationship as a long-term agreement based mainly on trust. Our aim has been to grow and specialise in order to be able to provide a better security service to companies.
+                        </p>
+                    </div>
+                    <img class="w-[550px]" src="img/cam-securite.png" alt="cam">
+                </div>
+            </my-container>
+
+        </div>
+    }@else if(service === "building-maintenance"){
+
+        <section class="relative overflow-hidden flex flex-col h-[800px]">
+            <div class="absolute bottom-0 left-0 z-2 flex flex-col items-center w-full">
+                <div class="flex flex-col gap-[10px] items-center">
+                    <span class="text-[18px] text-gray-700 font-bold">
+                        Building Maintenance
+                    </span>
+                    <h1 class="text-gray-700 text-[32px] font-bold">Keeping Your Facilities in Perfect Condition</h1>
+                    <p class="text-gray-700 text-[24px]">We maintain and repair your buildings to ensure a safe and functional environment.</p>
+                    <button class="rounded-[15px] text-white font-bold bg-(--my-sec-bg) w-fit h-[81px] text-[32px] px-5">
+                        SCHEDULE MAINTENANCE
+                    </button>
+                </div>
+                <div class="worker-img">
+
+                    <img src="img/building-maintenance-services.png"  alt="worker">
+                </div>
+            </div>
+            <img class="absolute bottom-0 left-0 w-full z-1 "  src="img/asset-building-maintenance.png" alt="asset">
+        </section>
+        <section class="bg-section h-screen w-full ">
+            <!-- <div class="max-w-7xl mx-auto "> -->
+                <my-container>
+
+                    <div class="flex flex-col items-center ">
+                        <h2 class="text-white text-3xl font-semibold mb-5">Our Services</h2>
+
+                        <div class="grid grid-cols-3 py-5 gap-4">
+                            <div class="bg-white rounded-2xl p-5 shadow-xl">
+                                <div class="flex flex-col gap-2 ">
+                                    <i class="ri-calendar-check-fill  rounded-xl w-15 h-15 flex justify-center items-center  text-white bg-amber-400 text-2xl "></i>
+                                    <h3 class="font-semibold text-gray-700 text-xl mb-2">Preventive Maintenance</h3>
+                                    <p class="text-gray-600">We implement scheduled maintenance programs to identify and resolve potential issues before they become costly problems. Our proactive approach helps extend the lifespan of your equipment and infrastructure.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-5 shadow-xl">
+                                <div class="flex flex-col gap-2 ">
+                                    <!-- <i class=""></i> -->
+                                    <i class="ri-hammer-fill rounded-xl w-15 h-15 flex justify-center items-center  text-white bg-amber-400 text-2xl "></i>
+                                    <h3 class="font-semibold text-gray-700 text-xl mb-2">Corrective Maintenance</h3>
+                                    <p class="text-gray-600">Our team responds quickly to repair and restore any malfunction or damage within your facility. We ensure minimal downtime and efficient resolution of all technical issues.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-5 shadow-xl">
+                                <div class="flex flex-col gap-2 ">
+                                    <i class="ri-flashlight-fill  rounded-xl w-15 h-15 flex justify-center items-center  text-white bg-amber-400 text-2xl "></i>
+                                    <h3 class="font-semibold text-gray-700 text-xl mb-2">Electrical & Plumbing Services</h3>
+                                    <p class="text-gray-600">We provide reliable maintenance and repair for electrical systems and plumbing installations. Safety, compliance, and performance are at the core of our service delivery.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-5 shadow-xl">
+                                <div class="flex flex-col gap-2 ">
+                                    <i class="ri-cloud-fill  rounded-xl w-15 h-15 flex justify-center items-center  text-white bg-amber-400 text-2xl "></i>
+                                    <h3 class="font-semibold text-gray-700 text-xl mb-2">HVAC Maintenance</h3>
+                                    <p class="text-gray-600">Our technicians ensure that your heating, ventilation, and air conditioning systems operate efficiently. We help maintain optimal indoor comfort while reducing energy consumption.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-5 shadow-xl">
+                                <div class="flex flex-col gap-2 ">
+                                    <i class="ri-tools-fill  rounded-xl w-15 h-15 flex justify-center items-center  text-white bg-amber-400 text-2xl "></i>
+                                    <h3 class="font-semibold text-gray-700 text-xl mb-2">General Repairs & Upkeep</h3>
+                                    <p class="text-gray-600">From minor fixes to routine upkeep, we handle all aspects of building maintenance. Our attention to detail ensures a clean, safe, and fully functional environment.</p>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                
+                </my-container>
+            <!-- </div> -->
+        </section>
+
+        <section>
+            <my-container>
+                <div class="flex flex-col items-center">
+                    
+                </div>
+            </my-container>
+        </section>
+    }
+
+
+<my-footer/>
