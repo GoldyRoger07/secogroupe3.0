@@ -63,57 +63,112 @@
       <div class="services-cards-container" style="margin-bottom: 70px;">
           @for(filiale of filiales; track $index){
             <!-- /services-country/{{pays}}/{{filiale.idName}} -->
-              <a routerLink="/services-country/{{pays}}/{{filiale.idName}}" class="service-card-container">
-                  <div class="service-card">
-                  <div class="front">
-                      <div class="icon-box">
-                          @if(filiale.details.length>0 && !filiale.icon.includes("fas")){
-                              <img [src]="filiale.icon" alt="logo" width="128px">
-                          }@else{
-                              <i [class]="filiale.icon"></i>
-                          }
-                          
-                              <!-- <i class="ri-shield-check-fill"></i> -->
-                      </div>
-                      
-                      <div class="title-box">
-                          
-                          @if(filiale.details.length>0 && (pays === 'usa' || pays === 'canada' || pays === 'bahamas')){
-                              <span>{{filiale.details}}</span>
-                          }@else{
-                              <span>{{filiale.name}}</span>
-                          }
-                      </div>
-                  </div>
-                  <div class="back">
-                      <!-- <div class="top">
-                          <img [src]="filiale.logo" class="bg-amber-300 rounded-xl" alt="logo seco">
-                      </div> -->
-                      <div class="overlay">
-                        @if(filiale.details.length>0 && (pays === 'usa' || pays === 'canada' || pays === 'bahamas')){
-                              <!-- <span>{{filiale.details}}</span> -->
-                              <div class="title text-gray-700">
-                                  <!-- <i [class]="filiale.icon"></i> -->
-                                  {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.title}}
-                              </div>
-                              <p class="text-gray-600">
-                               {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.description}}
-                              </p>
-                        }@else{
-                              <span>{{getPreviewInfo(filiale.name.toLocaleLowerCase())?.title}}</span>
-                              <p>
-                               {{getPreviewInfo(filiale.name.toLocaleLowerCase())?.description}}
-                              </p>
-                        }
-                          <!-- <div class="title">
-                              <i [class]="filiale.icon"></i>
-                              {{filiale.name}}
-                          </div> -->
-                          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet ratione obcaecati...</p> -->
-                      </div>
-                  </div>
-                  </div>
-              </a>
+             @if(filiale.idName === "building-maintenance"){
+
+               <a routerLink="/services-country/{{pays}}/{{filiale.idName}}" class="service-card-container">
+                   <div class="service-card">
+                   <div class="front">
+                       <div class="icon-box">
+                           @if(filiale.details.length>0 && !filiale.icon.includes("fas")){
+                               <img [src]="filiale.icon" alt="logo" width="128px">
+                           }@else{
+                               <i [class]="filiale.icon"></i>
+                           }
+                           
+                               <!-- <i class="ri-shield-check-fill"></i> -->
+                       </div>
+                       
+                       <div class="title-box">
+                           
+                           @if(filiale.details.length>0 && (pays === 'usa' || pays === 'canada' || pays === 'bahamas')){
+                               <span>{{filiale.details}}</span>
+                           }@else{
+                               <span>{{filiale.name}}</span>
+                           }
+                       </div>
+                   </div>
+                   <div class="back">
+                       <!-- <div class="top">
+                           <img [src]="filiale.logo" class="bg-amber-300 rounded-xl" alt="logo seco">
+                       </div> -->
+                       <div class="overlay">
+                         @if(filiale.details.length>0 && (pays === 'usa' || pays === 'canada' || pays === 'bahamas')){
+                               <!-- <span>{{filiale.details}}</span> -->
+                               <div class="title text-gray-700">
+                                   <!-- <i [class]="filiale.icon"></i> -->
+                                   {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.title}}
+                               </div>
+                               <p class="text-gray-600">
+                                {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.description}}
+                               </p>
+                         }@else{
+                               <span>{{getPreviewInfo(filiale.name.toLocaleLowerCase())?.title}}</span>
+                               <p>
+                                {{getPreviewInfo(filiale.name.toLocaleLowerCase())?.description}}
+                               </p>
+                         }
+                           <!-- <div class="title">
+                               <i [class]="filiale.icon"></i>
+                               {{filiale.name}}
+                           </div> -->
+                           <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet ratione obcaecati...</p> -->
+                       </div>
+                   </div>
+                   </div>
+               </a>
+             }@else {
+               <a class="service-card-container">
+                   <div class="service-card">
+                   <div class="front">
+                       <div class="icon-box">
+                           @if(filiale.details.length>0 && !filiale.icon.includes("fas")){
+                               <img [src]="filiale.icon" alt="logo" width="128px">
+                           }@else{
+                               <i [class]="filiale.icon"></i>
+                           }
+                           
+                               <!-- <i class="ri-shield-check-fill"></i> -->
+                       </div>
+                       
+                       <div class="title-box">
+                           
+                           @if(filiale.details.length>0 && (pays === 'usa' || pays === 'canada' || pays === 'bahamas')){
+                               <span>{{filiale.details}}</span>
+                           }@else{
+                               <span>{{filiale.name}}</span>
+                           }
+                       </div>
+                   </div>
+                   <div class="back">
+                       <!-- <div class="top">
+                           <img [src]="filiale.logo" class="bg-amber-300 rounded-xl" alt="logo seco">
+                       </div> -->
+                       <div class="overlay">
+                         @if(filiale.details.length>0 && (pays === 'usa' || pays === 'canada' || pays === 'bahamas')){
+                               <!-- <span>{{filiale.details}}</span> -->
+                               <div class="title text-gray-700">
+                                   <!-- <i [class]="filiale.icon"></i> -->
+                                   {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.title}}
+                               </div>
+                               <p class="text-gray-600">
+                                {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.description}}
+                               </p>
+                         }@else{
+                               <span>{{getPreviewInfo(filiale.name.toLocaleLowerCase())?.title}}</span>
+                               <p>
+                                {{getPreviewInfo(filiale.name.toLocaleLowerCase())?.description}}
+                               </p>
+                         }
+                           <!-- <div class="title">
+                               <i [class]="filiale.icon"></i>
+                               {{filiale.name}}
+                           </div> -->
+                           <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet ratione obcaecati...</p> -->
+                       </div>
+                   </div>
+                   </div>
+               </a>
+             }
           }
               
           

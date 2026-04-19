@@ -6,7 +6,7 @@
             <div class=" gap-2 flex flex-col items-start">
                 <span class="text-[18px] text-gray-700 font-bold">Seco Security</span>
                 <h1 class="text-[32px] font-bold text-gray-700">Personal Protection, Total Security</h1>
-                <p class="text-gray-700  mb-2">Our highly trained agents ensure your safety at all times with discretion and efficiency.</p>
+                <p class="text-gray-700 mb-2 text-center">Our highly trained agents ensure your safety at all times with discretion and efficiency.</p>
                 <button class="rounded-[15px] text-white font-bold bg-(--my-sec-bg) w-fit px-5 h-[81px] text-[28px]">
                     REQUEST PROTECTION NOW
                 </button>
@@ -16,9 +16,9 @@
         <div class="bg-(--my-sec-bg) mt-[200px] mb-[50px]">
             <my-container>
                 <div class="flex items-center col-span-12 text-white justify-between">
-                    <div class="w-[580px]">
+                    <div class="w-[580px] text-center">
                         <h2 class="text-[32px] font-bold text-start">A serious, honest and professional concept of SECURITY with capital letters</h2>
-                        <p class="text-[20px]">
+                        <p class="text-[20px] ">
                             The security of a company ranges from the protection of people, goods and facilities, to the proper preservation of digital data. At Seco security we are aware of this, which is why we have developed a wide variety of services to meet the security needs of a company.
                             <br/>
                             We establish commitments of collaboration with our clients, understanding the business relationship as a long-term agreement based mainly on trust. Our aim has been to grow and specialise in order to be able to provide a better security service to companies.
@@ -31,24 +31,24 @@
         </div>
     }@else if(service === "building-maintenance"){
 
-        <section class="relative overflow-hidden flex flex-col h-[800px]">
-            <div class="absolute bottom-0 left-0 z-2 flex flex-col items-center w-full">
+        <section class="relative overflow-hidden flex flex-col justify-end min-h-screen md:h-[800px]">
+            <div class="  z-2 flex flex-col items-center w-full">
                 <div class="flex flex-col gap-[10px] items-center">
-                    <span class="text-[18px] text-gray-700 font-bold">
+                    <span class="text-[18px] text-gray-700 font-bold text-center">
                         Building Maintenance
                     </span>
-                    <h1 class="text-gray-700 text-[32px] font-bold">Keeping Your Facilities in Perfect Condition</h1>
-                    <p class="text-gray-700 text-[24px]">We maintain and repair your buildings to ensure a safe and functional environment.</p>
-                    <button class="rounded-[15px] text-white font-bold bg-(--my-sec-bg) w-fit h-[81px] text-[32px] px-5">
+                    <h1 class="text-gray-700 text-2xl lg:text-[32px] font-bold text-center">Keeping Your Facilities in Perfect Condition</h1>
+                    <p class="text-gray-700 text-md text-center">We maintain and repair your buildings to ensure a safe and functional environment.</p>
+                    <button class="rounded-[15px] text-white font-bold bg-(--my-sec-bg) w-fit  lg:h-[81px] text-[24px] lg:text-[32px] px-5 py-3 hover:bg-amber-500 transition-colors duration-300">
                         SCHEDULE MAINTENANCE
                     </button>
                 </div>
-                <div class="worker-img">
+                <!-- <div class="worker-img">
 
-                    <img src="img/building-maintenance-services.png"  alt="worker">
-                </div>
+                </div> -->
+                <img src="img/building-maintenance-services.png"  alt="worker">
+                <img class="absolute bottom-0 left-0 w-full z-1 "  src="img/asset-building-maintenance.png" alt="asset">
             </div>
-            <img class="absolute bottom-0 left-0 w-full z-1 "  src="img/asset-building-maintenance.png" alt="asset">
         </section>
         <section class="bg-section w-full ">
             <!-- <div class="max-w-7xl mx-auto "> -->
@@ -57,7 +57,7 @@
                     <div class="flex flex-col items-center ">
                         <h2 class="text-white text-3xl font-semibold mb-5">Our Services</h2>
 
-                        <div class="grid grid-cols-3 py-5 gap-4">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-5 gap-4">
                             <div class="bg-white rounded-2xl p-5 shadow-xl">
                                 <div class="flex flex-col gap-2 ">
                                     <i class="ri-calendar-check-fill  rounded-xl w-15 h-15 flex justify-center items-center  text-white bg-amber-400 text-2xl "></i>
@@ -107,17 +107,17 @@
             <!-- </div> -->
         </section>
 
-        <section class="relative bg-[url('/img/bg_wave.svg')] bg-cover bg-no-repeat bg-center  h-screen w-full mt-20">
-            <img src="img/yellow_points.svg" alt="decorations" class="absolute top-0 right-20 w-20 object-cover ">
+        <section class="relative bg-[url('/img/bg_wave.svg')] bg-cover bg-no-repeat bg-center  min-h-screen w-full mt-20">
+            <img src="img/yellow_points.svg" alt="decorations" class="absolute top-0 right-5 w-10 md:w-20  object-cover ">
             <my-container>
-                <div class="flex flex-col gap-10 items-center">
+                <div class="flex flex-col gap-10 items-center mt-7">
                     <h2 class="text-2xl text-gray-700 font-semibold">Why Choose SECOGROUPE</h2>
-                    <div class="flex items-center gap-15 my-10">
-                        <img src="img/team_workers.jpg" class="w-[35%] backdrop-blur-2xl border-15 border-white rounded-2xl shadow-2xl" alt="Team workers">
-                        <div>
+                    <div class="flex flex-col md:flex-row items-center gap-5 lg:gap-15 my-10">
+                        <img src="img/team_workers.jpg" class="md:w-[50%] lg:w-[35%] backdrop-blur-2xl border-15 border-white rounded-2xl shadow lg:shadow-2xl" alt="Team workers">
+                        <div class="w-full">
                             
-                            <ul class="grid grid-cols-2 gap-2">
-                                <li class="grid grid-cols-[35px_1fr] gap-1">
+                            <ul class="grid lg:grid-cols-2 gap-2">
+                                <li class="grid grid-cols-[35px_1fr] gap-1 border border-gray-100 bg-white shadow rounded-2xl p-2">
                                     <i class="ri-checkbox-circle-fill text-3xl text-green-500"></i>
                                     <div>
                                         <span class="text-gray-700 font-bold">
@@ -130,7 +130,7 @@
                                     </div>
                                 </li>
 
-                                <li class="grid grid-cols-[35px_1fr] gap-1">
+                                <li class="grid grid-cols-[35px_1fr] gap-1 border border-gray-100 bg-white shadow rounded-2xl p-2">
                                     <i class="ri-checkbox-circle-fill text-3xl text-green-500"></i>
                                     <div>
                                         <span class="text-gray-700 font-bold">
@@ -143,7 +143,7 @@
                                     </div>
                                 </li>
 
-                                <li class="grid grid-cols-[35px_1fr] gap-1">
+                                <li class="grid grid-cols-[35px_1fr] gap-1 border border-gray-100 bg-white shadow rounded-2xl p-2">
                                     <i class="ri-checkbox-circle-fill text-3xl text-green-500"></i>
                                     <div>
                                         <span class="text-gray-700 font-bold">
@@ -156,7 +156,7 @@
                                     </div>
                                 </li>
 
-                                <li class="grid grid-cols-[35px_1fr] gap-1">
+                                <li class="grid grid-cols-[35px_1fr] gap-1 border border-gray-100 bg-white shadow rounded-2xl p-2">
                                     <i class="ri-checkbox-circle-fill text-3xl text-green-500"></i>
                                     <div>
                                         <span class="text-gray-700 font-bold">
@@ -169,7 +169,7 @@
                                     </div>
                                 </li>
 
-                                <li class="grid grid-cols-[35px_1fr] gap-1">
+                                <li class="grid grid-cols-[35px_1fr] gap-1 border border-gray-100 bg-white shadow rounded-2xl p-2">
                                     <i class="ri-checkbox-circle-fill text-3xl text-green-500"></i>
                                     <div>
                                         <span class="text-gray-700 font-bold">
@@ -190,9 +190,25 @@
             </my-container>
         </section>
 
-        <section class="relative h-screen bg-(--my-sec-bg) w-full">
-            <img src="img/white_points.svg" alt="decorations" class="absolute top-0 left-20 w-20 object-cover opacity-25">
-            <img src="img/white_points.svg" alt="decorations" class="absolute bottom-10 right-20 w-20 object-cover opacity-25">
+        <section class="relative h-screen bg-(--my-sec-bg) w-full py-5">
+            <img src="img/white_points.svg" alt="decorations" class="absolute top-0 left-7 w-10 md:w-20 object-cover opacity-25">
+            
+            <!-- <my-container> -->
+                <div class="flex flex-col items-center justify-between h-full">
+                    <h2 class="text-2xl text-white font-semibold mt-10">Get in Touch</h2>
+
+                    <div class="flex flex-col items-center text-center my-auto px-5 md:px-0  lg:w-[75%] gap-5">
+                        <h3 class="text-3xl md:text-5xl  text-white">Looking for dependable building maintenance services?</h3>
+                        <p class="text-md md:text-2xl text-white">Contact SECOGROUPE today to discuss your needs and receive a customized solution.</p>
+
+                        <button class="hover:bg-gray-100 rounded-[15px] font-bold bg-white w-fit py-3 text-(--my-sec-bg) text-[24px] md:text-[32px] px-5">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            <!-- </my-container> -->
+
+            <img src="img/white_points.svg" alt="decorations" class="absolute bottom-10 right-7 w-10 md:w-20 object-cover opacity-25">
         </section>
     }
 
