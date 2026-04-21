@@ -143,7 +143,7 @@ export class Navbar implements AfterViewInit{
     {label: "Home", path: ''},
     {label: "About", path: '/about-us'},
     {label: "Services", path: '/services'},
-    {label: "Hiring", path: '/hiring'},
+    {label: "Apply Now", path: '/hiring'},
     {label: "Contact", path: '/contact'}
     // {label: "Mission", path: '/mission'}
   ]
