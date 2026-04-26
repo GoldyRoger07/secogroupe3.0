@@ -235,8 +235,8 @@
 .service-card .back .overlay{
     /* margin-top: auto; */
     height: 100%;
-    background: #00000028;
-    /* background-image: linear-gradient(to top,#000000,transparent); */
+    /* background: #00000028; */
+    background-image: linear-gradient(to top,var(--my-sec-bg),transparent);
     /* color: #fbad19; */
     padding: 20px;
     

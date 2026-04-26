@@ -186,33 +186,43 @@ Services. `
 
   previewInfo = [
     {
-      title: 'Professional Security Solutions',
-      description: 'We provide reliable and highly trained security personnel to ensure the safety of your people and assets. Our services are tailored to meet the unique needs of each client. With a strong focus on vigilance and professionalism, we deliver peace of mind at all times.',
+      title: 'Your Safety, Our Priority',
+      description: ' Comprehensive protection tailored to your peace of mind. From elite manned guarding to advanced surveillance solutions, we provide a secure environment for your assets, employees, and premises.',
       service: 'security'
     },
     {
-      title: 'Comprehensive Building Maintenance',
-      description: 'Our building maintenance services are designed to keep your facilities operating at peak performance. We handle everything from routine inspections to preventive maintenance. Our team ensures a safe, functional, and well-maintained environment for your business.',
+      title: ' Preserving Your Property’s Excellence',
+      description: ` We ensure your infrastructure operates at peak performance. Our proactive 
+maintenance services cover MEP (Mechanical, Electrical, Plumbing), civil works, and 
+general repairs to extend the life of your facility.`,
       service: 'building maintenance'
     },
     {
-      title: 'Strategic Staffing Services',
-      description: 'We offer flexible staffing solutions to help your organization meet its workforce demands efficiently. Our recruitment process ensures qualified and reliable candidates for every role. We focus on delivering talent that aligns with your company’s goals and values.',
+      title: 'Empowering Your Business with Right Talent',
+      description: ` Finding the right fit shouldn't be a challenge. We provide qualified, pre-vetted 
+professionals across various industries, ensuring your team has the support it needs 
+to scale and succeed.`,
       service: 'staffing'
     },
     {
-      title: 'Premium Housekeeping Services',
-      description: 'Our housekeeping team delivers exceptional cleanliness and organization for residential and commercial spaces. We use professional techniques and quality products to maintain high standards. Your comfort and satisfaction remain our top priority.',
+      title: ' Impeccable Standards for Every Space',
+      description: ` Experience a higher level of cleanliness. Our housekeeping team specializes 
+in detailed care for residential and commercial spaces, ensuring a pristine 
+environment that reflects your commitment to quality.`,
       service: 'housekeeping'
     },
     {
-      title: 'Expert Janitorial Services',
-      description: 'We provide thorough and consistent janitorial services to maintain clean and hygienic work environments. Our trained staff follows strict cleaning protocols and schedules. We help create a healthier and more productive space for your operations.',
+      title: 'Cleanliness Built on Consistency',
+      description: `We handle the heavy lifting of facility hygiene. Our janitorial services focus on 
+high-traffic sanitation and deep-cleaning protocols to keep your workspace healthy, 
+safe, and professional around the clock. `,
       service: 'janitorial'
     },
     {
-      title: 'Personalized Concierge Services',
-      description: 'Our concierge services are designed to enhance convenience and elevate client experiences. From daily assistance to specialized requests, we handle every detail with professionalism. We ensure a seamless and welcoming environment for your clients and guests.',
+      title: 'The First Impression Your Brand Deserves',
+      description: ` Elevate your guest experience with professional front-of-house services. Our 
+concierge team combines hospitality with efficiency, managing inquiries and arrivals 
+with grace and sophistication.`,
       service: 'concierge'
     }
   ]
