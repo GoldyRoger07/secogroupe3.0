@@ -1,0 +1,46 @@
+{
+  "NAVBAR":{
+    "LINKS":{
+      "LINK1_TITLE": "Home",
+      "LINK2_TITLE": "About",
+      "LINK3_TITLE": "Services",
+      "LINK4_TITLE": "Apply Now",
+      "LINK5_TITLE": "Contact"
+    }
+  },
+  "FOOTER":{
+    "TITLE": "A new vision for your facility",
+    "SOCIAL_LINK_TITLE": "Find Us"
+  },
+  "hiring": {
+    "title": "Join {{companyName}}",
+    "description": "We are looking for motivated and committed talents. Browse our job openings and download recruitment notices.",
+    "cards": {
+      "card1": {
+        "title": "Accountant",
+        "description": "Financial management, tracking accounting operations, and producing reliable reports.",
+        "textBtn": "View PDF file"
+      },
+      "card2": {
+        "title": "Graphic Designer",
+        "description": "Creating modern visuals to strengthen the company's visual identity.",
+        "textBtn": "View PDF file"
+      },
+      "card3": {
+        "title": "Sales Representative",
+        "description": "Developing the client portfolio and promoting services.",
+        "textBtn": "View PDF file"
+      },
+      "card4": {
+        "title": "Recruiter",
+        "description": "Identifying and selecting talents, managing the recruitment process.",
+        "textBtn": "View PDF file"
+      }
+    },
+    "section3": {
+      "title": "Want to join our team?",
+      "description": "Apply today and become part of SECOGROUPE.",
+      "textBtn": "Apply now"
+    }
+  }
+}
