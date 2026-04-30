@@ -2,10 +2,11 @@ import { Component, input, Input } from '@angular/core';
 import { Link } from '../navbar/navbar';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'link-item',
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [TranslatePipe, RouterLink, RouterLinkActive, CommonModule],
   templateUrl: './link-item.html',
   styles: `
     a{

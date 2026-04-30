@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,15 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App implements OnInit{
+export class App {
   protected title = 'Secogroupe';
 
-
-  ngOnInit(): void {
-    
+  // private translate = inject(TranslateService);
+  
+  constructor(private translate: TranslateService) {
+      this.translate.addLangs(['fr', 'en']);
+      this.translate.setFallbackLang('fr');
+      this.translate.use('en');
   }
 
 

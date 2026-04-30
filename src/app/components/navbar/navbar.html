@@ -21,7 +21,7 @@
             }
           }
             <li>
-              <p-select [options]="languages" [(ngModel)]="selectedLanguage"  optionLabel="name" placeholder="Select a Language" class="w-full md:w-30" />
+              <p-select [options]="languages" (onChange)="onLangChange($event)" [(ngModel)]="selectedLanguage"  optionLabel="name" placeholder="Select a Language" class="w-full md:w-30" />
             </li>
         </ul>
     </div>
@@ -55,7 +55,7 @@
 
     }
     <li>
-      <p-select [options]="languages"   [(ngModel)]="selectedLanguage" optionLabel="name" placeholder="Select a Language" class="w-full md:w-30" />
+      <p-select [options]="languages" (onChange)="onLangChange($event)" optionLabel="name" placeholder="Select a Language" class="w-full md:w-30" />
     </li>
   </ul>
     

@@ -1,3 +1,3 @@
 <a routerLinkActive="text-(--link-color) font-bold" [routerLinkActiveOptions]="{exact:true}" [routerLink]="link.path"  class="hover:text-(--link-color)" [ngStyle]="{'--link-color': hoverTextColor, '--text-color': textColor}">
-    {{link.label}}
+    {{link.label | translate}}
 </a>

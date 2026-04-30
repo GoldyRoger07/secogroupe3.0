@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Navbar } from "../../components/navbar/navbar";
 import { Footer } from "../../components/footer/footer";
 import { Container } from "../../components/container/container";
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'cookie-policy',
-  imports: [Navbar, Footer, Container],
+  imports: [Navbar, Footer, Container, TranslatePipe],
   templateUrl: './hiring-page.html',
   styles: `
         .bg-hiring{

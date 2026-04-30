@@ -1,0 +1,48 @@
+{
+    "NAVBAR": {
+        "LINKS": {
+            "LINK1_TITLE": "Accueil",
+            "LINK2_TITLE": "À propos",
+            "LINK3_TITLE": "Services",
+            "LINK4_TITLE": "Postuler maintenant",
+            "LINK5_TITLE": "Contact"
+        }
+    },
+    "FOOTER":{
+        "TITLE": "Une nouvelle vision pour votre établissement",
+        "SOCIAL_LINK_TITLE": "Rejoignez-nous"
+    },
+    "hiring":{
+        "title": "Rejoignez {{companyName}}",
+        "description": "Nous recherchons des talents motivés et engagés. Consultez nos offres et téléchargez les avis de recrutement.",
+        "cards":{
+            "card1":{
+                "title": "Comptable",
+                "description": "Gestion financière, suivi des opérations comptables et production de rapports fiables.",
+                "textBtn": "Regarder le fichier PDF"
+            },
+            "card2":{
+                "title": "Graphiste",
+                "description": "Création de visuels modernes pour renforcer l'identité visuelle de l'entreprise.",
+                "textBtn": "Regarder le fichier PDF"
+            },
+            "card3":{
+                "title": "Agent Commercial",
+                "description": "Développement du portefeuille client et promotion des services.",
+                "textBtn": "Regarder le fichier PDF"
+            },
+            "card4":{
+                "title": "Recruteur",
+                "description": "Identification et sélection des talents, gestion du processus de recrutement.",
+                "textBtn": "Regarder le fichier PDF"
+            }
+        },
+
+        "section3":{
+            "title": "Vous souhaitez rejoindre notre équipe ?",
+            "description": "Postulez dès aujourd’hui et faites partie de SECOGROUPE.",
+            "textBtn": "Postuler maintenant"
+            
+        }
+    }
+}

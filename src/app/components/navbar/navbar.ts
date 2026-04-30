@@ -7,6 +7,7 @@ import { LinkItem } from "../link-item/link-item";
 import { HamburgerBtn } from "../hamburger-btn/hamburger-btn";
 import { SelectType } from '../../models/SelectType';
 import { Select } from "primeng/select";
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 export class NavbarConfig{
   // logo?: string;
@@ -33,7 +34,7 @@ export interface Link{
 
 @Component({
   selector: 'my-navbar',
-  imports: [Select ,RouterLink,RouterLinkActive, CommonModule, FormsModule, Container, LinkItem, HamburgerBtn],
+  imports: [Select ,RouterLink,RouterLinkActive, CommonModule, FormsModule, Container, LinkItem, HamburgerBtn, TranslatePipe],
   templateUrl: './navbar.html',
   styles: `
     .navbar {
@@ -140,16 +141,16 @@ export class Navbar implements AfterViewInit{
 
   @Input()
   links = [
-    {label: "Home", path: ''},
-    {label: "About", path: '/about-us'},
-    {label: "Services", path: '/services'},
-    {label: "Apply Now", path: '/hiring'},
-    {label: "Contact", path: '/contact'}
+    {label: 'NAVBAR.LINKS.LINK1_TITLE', path: ''},
+    {label: 'NAVBAR.LINKS.LINK2_TITLE', path: '/about-us'},
+    {label: 'NAVBAR.LINKS.LINK3_TITLE', path: '/services'},
+    {label: 'NAVBAR.LINKS.LINK4_TITLE', path: '/hiring'},
+    {label: 'NAVBAR.LINKS.LINK5_TITLE', path: '/contact'}
     // {label: "Mission", path: '/mission'}
   ]
 
    languages: SelectType[] = [
-        { name: 'English', code: 'US' },
+        { name: 'English', code: 'EN' },
         { name: 'French', code: 'FR' },
     ]
     
@@ -167,7 +168,9 @@ export class Navbar implements AfterViewInit{
 
   myStyle = {}
 
-  constructor(private renderer: Renderer2){}
+  constructor(private renderer: Renderer2, private translate: TranslateService){
+    this.translate.use(localStorage.getItem("lang") || "en");
+  }
 
   ngAfterViewInit() {
     const toolbarHeight = this.toolbar.nativeElement.offsetHeight;
@@ -179,6 +182,21 @@ export class Navbar implements AfterViewInit{
     });
 
     resizeObserver.observe(this.toolbar.nativeElement);
+
+    const currentLang = localStorage.getItem("lang") || "fr"
+    if(currentLang === "fr"){
+      this.selectedLanguage = {
+        name: "French",
+        code: "FR"
+      }
+
+    }else{
+      this.selectedLanguage = {
+        name: "English",
+        code: "EN"
+      }
+    }
+
 
     
     this.myStyle = {
@@ -196,6 +214,11 @@ export class Navbar implements AfterViewInit{
 
   handleSearch() {
     this.onSearch.emit(this.searchValue);
+  }
+
+  onLangChange(event: any){
+    localStorage.setItem("lang", event.value.code.toLocaleLowerCase())
+    this.translate.use(event.value.code.toLocaleLowerCase())
   }
 
 
