@@ -158,7 +158,7 @@ export class Navbar implements AfterViewInit{
     
       selectedLanguage: SelectType = {
         name: 'English',
-        code: 'US'
+        code: 'EN'
       };
   
 
@@ -183,7 +183,7 @@ export class Navbar implements AfterViewInit{
 
     resizeObserver.observe(this.toolbar.nativeElement);
 
-    const currentLang = localStorage.getItem("lang") || "fr"
+    const currentLang = localStorage.getItem("lang") || "en"
     if(currentLang === "fr"){
       this.selectedLanguage = {
         name: "French",
