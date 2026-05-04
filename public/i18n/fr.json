@@ -1,4 +1,91 @@
 {
+  "HOME": {
+    "PARTNERSHIP": {
+      "TITLE": "Le partenariat est au cœur de notre activité.",
+      "DESC1": "Votre installation est un atout essentiel, et votre vision est notre feuille de route. Chez SECO GROUPE, nous collaborons avec vous pour transformer vos infrastructures les plus critiques en environnements modernes, efficaces et sains.",
+      "DESC2": "Nous vous offrons un point de contact unique pour simplifier la gestion et atteindre vos objectifs.",
+      "POINT_TITLE": "Point de contact unique",
+      "POINT_DESC": "Communication fluide et responsabilité centralisée"
+    },
+
+    "MAP": {
+      "TITLE": "Où nous opérons",
+      "DESC": "Nous fournissons nos services premium dans plusieurs pays à travers le monde",
+      "BTN": "Nos services"
+    },
+
+    "EXPERTISE": {
+      "TITLE": "Une expertise conçue pour répondre à vos besoins.",
+      "DESC": "Les défis uniques de votre infrastructure nécessitent une approche sur mesure."
+    },
+
+    "FACILITY": {
+      "TITLE": "Gestion des installations",
+      "DESC": "Nous créons des environnements sûrs, propres et professionnels.",
+      "CLEANING_TITLE": "Nettoyage et maintenance",
+      "CLEANING_DESC": "Nous assurons l'entretien quotidien et programmé.",
+      "PROPERTY_TITLE": "Support immobilier",
+      "PROPERTY_DESC": "Services complets pour vos opérations.",
+      "TRANSPORT_TITLE": "Solutions de transport",
+      "TRANSPORT_DESC": "Gestion fluide du stationnement et des flux.",
+      "OUTDOOR_TITLE": "Entretien extérieur",
+      "OUTDOOR_DESC": "Services professionnels d'aménagement paysager."
+    },
+
+    "INFRA": {
+      "TITLE": "Solutions d'infrastructure",
+      "DESC": "Nous proposons des solutions stratégiques pour améliorer l'efficacité et réduire les coûts.",
+      "OPERATIONS_TITLE": "Opérations et maintenance",
+      "OPERATIONS_DESC": "Supervision proactive des systèmes.",
+      "MODERN_TITLE": "Modernisation",
+      "MODERN_DESC": "Amélioration des performances et durabilité.",
+      "HVAC_TITLE": "Systèmes CVC",
+      "HVAC_DESC": "Gestion du chauffage, ventilation et climatisation.",
+      "CRITICAL_TITLE": "Systèmes critiques",
+      "CRITICAL_DESC": "Optimisation des infrastructures essentielles."
+    },
+
+    "INDUSTRIES": {
+      "TITLE": "Secteurs desservis",
+      "DESC": "Des solutions adaptées à divers secteurs."
+    },
+
+    "ADVANTAGES": {
+      "TITLE": "Nos avantages concurrentiels",
+      "DESC": "Ce qui nous distingue.",
+      "EXCELLENCE_TITLE": "Excellence de service",
+      "EXCELLENCE_DESC": "Nous garantissons une qualité supérieure.",
+      "CUSTOMER_TITLE": "Satisfaction client",
+      "CUSTOMER_DESC": "Votre succès est notre priorité.",
+      "SUPPORT_TITLE": "Support 24h/24",
+      "SUPPORT_DESC": "Disponible à tout moment."
+    },
+
+    "WORK": {
+      "TITLE": "Nos réalisations",
+      "DESC": "Découvrez nos projets récents",
+      "BTN": "Voir plus"
+    },
+
+    "CLIENTS": {
+      "TITLE": "Nos clients",
+      "DESC": "Nous collaborons avec des partenaires de confiance."
+    },
+
+    "CONTACT": {
+      "TITLE": "Contactez-nous",
+      "DESC": "Prêt à démarrer votre projet ?",
+      "EMAIL": "Email",
+      "CALL": "Téléphone",
+      "VISIT": "Adresse",
+      "FORM_TITLE": "Envoyez-nous un message",
+      "NAME": "Votre nom",
+      "EMAIL_LABEL": "Adresse email",
+      "MESSAGE": "Votre message",
+      "BTN": "Envoyer"
+    }
+  },
+
     "NAVBAR": {
         "LINKS": {
             "LINK1_TITLE": "Accueil",

@@ -236,7 +236,7 @@
     /* margin-top: auto; */
     height: 100%;
     /* background: #00000028; */
-    background-image: linear-gradient(to top,var(--my-sec-bg),transparent);
+    background-image: linear-gradient(to bottom,var(--my-sec-bg), transparent 50% ,transparent );
     /* color: #fbad19; */
     padding: 20px;
     

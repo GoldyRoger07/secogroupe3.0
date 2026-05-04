@@ -18,6 +18,7 @@ import { NativeSlider } from "../../components/native-slider/native-slider";
 import { Dialog } from 'primeng/dialog';
 import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface Product {
     id: string,
@@ -40,7 +41,7 @@ interface CardService {
 
 @Component({
   selector: 'app-home-page',
-  imports: [Dialog,Carousel, CommonModule, ButtonModule, CardModule, Navbar, Footer, ReactiveFormsModule, MySlider, MyHero, Select, Container, NativeSlider],
+  imports: [TranslatePipe, Dialog,Carousel, CommonModule, ButtonModule, CardModule, Navbar, Footer, ReactiveFormsModule, MySlider, MyHero, Select, Container, NativeSlider],
   templateUrl: './home-page.html',
   styles: `
   .hero-section{

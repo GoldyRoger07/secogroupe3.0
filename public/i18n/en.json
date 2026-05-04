@@ -1,4 +1,93 @@
 {
+  "HOME": {
+    "PARTNERSHIP": {
+      "TITLE": "Partnership is at the core of our business.",
+      "DESC1": "Your facility is a vital asset, and your vision is our blueprint. At SECO GROUPE, we work alongside you to transform your most critical infrastructure into modern, efficient, and healthy environments.",
+      "DESC2": "We provide a single point of contact and accountability, making it simple for you to achieve your goals while focusing on what matters most.",
+      "POINT_TITLE": "Single Point of Contact",
+      "POINT_DESC": "Streamlined communication and accountability"
+    },
+
+    "MAP": {
+      "TITLE": "Where We Operate",
+      "TITLE_S1": "Where",
+      "TITLE_S2": "We",
+      "TITLE_S3": "Operate",
+      "DESC": "We deliver our premium services across multiple countries worldwide",
+      "BTN": "Our Services"
+    },
+
+    "EXPERTISE": {
+      "TITLE": "Expertise designed to meet your needs.",
+      "DESC": "Your facility's unique challenges require a tailored approach. Our diverse team at SECO GROUPE provides comprehensive, integrated services that ensure your building performs at its best throughout its entire lifecycle."
+    },
+
+    "FACILITY": {
+      "TITLE": "Facility Management",
+      "DESC": "From the grounds to the interior, we create pristine, safe, and professional environments. Our management solutions handle every detail, so you can focus on your core business.",
+      "CLEANING_TITLE": "Cleaning and Maintenance",
+      "CLEANING_DESC": "We manage all daily and scheduled upkeep to keep your space spotless and running smoothly.",
+      "PROPERTY_TITLE": "Property Support",
+      "PROPERTY_DESC": "A full suite of services to support your operations and the well-being of your occupants.",
+      "TRANSPORT_TITLE": "Transportation Solutions",
+      "TRANSPORT_DESC": "Seamless management of parking and vehicle flow to enhance safety and efficiency.",
+      "OUTDOOR_TITLE": "Outdoor Care",
+      "OUTDOOR_DESC": "Professional landscape and groundskeeping services to maintain your facility's exterior appearance."
+    },
+
+    "INFRA": {
+      "TITLE": "Infrastructure Solutions",
+      "DESC": "Many building managers overlook the potential for significant savings and efficiency gains. SECO GROUPE provides a strategic roadmap with a clear financial plan, expert execution, and long-term operational support to secure your facility's future.",
+      "OPERATIONS_TITLE": "Operations & Upkeep",
+      "OPERATIONS_DESC": "Proactive and strategic oversight to ensure all systems perform at their peak.",
+      "MODERN_TITLE": "Modernization",
+      "MODERN_DESC": "Solutions for electrifying and upgrading your infrastructure for improved performance and sustainability.",
+      "HVAC_TITLE": "HVAC Systems",
+      "HVAC_DESC": "Expert care for your heating, cooling, and ventilation to ensure comfort and air quality.",
+      "CRITICAL_TITLE": "Critical Systems",
+      "CRITICAL_DESC": "We manage and optimize your core building infrastructure to prevent downtime and waste."
+    },
+
+    "INDUSTRIES": {
+      "TITLE": "Industries We Serve",
+      "DESC": "Delivering exceptional solutions across diverse sectors with expertise and dedication."
+    },
+
+    "ADVANTAGES": {
+      "TITLE": "Our Competitive Advantages",
+      "DESC": "What sets us apart and makes us your trusted partner.",
+      "EXCELLENCE_TITLE": "Excellence in Service",
+      "EXCELLENCE_DESC": "We are committed to delivering the highest standards of quality in every project we undertake.",
+      "CUSTOMER_TITLE": "Customer Satisfaction",
+      "CUSTOMER_DESC": "Your success is our priority. We build lasting relationships through personalized service and clear communication.",
+      "SUPPORT_TITLE": "24-Hour Support",
+      "SUPPORT_DESC": "We're here for you around the clock, every day of the year."
+    },
+
+    "WORK": {
+      "TITLE": "Our Work",
+      "DESC": "Explore some of our recent projects and success stories",
+      "BTN": "See More"
+    },
+
+    "CLIENTS": {
+      "TITLE": "Our Clients",
+      "DESC": "We are proud to collaborate with trusted partners and clients who believe in our vision."
+    },
+
+    "CONTACT": {
+      "TITLE": "Get In Touch",
+      "DESC": "Ready to start your project? Contact us today and let's discuss how we can help your business grow.",
+      "EMAIL": "Email Us",
+      "CALL": "Call Us",
+      "VISIT": "Visit Us",
+      "FORM_TITLE": "Send Us a Message",
+      "NAME": "Your Name",
+      "EMAIL_LABEL": "Email Address",
+      "MESSAGE": "Your Message",
+      "BTN": "Send Message"
+    }
+  },
   "NAVBAR":{
     "LINKS":{
       "LINK1_TITLE": "Home",
