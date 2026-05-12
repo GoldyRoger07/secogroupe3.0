@@ -6,13 +6,14 @@ import { CommonModule } from '@angular/common';
 import { Filiale } from '../../models/Filiale';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FilialeService } from '../../services/filiale-service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 
 
 
 @Component({
   selector: 'app-services-country',
-  imports: [RouterLink,Navbar, Footer, Container, CommonModule],
+  imports: [TranslatePipe, RouterLink,Navbar, Footer, Container, CommonModule],
   templateUrl: './services-country.html',
   styleUrl: './services-country.css'
 })
@@ -27,6 +28,15 @@ export default class ServicesCountry implements OnInit{
   filialeService = inject(FilialeService)
 
   previewInfo = this.filialeService.previewInfo
+
+  previewIcons = {
+    security: "/images/logos/security_services.png",
+    hospitality: "/images/logos/house_keeping.png",
+    building: "/images/logos/building_maintenance.png",
+    staffing: "/images/logos/staffing_services.png",
+    outdoor: "/images/logos/outdoor_care.png",
+    janitorial: "/images/logos/janitorial_services.png",
+  }
   
   ngOnInit(): void {
     const sections = document.querySelectorAll(".section-animate")

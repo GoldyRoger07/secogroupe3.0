@@ -66,11 +66,10 @@
                 
                 <div class="space-y-8 transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
                     <div class="space-y-6" data-aos="fade-up" data-aos-duration="1500">
-                        <h2 class="lg:text-4xl font-bold text-gray-700 leading-tight">Your Trusted Partner in Facility and Staff Management</h2>
-                        <p class="text-md text-gray-600 leading-relaxed">SECOGROUPE is a full-service provider committed to maintaining the functionality, safety, and pristine condition of your property.</p>
-                        <p class="text-md text-gray-600 leading-relaxed">From the foundational cleanliness of
-Janitorial services to the expertise of Security Experts, we deliver integrated solutions that
-save you time, reduce overhead, and ensure seamless operations.</p>
+                        <h2 class="lg:text-4xl font-bold text-gray-700 leading-tight">{{'SERVICES.HERO_SECTION.TITLE' | translate}}</h2>
+                        <!-- <p class="text-md text-gray-600 leading-relaxed">SECOGROUPE is a full-service provider committed to maintaining the functionality, safety, and pristine condition of your property.</p> -->
+                        <p class="text-md text-gray-600 leading-relaxed">
+                            {{'SERVICES.HERO_SECTION.DESC' | translate}}
                     </div>
                     <!-- <div class="flex items-center space-x-4">
                         <div class="w-12 h-12 bg-(--my-sec-bg) rounded-full flex items-center justify-center">
@@ -102,90 +101,373 @@ save you time, reduce overhead, and ensure seamless operations.</p>
 </div> -->
     <my-container>
         <div class="text-center mb-16 col-span-12">
-                <h2 class="text-3xl font-bold mb-4 text-gray-700" >Our <span class="text-(--my-sec-bg)">Comprehensive </span>Services</h2>
+                <h2 class="text-3xl font-bold mb-4 text-gray-700" [innerHtml]="'SERVICES.SECTION_SERVICES.TITLE' | translate"></h2>
                 
         </div>
-        @for (serviceSection of serviceSections; track $index) {
-            <div class="col-span-12 mb-20 transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
-            <div class=" {{serviceSection.color}} min-[391px]:rounded-2xl p-4 md:p-8 lg:p-12">
+        <div class="col-span-12 mb-20 transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
+            <div class=" {{serviceSections[0].color}} min-[391px]:rounded-2xl p-4 md:p-8 lg:p-12">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    @if($index % 2 === 0) {
+                    <!-- @if($index % 2 === 0) { -->
                         <div>
-                        <div class="flex items-center mb-6">
-                            <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
-                                <i class="{{serviceSection.icon}} text-white text-2xl"></i>
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
+                                    <i class="{{serviceSections[0].icon}} text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-700">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE1.TITLE' | translate}}</h3>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-700">{{serviceSection.title}}</h3>
+                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE1.DESC' | translate}}</p>
                         </div>
-                        <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{serviceSection.description}}</p>
-                    </div>
-                    <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
-                        <my-slider [images]="serviceSection.imageUrl"/>
-                        <!-- <img alt="Facility Management" class="rounded-lg shadow-lg object-cover w-full h-64" [src]="serviceSection.imageUrl"> -->
-                    </div>
-                    }@else {
                         <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
-                            <my-slider [images]="serviceSection.imageUrl"/>
+                            <my-slider [images]="serviceSections[0].imageUrl"/>
+                            <!-- <img alt="Facility Management" class="rounded-lg shadow-lg object-cover w-full h-64" [src]="serviceSection.imageUrl"> -->
+                        </div>
+                    <!-- }@else { -->
+                        <!-- <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
+                            <my-slider [images]="serviceSections[0].imageUrl"/>
                         </div>
                         <div>
                             <div class="flex items-center mb-6">
                                 <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
-                                    <i class="{{serviceSection.icon}} text-white text-2xl"></i>
+                                    <i class="{{serviceSections[0].icon}} text-white text-2xl"></i>
                                 </div>
-                                <h3 class="text-3xl font-bold text-gray-700">{{serviceSection.title}}</h3>
+                                <h3 class="text-3xl font-bold text-gray-700">{{serviceSections[0].title}}</h3>
                             </div>
-                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{serviceSection.description}}</p>
-                        </div>
+                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{serviceSections[0].description}}</p>
+                        </div> -->
                     
-                    }
+                    <!-- } -->
                     
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-{{serviceSection.subServices.length}} gap-6 mt-12">
-                    @for (subService of serviceSection.subServices; track $index) {
+                <div class="grid md:grid-cols-2 lg:grid-cols-{{serviceSections[0].subServices.length}} gap-6 mt-12">
+                    <!-- @for (subService of serviceSections[0].subServices; track $index) { -->
                         <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
                             <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                                <i class="{{subService.icon}} text-(--my-sec-bg) text-xl"></i>
+                                <i class="{{serviceSections[0].subServices[0].icon}} text-(--my-sec-bg) text-xl"></i>
                             </div>
-                            <h4 class="font-semibold text-gray-700 mb-2">{{subService.title}}</h4>
-                            <p class="text-gray-600 text-sm leading-relaxed">{{subService.description}}</p>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE1.CARDS.CARD1.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE1.CARDS.CARD1.DESC' | translate}}</p>
                         </div>
-                    }
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[0].subServices[1].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE1.CARDS.CARD2.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE1.CARDS.CARD2.DESC' | translate}}</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[0].subServices[2].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE1.CARDS.CARD3.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE1.CARDS.CARD3.DESC' | translate}}</p>
+                        </div>
+                    <!-- } -->
                     
 
-                    <!-- <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 500ms;">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                            <i class="ri-building-line text-(--my-sec-bg) text-xl"></i>
-                        </div>
-                        <h4 class="font-semibold text-gray-900 mb-2" data-aos="fade-up" data-aos-duration="1500">Property Support</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed" data-aos="fade-up" data-aos-duration="1500">A full suite of services to support your operations and the well-being of your occupants.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 600ms;">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                            <i class="ri-car-line text-(--my-sec-bg) text-xl"></i>
-                        </div>
-                        <h4 class="font-semibold text-gray-900 mb-2" data-aos="fade-up" data-aos-duration="1500">Transportation Solutions</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed" data-aos="fade-up" data-aos-duration="1500">Seamless management of parking and vehicle flow to enhance safety and efficiency.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 700ms;">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                            <i class="ri-plant-line text-(--my-sec-bg) text-xl"></i>
-                        </div>
-                        <h4 class="font-semibold text-gray-900 mb-2" data-aos="fade-up" data-aos-duration="1500">Outdoor Care</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed" data-aos="fade-up" data-aos-duration="1500">Professional landscape and groundskeeping services to maintain your facility's exterior appearance.</p>
-                    </div> -->
+                    
                 </div>
             </div>
         </div>
-        }
+
+        <div class="col-span-12 mb-20 transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
+            <div class=" {{serviceSections[1].color}} min-[391px]:rounded-2xl p-4 md:p-8 lg:p-12">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- @if($index % 2 === 0) { -->
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
+                                    <i class="{{serviceSections[1].icon}} text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-700">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE2.TITLE' | translate}}</h3>
+                            </div>
+                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE2.DESC' | translate}}</p>
+                        </div>
+                        <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
+                            <my-slider [images]="serviceSections[1].imageUrl"/>
+                            <!-- <img alt="Facility Management" class="rounded-lg shadow-lg object-cover w-full h-64" [src]="serviceSection.imageUrl"> -->
+                        </div>
+                    <!-- }@else { -->
+                        <!-- <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
+                            <my-slider [images]="serviceSections[1].imageUrl"/>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
+                                    <i class="{{serviceSections[1].icon}} text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-700">{{serviceSections[1].title}}</h3>
+                            </div>
+                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{serviceSections[1].description}}</p>
+                        </div> -->
+                    
+                    <!-- } -->
+                    
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-{{serviceSections[1].subServices.length}} gap-6 mt-12">
+                    <!-- @for (subService of serviceSections[1].subServices; track $index) { -->
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[1].subServices[0].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE2.CARDS.CARD1.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE2.CARDS.CARD1.DESC' | translate}}</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[1].subServices[1].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE2.CARDS.CARD2.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE2.CARDS.CARD2.DESC' | translate}}</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[1].subServices[2].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE2.CARDS.CARD3.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE2.CARDS.CARD3.DESC' | translate}}</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[1].subServices[3].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE2.CARDS.CARD4.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE2.CARDS.CARD4.DESC' | translate}}</p>
+                        </div>
+                    <!-- } -->
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-span-12 mb-20 transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
+            <div class=" {{serviceSections[2].color}} min-[391px]:rounded-2xl p-4 md:p-8 lg:p-12">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- @if($index % 2 === 0) { -->
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
+                                    <i class="{{serviceSections[2].icon}} text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-700">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE3.TITLE' | translate}}</h3>
+                            </div>
+                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE3.DESC' | translate}}</p>
+                        </div>
+                        <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
+                            <my-slider [images]="serviceSections[2].imageUrl"/>
+                            <!-- <img alt="Facility Management" class="rounded-lg shadow-lg object-cover w-full h-64" [src]="serviceSection.imageUrl"> -->
+                        </div>
+                    <!-- }@else { -->
+                        <!-- <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
+                            <my-slider [images]="serviceSections[2].imageUrl"/>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
+                                    <i class="{{serviceSections[2].icon}} text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-700">{{serviceSections[2].title}}</h3>
+                            </div>
+                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{serviceSections[2].description}}</p>
+                        </div> -->
+                    
+                    <!-- } -->
+                    
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-{{serviceSections[2].subServices.length}} gap-6 mt-12">
+                    <!-- @for (subService of serviceSections[2].subServices; track $index) { -->
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[2].subServices[0].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE3.CARDS.CARD1.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE3.CARDS.CARD1.DESC' | translate}}</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[2].subServices[1].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE3.CARDS.CARD2.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE3.CARDS.CARD2.DESC' | translate}}</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[2].subServices[2].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE3.CARDS.CARD3.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE3.CARDS.CARD3.DESC' | translate}}</p>
+                        </div>
+
+                        
+                    <!-- } -->
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-span-12 mb-20 transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
+            <div class=" {{serviceSections[3].color}} min-[391px]:rounded-2xl p-4 md:p-8 lg:p-12">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- @if($index % 2 === 0) { -->
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
+                                    <i class="{{serviceSections[3].icon}} text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-700">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE4.TITLE' | translate}}</h3>
+                            </div>
+                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE4.DESC' | translate}}</p>
+                        </div>
+                        <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
+                            <my-slider [images]="serviceSections[3].imageUrl"/>
+                            <!-- <img alt="Facility Management" class="rounded-lg shadow-lg object-cover w-full h-64" [src]="serviceSection.imageUrl"> -->
+                        </div>
+                    <!-- }@else { -->
+                        <!-- <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
+                            <my-slider [images]="serviceSections[3].imageUrl"/>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
+                                    <i class="{{serviceSections[3].icon}} text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-700">{{serviceSections[3].title}}</h3>
+                            </div>
+                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{serviceSections[3].description}}</p>
+                        </div> -->
+                    
+                    <!-- } -->
+                    
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-{{serviceSections[3].subServices.length}} gap-6 mt-12">
+                    <!-- @for (subService of serviceSections[3].subServices; track $index) { -->
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[3].subServices[0].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE4.CARDS.CARD1.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE4.CARDS.CARD1.DESC' | translate}}</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[3].subServices[1].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE4.CARDS.CARD2.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE4.CARDS.CARD2.DESC' | translate}}</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[3].subServices[2].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE4.CARDS.CARD3.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE4.CARDS.CARD3.DESC' | translate}}</p>
+                        </div>
+
+                        
+                    <!-- } -->
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-span-12 mb-20 transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
+            <div class=" {{serviceSections[4].color}} min-[391px]:rounded-2xl p-4 md:p-8 lg:p-12">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- @if($index % 2 === 0) { -->
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
+                                    <i class="{{serviceSections[4].icon}} text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-700">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE5.TITLE' | translate}}</h3>
+                            </div>
+                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE5.DESC' | translate}}</p>
+                        </div>
+                        <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
+                            <my-slider [images]="serviceSections[4].imageUrl"/>
+                            <!-- <img alt="Facility Management" class="rounded-lg shadow-lg object-cover w-full h-64" [src]="serviceSection.imageUrl"> -->
+                        </div>
+                    <!-- }@else { -->
+                        <!-- <div class="rounded-lg shadow-lg w-full h-64 overflow-hidden">
+                            <my-slider [images]="serviceSections[4].imageUrl"/>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-(--my-sec-bg) shrink-0 rounded-full flex items-center justify-center mr-4">
+                                    <i class="{{serviceSections[4].icon}} text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-gray-700">{{serviceSections[4].title}}</h3>
+                            </div>
+                            <p  class="text-lg text-gray-600 mb-8 leading-relaxed">{{serviceSections[4].description}}</p>
+                        </div> -->
+                    
+                    <!-- } -->
+                    
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-{{serviceSections[4].subServices.length}} gap-6 mt-12">
+                    <!-- @for (subService of serviceSections[4].subServices; track $index) { -->
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[4].subServices[0].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE5.CARDS.CARD1.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE5.CARDS.CARD1.DESC' | translate}}</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[4].subServices[1].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE5.CARDS.CARD2.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE5.CARDS.CARD2.DESC' | translate}}</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[4].subServices[2].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE5.CARDS.CARD3.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE5.CARDS.CARD3.DESC' | translate}}</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg translate-y-0 opacity-100" style="transition-delay: 400ms;">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="{{serviceSections[4].subServices[3].icon}} text-(--my-sec-bg) text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-700 mb-2"> {{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE5.CARDS.CARD4.TITLE' | translate}}</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">{{'SERVICES.SECTION_SERVICES.SERVICES.SERVICE5.CARDS.CARD4.DESC' | translate}}</p>
+                        </div>
+                    <!-- } -->
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+       
         
     </my-container>
 </section>
 
     <section class="py-20">
         <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4 text-gray-700">Our <span class="text-(--my-sec-bg)">Clients</span></h2>
+                <h2 class="text-3xl font-bold mb-4 text-gray-700" [innerHtml]="'SERVICES.SECTION_CLIENTS.TITLE' | translate"></h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
-                    We are proud to collaborate with trusted partners and clients who believe in our vision.
+                    {{'SERVICES.SECTION_CLIENTS.DESC' | translate}}
                 </p>
             </div>
     <div class="overflow-hidden relative" data-aos="fade-in" data-aos-duration="1500">

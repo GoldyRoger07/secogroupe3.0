@@ -42,7 +42,7 @@ export class FilialeService {
   ]
 
   filiales:Filiale[] = [
-      new Filiale('seco-security','Seco Security','Security','',['images/new/bg_seco_securite.jpg'],'images/logos/seco_secu_logo.png','','images/logos/security_services.png',new CardDetails(2,
+      new Filiale('seco-security','Seco Security','Security & Concierge','',['images/new/bg_seco_securite.jpg'],'images/logos/seco_secu_logo.png','','images/logos/security_services.png',new CardDetails(2,
         [
          
           {title: 'Security Guard', link: '/seco_securite/security_guard', cover: 'https://cdn.prod.website-files.com/65e795a2f83946f9da1f1bcc/67c7c2c8c603a6e7c899e103_Belfry_Imagery4.png'},
@@ -65,7 +65,7 @@ export class FilialeService {
          `,
          slogan: 'Our company focus is to diligently serve the Corporate Sector by providing specialized Security & Loss Prevention Services.'
       }]),
-      new Filiale('optimal_staffing_services','Optimal Staffing Services','Staffing','',['https://i0.wp.com/careerical.com/wp-content/uploads/2025/02/Top-Recruitment-Agencies-in-Italy-Providing-Jobs-with-Visa-Sponsorship.jpg?fit=1200%2C628&ssl=1'],'images/logos/seco_secu_logo.png','','images/logos/staffing_services.png',new CardDetails(2),
+      new Filiale('optimal_staffing_services','Optimal Staffing Services','Staffing Solutions','',['https://i0.wp.com/careerical.com/wp-content/uploads/2025/02/Top-Recruitment-Agencies-in-Italy-Providing-Jobs-with-Visa-Sponsorship.jpg?fit=1200%2C628&ssl=1'],'images/logos/seco_secu_logo.png','','images/logos/staffing_services.png',new CardDetails(2),
       [
         {
         title: 'Staffing Service',
@@ -105,7 +105,7 @@ that make a difference.
       },
 
     ]),
-      new Filiale('housekeeping_services','Housekeeping Services','Housekeeping','',['https://plus.unsplash.com/premium_photo-1682097409792-354d4d544753?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'],'images/logos/seco_secu_logo.png','','images/logos/house_keeping.png',new CardDetails(2),[{
+      new Filiale('housekeeping_services','Housekeeping Services','Hospitality Support','',['https://plus.unsplash.com/premium_photo-1682097409792-354d4d544753?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'],'images/logos/seco_secu_logo.png','','images/logos/house_keeping.png',new CardDetails(2),[{
         title: 'Hospitality And Cleaning Services',
         description: `We are a premier provider of top-notch hospitality solutions tailored
 to elevate your guest experience. With a strong focus on quality,
@@ -119,8 +119,8 @@ Services. `
         title: '',
         description: 'Our dedicated team is committed to enhancing the ambiance and comfort of your establishment. From luxury, hotels, and resorts to bustling casinos, hospitals, and serene retirement facilities, we cater to a diverse clientele that demands nothing but excellence. With a proven track record, we ensure immaculate public areas, well-maintained facilities, and a seamless guest journey'
       }]),
-      new Filiale('concierge_services','Concierge Services','Concierge','',['https://media.cnn.com/api/v1/images/stellar/prod/111005061730-concierge-ritz.jpg?q=w_4000,h_3000,x_0,y_0,c_fill'],'images/logos/seco_secu_logo.png','','images/logos/concierges_services.png',new CardDetails(2),this.filialeDetails),
-      new Filiale('janitorial_services','Janitorial Services','Janitorial','',['https://plus.unsplash.com/premium_photo-1661662877086-4007ebf0378e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'],'images/logos/seco_secu_logo.png','','images/logos/janitorial_services.png',new CardDetails(2),this.filialeDetails),
+      new Filiale('concierge_services','Concierge Services','Outdoor Care','',['https://media.cnn.com/api/v1/images/stellar/prod/111005061730-concierge-ritz.jpg?q=w_4000,h_3000,x_0,y_0,c_fill'],'images/logos/seco_secu_logo.png','','images/logos/concierges_services.png',new CardDetails(2),this.filialeDetails),
+      new Filiale('janitorial_services','Janitorial Services','Janitorial & Cleaning','',['https://plus.unsplash.com/premium_photo-1661662877086-4007ebf0378e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'],'images/logos/seco_secu_logo.png','','images/logos/janitorial_services.png',new CardDetails(2),this.filialeDetails),
       new Filiale('building-maintenance','Seco Tech','Building Maintenance','',['images/new/bg_seco_tech.jpg'],'images/logos/seco_tech_logo.png','images/logos/seco_tech_white_logo.png','images/logos/building_maintenance.png',new CardDetails(3),this.secoTechDetails),
       new Filiale('seco_agro_industries','Seco Agro Industries','','',[
         'images/vecteezy/cover_seco_agro.jpg',
@@ -188,7 +188,7 @@ Services. `
     {
       title: 'Your Safety, Our Priority',
       description: ' Comprehensive protection tailored to your peace of mind. From elite manned guarding to advanced surveillance solutions, we provide a secure environment for your assets, employees, and premises.',
-      service: 'security'
+      service: 'Security & Concierge'
     },
     {
       title: ' Preserving Your Property’s Excellence',
@@ -202,28 +202,28 @@ general repairs to extend the life of your facility.`,
       description: ` Finding the right fit shouldn't be a challenge. We provide qualified, pre-vetted 
 professionals across various industries, ensuring your team has the support it needs 
 to scale and succeed.`,
-      service: 'staffing'
+      service: 'Staffing Solutions'
     },
     {
       title: ' Impeccable Standards for Every Space',
       description: ` Experience a higher level of cleanliness. Our housekeeping team specializes 
 in detailed care for residential and commercial spaces, ensuring a pristine 
 environment that reflects your commitment to quality.`,
-      service: 'housekeeping'
+      service: 'Hospitality Support'
     },
     {
       title: 'Cleanliness Built on Consistency',
       description: `We handle the heavy lifting of facility hygiene. Our janitorial services focus on 
 high-traffic sanitation and deep-cleaning protocols to keep your workspace healthy, 
 safe, and professional around the clock. `,
-      service: 'janitorial'
+      service: 'Janitorial & Cleaning'
     },
     {
       title: 'The First Impression Your Brand Deserves',
       description: ` Elevate your guest experience with professional front-of-house services. Our 
 concierge team combines hospitality with efficiency, managing inquiries and arrivals 
 with grace and sophistication.`,
-      service: 'concierge'
+      service: 'Outdoor Care'
     }
   ]
 

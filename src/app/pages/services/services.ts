@@ -4,6 +4,7 @@ import { Footer } from "../../components/footer/footer";
 import { HeroSection } from "../../components/hero-section/hero-section";
 import { MySlider } from "../../components/my-slider/my-slider";
 import { Container } from "../../components/container/container";
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface ServiceSection{
   title: string;
@@ -22,14 +23,14 @@ interface SubService{
 
 @Component({
   selector: 'app-services',
-  imports: [Navbar, Footer, HeroSection, MySlider, Container],
+  imports: [Navbar, Footer, HeroSection, MySlider, Container, TranslatePipe],
   templateUrl: './services.html',
   styleUrl: './services.css'
 })
 export default class Services {
   serviceSections: ServiceSection[] = [
   {
-    title: 'Housekeeping & Janitorial',
+    title: 'Janitorial & Cleaning',
     icon: 'ri-brush-line',
     color: 'bg-gradient-to-r from-blue-50 to-blue-100',
     description: 'Beyond simply cleaning, our services ensure a healthy, productive, and welcoming environment for your employees and clients',
@@ -115,14 +116,14 @@ export default class Services {
     ]
   },
   {
-    title: 'Concierge Services',
+    title: 'Outdoor Care',
     icon: 'ri-service-line',
     color: 'bg-gradient-to-r from-gray-50 to-gray-100',
     description: 'Elevate the experience for residents, tenants, and visitors with professional, hospitable, and highly effective concierge support.',
     imageUrl: [
-      'img/services/compressed/concierge_1440.webp',
-      'img/services/compressed/concierge_1440.webp',
-      'img/services/compressed/concierge_1440.webp'],
+      'img/services/new/gazon2.jpg',
+      'img/services/new/tonte-gazon-elagage-nettoyage.jpg',
+      'img/services/new/gazon2.jpg'],
     subServices: [
       {
         title: 'First Impressions',
@@ -142,14 +143,15 @@ export default class Services {
     ]
   },
   {
-    title: 'Security Experts',
+    title: 'Security & Concierge',
     icon: 'ri-shield-keyhole-line',
     color: 'bg-gradient-to-r from-blue-50 to-blue-100',
     description: 'Protecting your assets, people, and property is our paramount commitment. Our security experts provide a powerful blend of technology and human presence.',
     imageUrl: [
       'img/services/compressed/bg_seco_securite_1440.webp',
-      'img/services/compressed/security_guard_1440.webp',
-      'img/services/compressed/security_guard_female_1440.webp'],
+      'img/services/compressed/security_guard_female_1440.webp',
+      'img/services/compressed/concierge_1440.webp'
+    ],
     subServices: [
       {
         title: '24/7 Protection',

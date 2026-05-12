@@ -8,14 +8,14 @@
                 <div>
                     <h1>
                         @if(pays === 'usa' || pays === 'canada' || pays === 'bahamas'){
-                            Housekeeping, Building Maintenance, Janitorial, Staffing, Concierge & Security Experts
+                            {{'SERVICES_USA.TITLE' | translate}}
                         }@else{
                             Seco Tech, Seco Distributors, Mass Funds, Mass Assurance, Security Experts etc
                         }
                     </h1>
                     <div class="my-buttons">
-                        <button>Request a quote</button>
-                        <button>Request a work order</button>
+                        <button>{{'SERVICES_USA.CTAs.CTA1' | translate}}</button>
+                        <button>{{'SERVICES_USA.CTAs.CTA2' | translate}}</button>
                     </div>
                 </div>
            </div>
@@ -61,9 +61,9 @@
       }
       
       <div class="services-cards-container" style="margin-bottom: 70px;">
-          @for(filiale of filiales; track $index){
+          <!-- @for(filiale of filiales; track $index){ -->
             <!-- /services-country/{{pays}}/{{filiale.idName}} -->
-             @if(filiale.idName === "building-maintenance"){
+             <!-- @if(filiale.idName === "building-maintenance"){
 
                <a routerLink="/services-country/{{pays}}/{{filiale.idName}}" class="service-card-container">
                    <div class="service-card">
@@ -75,7 +75,7 @@
                                <i [class]="filiale.icon"></i>
                            }
                            
-                               <!-- <i class="ri-shield-check-fill"></i> -->
+                               
                        </div>
                        
                        <div class="title-box">
@@ -88,14 +88,12 @@
                        </div>
                    </div>
                    <div class="back">
-                       <!-- <div class="top">
-                           <img [src]="filiale.logo" class="bg-amber-300 rounded-xl" alt="logo seco">
-                       </div> -->
+                       
                        <div class="overlay">
                          @if(filiale.details.length>0 && (pays === 'usa' || pays === 'canada' || pays === 'bahamas')){
-                               <!-- <span>{{filiale.details}}</span> -->
+                              
                                <div class="title text-gray-700">
-                                   <!-- <i [class]="filiale.icon"></i> -->
+                                   
                                    {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.title}}
                                </div>
                                <p class="text-gray-600">
@@ -107,36 +105,35 @@
                                 {{getPreviewInfo(filiale.name.toLocaleLowerCase())?.description}}
                                </p>
                          }
-                           <!-- <div class="title">
-                               <i [class]="filiale.icon"></i>
-                               {{filiale.name}}
-                           </div> -->
-                           <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet ratione obcaecati...</p> -->
+                           
                        </div>
                    </div>
                    </div>
                </a>
-             }@else {
+             }@else { -->
                <a class="service-card-container">
                    <div class="service-card">
                    <div class="front">
                        <div class="icon-box">
-                           @if(filiale.details.length>0 && !filiale.icon.includes("fas")){
+                           <!-- @if(filiale.details.length>0 && !filiale.icon.includes("fas")){
                                <img [src]="filiale.icon" alt="logo" width="128px">
-                           }@else{
-                               <i [class]="filiale.icon"></i>
-                           }
+                           }@else{ -->
+                                <img [src]="previewIcons.security" alt="logo" width="128px">
+                               <!-- <i [class]="previewIcons.security"></i> -->
+                           <!-- } -->
                            
                                <!-- <i class="ri-shield-check-fill"></i> -->
                        </div>
                        
                        <div class="title-box">
                            
-                           @if(filiale.details.length>0 && (pays === 'usa' || pays === 'canada' || pays === 'bahamas')){
+                           <!-- @if(filiale.details.length>0 && (pays === 'usa' || pays === 'canada' || pays === 'bahamas')){
                                <span>{{filiale.details}}</span>
                            }@else{
                                <span>{{filiale.name}}</span>
-                           }
+                           } -->
+                            <span>{{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD1.FRONT.TITLE' | translate}}</span>
+
                        </div>
                    </div>
                    <div class="back">
@@ -144,21 +141,23 @@
                            <img [src]="filiale.logo" class="bg-amber-300 rounded-xl" alt="logo seco">
                        </div> -->
                        <div class="overlay">
-                         @if(filiale.details.length>0 && (pays === 'usa' || pays === 'canada' || pays === 'bahamas')){
+                         <!-- @if (pays === 'usa' || pays === 'canada' || pays === 'bahamas'){ -->
                                <!-- <span>{{filiale.details}}</span> -->
                                <div class="title text-gray-700">
                                    <!-- <i [class]="filiale.icon"></i> -->
-                                   {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.title}}
+                                   {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD1.BACK.TITLE' | translate}}
+                                   <!-- {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.title}} -->
                                </div>
                                <p class="text-gray-600">
-                                {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.description}}
+                                {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD1.BACK.DESC' | translate}}
+                                <!-- {{getPreviewInfo(filiale.details.toLocaleLowerCase())?.description}} -->
                                </p>
-                         }@else{
+                         <!-- }@else{
                                <span>{{getPreviewInfo(filiale.name.toLocaleLowerCase())?.title}}</span>
                                <p>
                                 {{getPreviewInfo(filiale.name.toLocaleLowerCase())?.description}}
                                </p>
-                         }
+                         } -->
                            <!-- <div class="title">
                                <i [class]="filiale.icon"></i>
                                {{filiale.name}}
@@ -168,8 +167,183 @@
                    </div>
                    </div>
                </a>
-             }
-          }
+
+               <a class="service-card-container">
+                   <div class="service-card">
+                   <div class="front">
+                       <div class="icon-box">
+                           
+                                <img [src]="previewIcons.building" alt="logo" width="128px">
+                              
+                        </div>
+                       
+                       <div class="title-box">
+                           
+                          
+                            <span>{{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD2.FRONT.TITLE' | translate}}</span>
+
+                       </div>
+                   </div>
+                   <div class="back">
+                       
+                       <div class="overlay">
+                         
+                               <div class="title text-gray-700">
+                                   
+                                   {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD2.BACK.TITLE' | translate}}
+                                   
+                               </div>
+                               <p class="text-gray-600">
+                                {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD2.BACK.DESC' | translate}}
+                                
+                               </p>
+                         
+                       </div>
+                   </div>
+                   </div>
+               </a>
+
+               <a class="service-card-container">
+                   <div class="service-card">
+                   <div class="front">
+                       <div class="icon-box">
+                           
+                                <img [src]="previewIcons.staffing" alt="logo" width="128px">
+                              
+                        </div>
+                       
+                       <div class="title-box">
+                           
+                          
+                            <span>{{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD4.FRONT.TITLE' | translate}}</span>
+
+                       </div>
+                   </div>
+                   <div class="back">
+                       
+                       <div class="overlay">
+                         
+                               <div class="title text-gray-700">
+                                   
+                                   {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD4.BACK.TITLE' | translate}}
+                                   
+                               </div>
+                               <p class="text-gray-600">
+                                {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD4.BACK.DESC' | translate}}
+                                
+                               </p>
+                         
+                       </div>
+                   </div>
+                   </div>
+               </a>
+
+               <a class="service-card-container">
+                   <div class="service-card">
+                   <div class="front">
+                       <div class="icon-box">
+                           
+                                <img [src]="previewIcons.hospitality" alt="logo" width="128px">
+                              
+                        </div>
+                       
+                       <div class="title-box">
+                           
+                          
+                            <span>{{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD3.FRONT.TITLE' | translate}}</span>
+
+                       </div>
+                   </div>
+                   <div class="back">
+                       
+                       <div class="overlay">
+                         
+                               <div class="title text-gray-700">
+                                   
+                                   {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD3.BACK.TITLE' | translate}}
+                                   
+                               </div>
+                               <p class="text-gray-600">
+                                {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD3.BACK.DESC' | translate}}
+                                
+                               </p>
+                         
+                       </div>
+                   </div>
+                   </div>
+               </a>
+
+               <a class="service-card-container">
+                   <div class="service-card">
+                   <div class="front">
+                       <div class="icon-box">
+                           
+                                <img [src]="previewIcons.janitorial" alt="logo" width="128px">
+                              
+                        </div>
+                       
+                       <div class="title-box">
+                           
+                          
+                            <span>{{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD5.FRONT.TITLE' | translate}}</span>
+
+                       </div>
+                   </div>
+                   <div class="back">
+                       
+                       <div class="overlay">
+                         
+                               <div class="title text-gray-700">
+                                   
+                                   {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD5.BACK.TITLE' | translate}}
+                                   
+                               </div>
+                               <p class="text-gray-600">
+                                {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD5.BACK.DESC' | translate}}
+                                
+                               </p>
+                         
+                       </div>
+                   </div>
+                   </div>
+               </a>
+
+               <a class="service-card-container">
+                   <div class="service-card">
+                   <div class="front">
+                       <div class="icon-box">
+                           
+                                <img [src]="previewIcons.outdoor" alt="logo" width="128px">
+                              
+                        </div>
+                       
+                       <div class="title-box">
+                           
+                          
+                            <span>{{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD6.FRONT.TITLE' | translate}}</span>
+
+                       </div>
+                   </div>
+                   <div class="back">
+                       
+                       <div class="overlay">
+                         
+                               <div class="title text-gray-700">
+                                   
+                                   {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD6.BACK.TITLE' | translate}}
+                                   
+                               </div>
+                               <p class="text-gray-600">
+                                {{'SERVICES_USA.SECTION_SERVICES.CARDS.CARD6.BACK.DESC' | translate}}
+                                
+                               </p>
+                         
+                       </div>
+                   </div>
+                   </div>
+               </a>
+             <!-- } -->
+          <!-- } -->
               
           
          

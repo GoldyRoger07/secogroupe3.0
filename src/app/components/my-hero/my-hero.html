@@ -18,10 +18,10 @@
             <my-container>
                 <div class=" flex items-center justify-center col-span-4  lg:justify-start">
                                 <div class="mx-auto md:mx-0  text-white py-5 h-fit w-[90%] sm:w-[80%] lg:w-[600px] rounded-2xl space-y-6 flex flex-col justify-center text-center md:text-start md:justify-start">
-                                    <h2 class="text-3xl md:text-5xl lg:text-5xl font-bold leading-tight text-shadow-sm text-shadow-gray-600">A new vision for your facility with <span class="text-(--my-sec-bg)">SECO GROUPE</span></h2>
+                                    <h2 class="text-3xl md:text-5xl lg:text-5xl font-bold leading-tight text-shadow-sm text-shadow-gray-600" [innerHtml]="'HOME.MY_HERO.TITLE' | translate"></h2>
                                     <p class="text-md lg:text-2xl text-white leading-relaxed ">At SECO GROUPE, we don't just see a building; we see an opportunity to create a smarter, more resilient, and connected space that delivers real value.</p>
                                     <!-- <button class="w-full bg-(--my-sec-bg) hover:bg-orange-400 text-white px-4 py-2 min-[395px]:p-4  md:px-8 md:py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 min-[395px]:whitespace-nowrap cursor-pointer">Let's build something better, together</button> -->
-                                    <button routerLink="/contact" class=" w-full text-sm sm:text-md md:text-2lg lg:text-2xl pulse-button bg-(--my-sec-bg) whitespace-nowrap">Let's build something better, together</button>
+                                    <button routerLink="/contact" class=" w-full text-sm sm:text-md md:text-2lg lg:text-2xl pulse-button bg-(--my-sec-bg) whitespace-nowrap">{{'HOME.MY_HERO.CTA' | translate}}</button>
                                 </div>
                 </div>
             </my-container>

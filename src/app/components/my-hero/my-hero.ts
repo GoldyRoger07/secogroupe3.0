@@ -5,12 +5,14 @@ import { register } from 'swiper/element/bundle';
 import { ProgressiveImage } from '../progressive-image/progressive-image';
 import { Container } from '../container/container';
 import { RouterLink } from '@angular/router';
+
+import { TranslatePipe } from '@ngx-translate/core';
 // register Swiper custom elements
 register();
 
 @Component({
   selector: 'my-hero',
-  imports: [Container, RouterLink],
+  imports: [Container, RouterLink, TranslatePipe],
   templateUrl: './my-hero.html',
   styleUrl: './my-hero.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
