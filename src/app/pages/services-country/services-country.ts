@@ -31,9 +31,9 @@ export default class ServicesCountry implements OnInit{
 
   previewIcons = {
     security: "/images/logos/security_services.png",
-    hospitality: "/images/logos/house_keeping.png",
+    staffing: "/images/logos/house_keeping.png",
     building: "/images/logos/building_maintenance.png",
-    staffing: "/images/logos/staffing_services.png",
+    hospitality: "/images/logos/staffing_services.png",
     outdoor: "/images/logos/outdoor_care.png",
     janitorial: "/images/logos/janitorial_services.png",
   }

@@ -92,9 +92,9 @@ export default class Services {
     color: 'bg-gradient-to-r from-blue-50 to-blue-100',
     description: 'When you need specialized help fast, our staffing division provides vetted, trained, and reliable personnel to fill essential roles within your facility or organization.',
     imageUrl: [
-      'img/services/new/compressed/staffing_1440.webp',
-      'img/services/new/compressed/staffing_foods_worker_1440.webp',
-      'img/services/compressed/staffing_pic_for_production_1440.webp'
+      'img/services/new/compressed/facility_management_1_1440.webp',
+      'img/services/new/compressed/facility_management_1_1440.webp',
+      'img/services/new/compressed/facility_management_1_1440.webp'
     ],
     subServices: [
       {
@@ -115,9 +115,10 @@ export default class Services {
       }
     ]
   },
+  // service-line
   {
     title: 'Outdoor Care',
-    icon: 'ri-service-line',
+    icon: 'ri-scissors-line',
     color: 'bg-gradient-to-r from-gray-50 to-gray-100',
     description: 'Elevate the experience for residents, tenants, and visitors with professional, hospitable, and highly effective concierge support.',
     imageUrl: [
@@ -172,6 +173,34 @@ export default class Services {
         title: 'Emergency Response',
         icon: 'ri-alarm-warning-line',
         description: 'Professional handling of security incidents, emergency situations, and immediate response coordination.'
+      }
+    ]
+  },
+  {
+    title: 'Hospitality Support',
+    icon: 'ri-brush-line',
+    color: 'bg-gradient-to-r from-blue-50 to-blue-100',
+    description: 'Beyond simply cleaning, our services ensure a healthy, productive, and welcoming environment for your employees and clients',
+    imageUrl: [
+      'img/services/compressed/housekeeping_services_1440.webp',
+      'img/services/compressed/housekeeping_services_1440.webp',
+      'img/services/compressed/housekeeping1_1440.webp'
+    ],
+    subServices: [
+      {
+        title: 'Pristine Environments',
+        icon: 'ri-sparkling-line',
+        description: 'Daily, weekly, or custom cleaning schedules tailored to your facility\'s needs—from offices and commercial spaces to industrial sites.'
+      },
+      {
+        title: 'Health & Safety Focus',
+        icon: 'ri-shield-cross-line',
+        description: 'Use of industry-leading practices and eco-friendly products to promote a sterile environment and reduce the spread of germs.'
+      },
+      {
+        title: 'Specialized Care',
+        icon: 'ri-tools-line',
+        description: 'Deep cleaning, floor care (stripping, waxing, buffing), window cleaning, and waste management.'
       }
     ]
   }

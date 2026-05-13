@@ -280,6 +280,24 @@
             }
             
           }
+        },
+        "SERVICE6":{
+          "TITLE": "Hospitality Support",
+          "DESC": "Beyond simply cleaning, our services ensure a healthy, productive, and welcoming environment for your employees and clients.",
+          "CARDS":{
+            "CARD1":{
+              "TITLE": "Pristine Environments",
+              "DESC": "Daily, weekly, or custom cleaning schedules tailored to your facility's needs—from offices and commercial spaces to industrial sites."
+            },
+            "CARD2":{
+              "TITLE": "Health & Safety Focus",
+              "DESC": "Use of industry-leading practices and eco-friendly products to promote a sterile environment and reduce the spread of germs."
+            },
+            "CARD3":{
+              "TITLE": "Specialized Care",
+              "DESC": "Deep cleaning, floor care (stripping, waxing, buffing), window cleaning, and waste management."
+            }
+          }
         }
       }
     },

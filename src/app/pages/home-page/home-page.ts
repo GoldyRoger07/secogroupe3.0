@@ -231,8 +231,8 @@ export default class HomePage implements OnInit{
             }
         ]
     this.title.setTitle('Home — Secogroupe');
-    this.meta.updateTag({ name: 'description', content: 'Seco Groupe est Gardiennage, rondes, interventions, sécurité privée, surveillance de locaux... #securite' });
-    this.meta.updateTag({ property: 'og:title', content: 'seco groupe | securite' });
+    this.meta.updateTag({ name: 'description', content: 'Senior Living. Compassionate care and support services designed to enhance quality of life for senior residents and their families. Multi-Family, HOA &' });
+    this.meta.updateTag({ property: 'og:title', content: 'Seco groupe | Security' });
 
 
     const sections = document.querySelectorAll("section")
