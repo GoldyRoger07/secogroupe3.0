@@ -1,6 +1,6 @@
 <section class=" min-h-150 relative bg-[#aaa8a5]/70">
     <!-- <div class="red w-10 h-10"></div> -->
-    <div  class="bg-[#aaa8a5]/70 absolute top-0 w-full z-2">
+    <div  class="bg-[#aaa8a5]/70 absolute top-0 w-full z-3">
 
         <v4-navbar></v4-navbar>
     </div>
@@ -8,12 +8,12 @@
 
         <div class="max-w-5xl w-full mx-auto pt-[70px] ">
     
-            <div class="hero-section h-150 w-full  bg-cover bg-no-repeat bg-center  z-1">
+            <div class="hero-section h-150 w-full  bg-cover bg-no-repeat bg-center  z-1 border-none" [class.fade]="fade()">
                 <!-- <v4-hero-slider></v4-hero-slider> -->
             </div>
         </div>
     </div>
-    <div class="absolute w-full h-70 bg-gray-700/35 top-[50%] -translate-y-[50%] flex items-center justify-center">
+    <div class="absolute w-full z-2 h-70 bg-gray-700/35 top-[50%] -translate-y-[50%] flex items-center justify-center">
         <div class="max-w-5xl w-full mx-auto">
                 <div class="text-white text-center  mx-auto">
                     <h1 class="raleway-bold text-4xl mb-7 ">YOUR TRUSTED FACILITY SERVICE PROVIDER</h1>
@@ -21,7 +21,7 @@
                 </div>
         </div>
     </div>
-    <div class="h-60 bg-(--v4-sec-bg) w-full relative ">
+    <div class="h-60 bg-(--v4-sec-bg) w-full relative z-2">
         <img src="v4/assets/shadow-assets.svg" class="h-60 md:h-80 absolute left-5 md:left-20 bottom-0" alt="asset1">
         <div class="max-w-5xl px-5 md:px-0 w-full mx-auto flex flex-col items-center py-5 text-white">
             <hr class="h-2 bg-(--v4-prim-bg) w-full text-(--v4-prim-bg) mb-5">
