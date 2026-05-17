@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Navbar } from "../../components/navbar/navbar";
 import { Footer } from "../../components/footer/footer";
 import { Container } from "../../components/container/container";
+import { Navbar } from "../../components/v4/navbar/navbar";
 
 @Component({
   selector: 'app-mission',
-  imports: [Navbar, Footer, Container],
+  imports: [Navbar, Footer, Container, Navbar],
   templateUrl: './mission.html',
   styleUrl: './mission.css'
 })

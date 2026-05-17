@@ -14,3 +14,7 @@
       transition: all 250ms ease-out;
       color: --text-color;
     } */
+
+    .active{
+        background: #faae3b85;
+    }

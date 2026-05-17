@@ -33,9 +33,7 @@ swiper-container {
       animation-delay: -5s;
     }
 
-    /* .fade-animation:nth-child(3){
-      animation-delay: -5s;
-    } */
+    
 
     @keyframes fade {
        0% {
