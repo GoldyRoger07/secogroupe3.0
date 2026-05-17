@@ -25,12 +25,12 @@
             <hamburger-btn #menuBtn (click)="onClickMenuBtn(menuBtn,mobileMenu)"/>
         </div>
 
-        <ul class="bg-[#A29990] absolute w-full z-1  py-5 flex flex-col md:flex-row items-center md:items-end gap-5 text-xl text-white josefin-sans">
-            <li><a routerLink="/" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md josefin-sans-bold">Home</a></li>
-            <li><a routerLink="/about-us" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">About Us</a></li>
-            <li><a routerLink="/services" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">Services</a></li>
-            <li><a routerLink="/contact" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">Contact Us</a></li>
-            <li><a routerLink="/page-not-found" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">Blog</a></li>
-        </ul>
+        <div class="links bg-[#A29990] absolute w-full z-1  py-5 flex flex-col md:flex-row items-center md:items-end gap-5 text-xl text-white josefin-sans">
+            <a routerLink="/" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md ">Home</a>
+            <a routerLink="/about-us" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">About Us</a>
+            <a routerLink="/services" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">Services</a>
+            <a routerLink="/contact" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">Contact Us</a>
+            <a routerLink="/page-not-found" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">Blog</a>
+        </div>
     </div>
 </nav>

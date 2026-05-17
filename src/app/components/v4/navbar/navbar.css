@@ -1,9 +1,9 @@
-.mobile-menu ul{
+.mobile-menu .links{
     transition: translate 0.3s ease-in-out;
     translate: 0 -120%;
 }
 
-.mobile-menu.open ul{
+.mobile-menu.open .links{
     translate: 0 25%;
 }
 
