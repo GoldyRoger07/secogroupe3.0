@@ -1,0 +1,36 @@
+<nav class="bg-[#A29990] md:bg-(--v4-prim-bg)/15 w-full md:pt-3 pb-5">
+    <div class="hidden px-2.5 lg:px-0 max-w-5xl  gap-10 w-full md:flex  flex-col  items-center md:items-end md:flex-row md:justify-between mx-auto  border-b-2 border-white pb-5">
+        <a href="#">
+            <img src="v4/img/logo/logo_seco.png" class="min-w-25 w-25 md:w-35 lg:w-50" alt="logo">
+        </a>
+
+        <div class="flex flex-col md:flex-row items-center md:items-end gap-5 text-white josefin-sans">
+            <a routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md " routerLink="/">Home</a>
+            <a routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md" routerLink="/about-us">About Us</a>
+            <a routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md" routerLink="/services">Services</a>
+            <a routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md" routerLink="/hiring">Apply Now</a>
+            <a routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md" routerLink="/contact">Contact Us</a>
+            <!-- <li routerLinkActive="bg-(--v4-prim-bg)/45" class=" px-4 bg-(--v4-sec-bg)/45 rounded-md ">Blog</li> -->
+        </div>
+
+        
+    </div>
+
+    <div #mobileMenu class="relative bg-[#A29990] mobile-menu md:hidden" >
+        <div class="absolute bg-[#A29990] w-full z-2 flex justify-between items-center px-5 py-5">
+            <a href="#">
+                <img src="v4/img/logo/logo_seco.png" class="min-w-25 w-25 md:w-35 lg:w-50" alt="logo">
+            </a>
+
+            <hamburger-btn #menuBtn (click)="onClickMenuBtn(menuBtn,mobileMenu)"/>
+        </div>
+
+        <ul class="bg-[#A29990] absolute w-full z-1  py-5 flex flex-col md:flex-row items-center md:items-end gap-5 text-xl text-white josefin-sans">
+            <li><a routerLink="/" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md josefin-sans-bold">Home</a></li>
+            <li><a routerLink="/about-us" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">About Us</a></li>
+            <li><a routerLink="/services" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">Services</a></li>
+            <li><a routerLink="/contact" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">Contact Us</a></li>
+            <li><a routerLink="/page-not-found" routerLinkActive="bg-(--v4-prim-bg)/45 josefin-sans-bold" [routerLinkActiveOptions]="{exact:true}" class="px-4 bg-(--v4-sec-bg)/45 rounded-md">Blog</a></li>
+        </ul>
+    </div>
+</nav>

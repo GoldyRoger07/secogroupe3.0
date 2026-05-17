@@ -40,7 +40,7 @@
     <!-- <button (click)="onClickMenuBtn">
         Menu
     </button> -->
-    <hamburger-btn [callback]="onClickMenuBtn" [option]="mobileMenu"/>
+    <hamburger-btn (click)="onClickMenuBtn(mobileMenu)"/>
 
     <ng-template #btnContent>
               Menu

@@ -1,0 +1,15 @@
+/* .cover-nav{
+    background-image: linear-gradient(to top, #aaa8a5, transparent);
+} */
+
+.hero-section{
+    /* position: relative; */
+    background-image: linear-gradient(to right, #ffffff, transparent, #fff),  url('/v4/img/services/hero.png');
+
+}
+
+/* .hero-section::after{
+    content:"";
+    background-image: (to right, #ffffff, transparent, #fff);
+    z-index: 4;
+} */
