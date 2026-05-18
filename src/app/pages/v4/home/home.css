@@ -9,12 +9,12 @@
     /* position: relative; */
     background-image:linear-gradient(to right, #ffffff, transparent, #fff), linear-gradient(to bottom, #ffffff 0%, transparent 5%),  var(--current-image);
     opacity: 1;
-    transform: scale(1.05);
-     transition: opacity 0.5s ease-in-out, transform 5s linear;
+    /* transform: scale(1.05); */
+     transition: opacity 0.5s ease-in-out;
 
 }
 
-.hero-section::before,.hero-section::after{
+/* .hero-section::before,.hero-section::after{
     content: "";
     position: absolute;
     height: 100%;
@@ -25,22 +25,19 @@
 .hero-section::before{ 
     left:0;
     transform: translateX(-1px);
-    /* background: linear-gradient(to right, #ffffff, transparent 50%); */
+    
 }
 .hero-section::after{
     right:0;
     transform: translateX(1px);
-    /* background: linear-gradient(to left, #ffffff, transparent 50%); */
-}
+    
+} */
 
 .hero-section.fade{
     opacity: 0;
 }
 
-.hero-section:not(.fade){
-    transform: scale(1.05);
-
-}
+ 
 
 /* .hero-section::after{
     content:"";
