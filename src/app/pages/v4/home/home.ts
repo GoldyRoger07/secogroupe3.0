@@ -17,8 +17,8 @@ export default class Home implements OnInit, OnDestroy {
   fade = signal(false)
 
   images = [
-    "img/services/new/compressed/construction_worker_and_maintenance_1440.webp",
     "img/services/new/compressed/facility_management_1_1440.webp",
+    "img/services/new/compressed/construction_worker_and_maintenance_1440.webp",
     "img/services/new/compressed/facility_management_1440.webp",
     "img/services/new/compressed/facility_manager_1440.webp",
     "img/services/compressed/concierge_1440.webp",
@@ -45,7 +45,7 @@ export default class Home implements OnInit, OnDestroy {
       // else
       //   this.i++
       
-    },5000)
+    },15000)
   }
 
   ngOnDestroy(): void {
