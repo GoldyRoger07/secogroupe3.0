@@ -210,8 +210,8 @@
 }
 
 .fade-up{
-    transform: translateY(25%) scale(0.9);
-    opacity: 0;
+    transform: translateY(10%) scale(0.9);
+    opacity: 0.9;
     transition: all 700ms ease-in-out ;
     /* transition-delay: 500ms; */
 }
@@ -223,7 +223,7 @@
 
 .fade-right{
     transform: translateX(-5%);
-    opacity: 0;
+    opacity: 0.9;
     transition: all 700ms ease-in-out ;
     /* transition-delay: 500ms; */
 }
@@ -235,7 +235,7 @@
 
 .fade-left{
     transform: translateX(5%);
-    opacity: 0;
+    opacity: 0.9;
     transition: all 700ms ease-in-out ;
     transition-delay: 500ms;
 }
@@ -243,6 +243,15 @@
 .section-animate.active .fade-left{
     transform: translateX(0%);
     opacity: 1;
+}
+
+.border-gradient{
+  /* border-color: linear-gradient(to right, #faaf3b, #ffbd5a, #faaf3b); */
+  border-color:  #faaf3b;
+}
+
+.map-card{
+  aspect-ratio: 5 / 6;
 }
 
 
