@@ -5,11 +5,15 @@
 
 .hero-section{
    position: relative;
-    --current-image: url('/v4/img/services/hero.webp');
-    /* position: relative; */
-    background-image:linear-gradient(to right, #ffffff, transparent, #fff), linear-gradient(to bottom, #ffffff 0%, transparent 5%),  var(--current-image);
+    --current-image: url('/v4/img/hero_section.jpg');
+    
+    background-image: var(--current-image);
+    background-position: start;
+    background-size: cover;
+    aspect-ratio:  16 / 9;
+     /* linear-gradient(to right, #ffffff, transparent, #fff), linear-gradient(to bottom, #ffffff 0%, transparent 5%),  var(--current-image); */
     opacity: 1;
-    /* transform: scale(1.05); */
+     
      transition: opacity 0.5s ease-in-out;
 
 }

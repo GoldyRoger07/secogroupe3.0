@@ -4,15 +4,24 @@
   "newProjectRoot": "projects",
   "projects": {
     "secogroupe3.0": {
+
+      
       "projectType": "application",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
+        "serve":{
+
+        "options":{
+          "disableHostCheck": true
+        },
+      },
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            
             "outputPath": "docs",
             "browser": "src/main.ts",
             "polyfills": [
