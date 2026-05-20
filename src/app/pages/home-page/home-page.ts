@@ -174,6 +174,11 @@ interface CardService {
 .card-4 .top img{
   width: 100%;
 }
+
+video{
+  width: 100%;
+}
+
   `
 })
 export default class HomePage implements OnInit{

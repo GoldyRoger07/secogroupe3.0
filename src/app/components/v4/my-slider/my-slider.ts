@@ -1,0 +1,76 @@
+import { Component, OnInit } from '@angular/core';
+
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+import Swiper from 'swiper';
+import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+// import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
+
+@Component({
+  selector: 'v4-my-slider',
+  imports: [],
+  templateUrl: './my-slider.html',
+  styleUrl: './my-slider.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
+export class MySlider implements OnInit {
+  images = [
+    "v4/img/hero_section.jpg",
+    "img/services/new/compressed/facility_management_1_1440.webp",
+    "img/services/new/compressed/facility_management_1440.webp",
+    "v4/img/hero_section_1.jpg",
+    "v4/img/hero_section_2.jpg",
+    "v4/img/hero_section_3.jpg",
+    "v4/img/hero_section_4.jpg",
+    "v4/img/hero_section_5.jpg",
+    "v4/img/hero_section_6.jpg",
+
+    "v4/img/hero_section.jpg",
+    "img/services/new/compressed/facility_management_1_1440.webp",
+    "img/services/new/compressed/facility_management_1440.webp",
+    "v4/img/hero_section_1.jpg",
+    "v4/img/hero_section_2.jpg",
+    "v4/img/hero_section_3.jpg",
+    "v4/img/hero_section_4.jpg",
+    "v4/img/hero_section_5.jpg",
+    "v4/img/hero_section_6.jpg"
+
+
+  ]
+
+
+  ngOnInit(): void {
+    const swiperEl = document.querySelector('swiper-container');
+
+  // const swiperEl = document.querySelector('swiper-container');
+
+  // swiper parameters
+  const swiperParams = {
+    slidesPerView: 1,
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 1,
+      },
+    },
+    on: {
+      init() {
+        // ...
+      },
+    },
+  };
+  // now we need to assign all parameters to Swiper element
+  Object.assign(swiperEl!, swiperParams);
+
+  // and now initialize it
+  swiperEl!.initialize();
+    // document.querySelector('.hero-section')?.setAttribute('style', `--current-image: url('${this.images[0]}')`)
+  }
+}
