@@ -20,20 +20,26 @@ import 'swiper/css/pagination';
 })
 export class MySlider implements OnInit {
   images = [
-    "v4/img/compressed/hero_section_1_1600.webp",
-    "v4/img/compressed/hero_section_2_1600.webp",
-    "v4/img/compressed/hero_section_3_1600.webp",
     "v4/img/compressed/hero_section_4_1600.webp",
-    "v4/img/compressed/hero_section_5_1600.webp",
+    "img/services/new/compressed/construction_worker_and_maintenance_1440.webp",
     "v4/img/compressed/hero_section_6_1600.webp",
     "img/services/new/compressed/facility_management_1_1440.webp",
+    "v4/img/compressed/hero_section_5_1600.webp",
     "img/services/new/compressed/facility_management_1440.webp",
-    // "v4/img/hero_section_1.jpg",
-    // "v4/img/hero_section_2.jpg",
-    // "v4/img/hero_section_3.jpg",
-    // "v4/img/hero_section_4.jpg",
-    // "v4/img/hero_section_5.jpg",
-    // "v4/img/hero_section_6.jpg",
+    "v4/img/compressed/hero_section_3_1600.webp",
+    "img/services/new/compressed/facility_manager_1440.webp",
+    "img/services/compressed/concierge_1440.webp",
+    
+    "img/services/new/compressed/housekeeping_team_1440.webp",
+    "v4/img/compressed/hero_section_2_1600.webp",
+    "img/services/new/compressed/janitorial_hospital_1440.webp",
+    "v4/img/compressed/hero_section_1_1600.webp",
+    "img/services/new/compressed/janitorial_1440.webp",
+    "img/services/compressed/security_guard_1440.webp",
+    "img/services/compressed/staffing_solution_1440.webp"
+    // "img/services/new/compressed/facility_management_1_1440.webp",
+    // "img/services/new/compressed/facility_management_1440.webp",
+    
 
     // "v4/img/hero_section.jpg",
     // "img/services/new/compressed/facility_management_1_1440.webp",
