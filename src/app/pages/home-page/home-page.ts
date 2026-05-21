@@ -212,26 +212,50 @@ export default class HomePage implements OnInit{
 
   maps = [
     {
-      imgUrl: 'img/maps/compressed/usa_map_512.webp',
+      imgUrl: 'v4/img/map/usa_map.png',
       title: 'United States'
     },
     {
-      imgUrl: 'img/maps/compressed/canada_map_512.webp',
+      imgUrl: 'v4/img/map/canada_map.png',
       title: 'Canada'
     },
     {
-      imgUrl: 'img/maps/compressed/haiti_map_512.webp',
+      imgUrl: 'v4/img/map/haiti_map.png',
       title: 'Haiti'
     },
     {
-      imgUrl: 'img/maps/compressed/bahamas_map_512.webp',
-      title: 'Bahamas'
-    },
-    {
-      imgUrl: 'img/maps/compressed/bresil_map_512.webp',
+      imgUrl: 'v4/img/map/brazil_map.png',
       title: 'Bresil'
     },
+    {
+      imgUrl: 'v4/img/map/bahamas_map.png',
+      title: 'Bahamas'
+    },
   ]
+
+
+  // maps = [
+  //   {
+  //     imgUrl: 'img/maps/compressed/usa_map_512.webp',
+  //     title: 'United States'
+  //   },
+  //   {
+  //     imgUrl: 'img/maps/compressed/canada_map_512.webp',
+  //     title: 'Canada'
+  //   },
+  //   {
+  //     imgUrl: 'img/maps/compressed/haiti_map_512.webp',
+  //     title: 'Haiti'
+  //   },
+  //   {
+  //     imgUrl: 'img/maps/compressed/bahamas_map_512.webp',
+  //     title: 'Bahamas'
+  //   },
+  //   {
+  //     imgUrl: 'img/maps/compressed/bresil_map_512.webp',
+  //     title: 'Bresil'
+  //   },
+  // ]
 
   cardServices: CardService[] = [
     {
