@@ -225,7 +225,7 @@ export default class HomePage implements OnInit{
     },
     {
       imgUrl: 'v4/img/map/brazil_map.png',
-      title: 'Bresil'
+      title: 'Brazil'
     },
     {
       imgUrl: 'v4/img/map/bahamas_map.png',
