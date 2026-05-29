@@ -333,9 +333,10 @@ export default class HomePage implements OnInit{
                 numScroll: 1
             }
         ]
-    this.title.setTitle('Home — Secogroupe');
-    this.meta.updateTag({ name: 'description', content: 'Senior Living. Compassionate care and support services designed to enhance quality of life for senior residents and their families. Multi-Family, HOA &' });
-    this.meta.updateTag({ property: 'og:title', content: 'Seco groupe | Security' });
+    this.title.setTitle('Professional Hospitality, Staffing & Cleaning Services | Seco Groupe');
+    this.meta.updateTag({ name: 'description', content: 'Seco Groupe provides hospitality support, janitorial cleaning, staffing solutions, concierge, and security services across the USA, Canada, Bahamas, and Brazil.' });
+    this.meta.updateTag({ property: 'og:title', content: 'Seco Groupe' });
+    this.meta.updateTag({ property: 'og:description', content: 'Professional hospitality, staffing, cleaning, concierge and security services.' })
 
 
     const sections = document.querySelectorAll("section")
