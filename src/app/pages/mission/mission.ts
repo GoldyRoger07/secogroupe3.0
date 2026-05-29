@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Footer } from "../../components/footer/footer";
 import { Container } from "../../components/container/container";
 import { Navbar } from "../../components/v4/navbar/navbar";
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-mission',
@@ -46,10 +47,16 @@ compliant with all regulations.`
 
   ]
 
+  title = inject(Title)
+  meta = inject(Meta)
+
   ngOnInit(): void {
     const sections = document.querySelectorAll(".section-animate")
 
-    
+    this.title.setTitle('About Seco Groupe | Hospitality, Staffing & Cleaning Experts');
+    this.meta.updateTag({ name: 'description', content: 'Learn more about Seco Groupe, an international company providing hospitality support, staffing solutions, janitorial cleaning, concierge, and security services.' });
+    this.meta.updateTag({ property: 'og:title', content: 'Seco groupe | About Us' });
+
 const observer = new IntersectionObserver((entries)=>{
     // console.log(entries)
 

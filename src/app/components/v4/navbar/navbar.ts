@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HamburgerBtn } from "../../hamburger-btn/hamburger-btn";
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
@@ -9,7 +9,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.css'
 })
 export class Navbar {
-
+  @Input()
+  isTransparent = false
 
   onClickMenuBtn(button: HamburgerBtn,mobileMenu: any) {
     button.isOpen = !button.isOpen

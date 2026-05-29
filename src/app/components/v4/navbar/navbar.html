@@ -1,8 +1,9 @@
-<nav class="md:bg-gray-700/45 w-full md:pt-3 pb-5 z-50">
+<nav class="md:bg-gray-700/45 w-full md:pt-3 pb-5 z-50 lg:px-2" [class.md:bg-transparent]="isTransparent">
+    <!-- "{'md:bg-transparent':isTransparent}" -->
     <!-- bg-[#A29990] -->
-    <div class="hidden px-2.5 lg:px-5 max-w-8xl  gap-10 w-full md:flex  flex-col  items-center md:items-end md:flex-row md:justify-between mx-auto  border-b-2 border-white pb-5">
+    <div class="hidden px-2.5 lg:p-5 max-w-8xl  gap-10 w-full md:flex  flex-col  items-center md:items-end md:flex-row md:justify-between mx-auto   pb-5 " [class]="!isTransparent ? 'border-b-2 border-white' : ''">
         <a href="#">
-            <img src="v4/img/logo/logo_seco.png" class="min-w-25 w-25 md:w-35 lg:w-50" alt="logo">
+            <img src="v4/img/logo/logo_seco.png" class="min-w-20 w-20 md:w-35 lg:w-30" alt="logo">
         </a>
 
         <div class="flex">
